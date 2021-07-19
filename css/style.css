@@ -383,6 +383,9 @@ label {
   flex-direction: column;
   flex-wrap: nowrap; }
 
+.h1-404 {
+  font-size: 2rem; }
+
 .img-404 {
   opacity: .9; }
 
