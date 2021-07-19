@@ -1,0 +1,30 @@
+$width: 100%;
+.header__menu--fondo {
+    /* Visual */
+    background-image: url(../images/fondo.png);
+    background-position: right;
+}
+
+.header__img--size {
+    /* Box model */
+    width: ($width/2)+10;
+}
+
+.header__botonera--fondo {
+    /* Visual */
+    background-color: $marronClaro;
+    /* Others */
+    opacity: 1;
+}
+
+.header__a--style {
+    /* Text */
+    font-weight: bold;
+    &:hover {
+        /* Box Model */
+        border-radius: 50rem;
+        /* Visual */
+        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
+        color: $marronOscuro;
+    }
+}

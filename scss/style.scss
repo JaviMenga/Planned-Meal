@@ -1,0 +1,420 @@
+@import "colores.scss";
+@import "header.scss";
+@import "footer.scss";
+* {
+    /* Box Model */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Text */
+    text-align: center;
+    font-family: 'Kurale', serif;
+    /* Visual */
+    background-image: url(../images/fondo.png);
+}
+
+
+/* --------------------------------------PERTENECE A CUERPO-SECCION------------------------------------ */
+
+main,
+section {
+    /* Box Model */
+    height: 75vh;
+}
+
+main {
+    // box model
+    overflow-y: auto;
+}
+
+h1,
+h2,
+h4 {
+    // Text
+    color: $marronOscuro;
+    /* Visual */
+    background-color: $blancoHumo;
+    /* Others */
+    opacity: .7;
+}
+
+h4 {
+    // Visual
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+// Scrollbar
+.busquedaConsejos::-webkit-scrollbar,
+main::-webkit-scrollbar,
+.section::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.busquedaConsejos::-webkit-scrollbar:vertical,
+main::-webkit-scrollbar:vertical,
+.section::-webkit-scrollbar:vertical,
+::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.busquedaConsejos::-webkit-scrollbar-button:increment,
+.busquedaConsejos::-webkit-scrollbar-button,
+main::-webkit-scrollbar-button:increment,
+main::-webkit-scrollbar-button,
+.section::-webkit-scrollbar-button:increment,
+.section::-webkit-scrollbar-button {
+    display: none;
+}
+
+.busquedaConsejos::-webkit-scrollbar:horizontal,
+main::-webkit-scrollbar:horizontal,
+.section::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+.busquedaConsejos::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb,
+.section::-webkit-scrollbar-thumb {
+    background-color: $blancoHumo;
+    border-radius: 10px;
+}
+
+.busquedaConsejos::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track,
+.section::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+// Carousel
+.carousel__a-style {
+    /* Text */
+    text-decoration: none;
+    color: $marronOscuro;
+    &:hover {
+        /* Box Model */
+        border-radius: 50rem;
+        /* Visual */
+        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
+        color: $marronOscuro;
+    }
+}
+
+@mixin carousel {
+    /* Box Model */
+    height: 73vh;
+    /* Visual */
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-item-recipes {
+    @include carousel;
+    background-image: url(../images/receta9.jpg);
+}
+
+.carousel-item-comunity {
+    @include carousel;
+    background-image: url(../images/vegetariano.jpg);
+}
+
+.carousel-item-advices {
+    @include carousel;
+    background-image: url(../images/nutricionistas.jpg);
+}
+
+.carousel-item-planification {
+    @include carousel;
+    background-image: url(../images/planificacion.jpg);
+}
+
+// Cards
+.card--style {
+    // Visual
+    box-shadow: 2px 2px 10px $marronOscuro
+}
+
+.card__img--tamaño {
+    // Box Model
+    height: 30vh;
+    // Visual
+    border-radius: 10px;
+}
+
+.btn-color {
+    background-color: $blancoHumo;
+}
+
+.card-title--style {
+    color: $marronOscuro;
+    font-weight: bold;
+}
+
+.a-style {
+    color: $marronOscuro
+}
+
+.card--style:hover {
+    margin: 1rem;
+    /* Others */
+    transform: scale(1.1, 1.1);
+}
+
+// Consejos
+.section {
+    // Box Model 
+    overflow-y: scroll;
+}
+
+.titulo {
+    // Box Model
+    margin-bottom: 1rem;
+    /* Visual */
+    color: $marronOscuro;
+}
+
+.busquedaConsejos {
+    /* Box Model */
+    display: inline-block;
+    width: ($width/2)-10;
+    height: 300px;
+    margin: 10px;
+    overflow: auto;
+    /* Visual */
+    background-color: $blancoHumo;
+    color: $marronOscuro;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px $marronOscuro;
+    // Others
+    opacity: .7;
+}
+
+.busqueda {
+    /* Box Model */
+    width: 40vw;
+    /* Text */
+    text-align: center;
+    /* Visual */
+    border: none;
+    background-color: $blancoHumo;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px $marronOscuro;
+    outline: none;
+    // Others
+    opacity: .7;
+}
+
+.busqueda:hover,
+.busquedaConsejos:hover {
+    /* Others */
+    opacity: 1;
+}
+
+.busqueda:active {
+    /* Others */
+    border: none;
+}
+
+.consejoTexto {
+    /* Box Model */
+    margin: .625rem;
+}
+
+.contenedorConsejos {
+    /* Box Model */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+// Comunidades
+.grillaPadre {
+    /* Box Model */
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "titulo titulo titulo titulo" "comunidadVerde comunidadVerde comunidadRoja comunidadRoja";
+    width: $width;
+}
+
+.titulo {
+    /* Box Model */
+    grid-area: titulo;
+}
+
+.comunidadVerde {
+    /* Box Model */
+    grid-area: comunidadVerde;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-self: center;
+}
+
+.comunidadRoja {
+    /* Box Model */
+    grid-area: comunidadRoja;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-self: center;
+}
+
+.comunidades {
+    /* Box Model */
+    display: inline-block;
+    width: $width;
+    height: 100%;
+    margin: .7rem;
+    /* Visual */
+    background-color: $blancoHumo;
+    color: $marronOscuro;
+    border-radius: 10px;
+    background-size: cover;
+    box-shadow: 2px 2px 10px $marronOscuro;
+    /* Text */
+    font-weight: bold;
+}
+
+.comunidades:hover {
+    // Box Model
+    margin: 2rem;
+    /* Others */
+    transform: scale(1.5, 1.5);
+}
+
+.asado {
+    /* Visual */
+    background-image: url(../images/asado.jpg);
+}
+
+.veganos {
+    /* Visual */
+    background-image: url(../images/vegano.jpg);
+}
+
+.vegetarianos {
+    /* Visual */
+    background-image: url(../images/vegetariano.jpg);
+}
+
+.lactosa {
+    /* Visual */
+    background-image: url(../images/lactosa.jpg);
+}
+
+.celiacos {
+    /* Visual */
+    background-image: url(../images/celiaco.jpg);
+}
+
+.palta {
+    /* Visual */
+    background-image: url(../images/palta.jpg);
+}
+
+// Usuario
+.infoUsuario {
+    /* Position */
+    position: relative;
+    right: 510px;
+}
+
+.contenedorFormulario {
+    /* Box Model */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.contenedorEnviarLimpiar {
+    /* Position */
+    position: relative;
+    right: 465px;
+}
+
+.formulario {
+    /* Box Model */
+    width: 200px;
+    margin: 10px;
+    /* Text */
+    text-align: center;
+    /* Visual */
+    background-color: $marronClaro;
+    border-radius: 50px;
+    border: 0 solid $marronOscuro;
+}
+
+ ::placeholder {
+    /* Visual */
+    color: $marronOscuro;
+}
+
+label {
+    /* Box Model */
+    width: 100px;
+    display: inline-block;
+    /* Text */
+    text-align: left;
+    font-weight: bold;
+    /* Visual */
+    color: $marronOscuro;
+}
+
+// Mi menu
+.miCalendario {
+    /* Box Model */
+    max-width: $width;
+    height: 50vh;
+    /* Visual */
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px $marronOscuro;
+}
+
+.pdf {
+    /* Box Model */
+    margin-top: 10px;
+}
+
+.descargarPdf {
+    /* Box model */
+    border-radius: 50em;
+    background-color: $marronClaro;
+    padding: .5rem;
+    /* Text */
+    font-weight: bold;
+    /* Visual */
+    border: none;
+    /* Others */
+    opacity: .8;
+}
+
+.textoDescarga {
+    margin: 0;
+}
+
+.section-404 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.img-404 {
+    // Others
+    opacity: .9;
+}
+
+.a-404 {
+    // Box Model
+    display: block;
+    // Text
+    text-decoration: none;
+    color: $marronOscuro;
+    font-size: 2rem;
+}

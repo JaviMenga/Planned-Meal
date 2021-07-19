@@ -1,0 +1,25 @@
+.footer {
+    /* Box Model */
+    grid-area: footer;
+    padding-top: 0.625em;
+    padding-bottom: 0.2em;
+    height: 8vh;
+    /* Visual */
+    background-image: url(../images/fondo.png);
+    background-position: right;
+}
+
+.footer__redesSociales {
+    /* Text */
+    text-align: right;
+}
+
+.footer__iconosSociales {
+    /* Box Model */
+    width: 25px;
+}
+
+.mail {
+    /* Box Model */
+    margin-right: .5em;
+}
