@@ -226,10 +226,10 @@ main::-webkit-scrollbar-track,
 .contenedorConsejos {
     /* Box Model */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    align-content: center;
 }
 
 // Comunidades
