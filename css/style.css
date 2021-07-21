@@ -19,7 +19,7 @@
   font-weight: bold; }
   .header__a--style:hover {
     /* Box Model */
-    border-radius: 50rem;
+    border-radius: 2.5px;
     /* Visual */
     background-image: linear-gradient(to left, #BABCBF, #A66B38);
     color: #401202; }
