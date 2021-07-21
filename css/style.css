@@ -24,6 +24,9 @@
     background-image: linear-gradient(to left, #BABCBF, #A66B38);
     color: #401202; }
 
+.header__img--icono {
+  width: 20px; }
+
 .footer {
   /* Box Model */
   grid-area: footer;
