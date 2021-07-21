@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 
@@ -109,4 +110,117 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="description" content="Menú Programado es un servicio de programación semanal de tus comidas, con las recetas que más se acomoden a tu estilo de vida.">
+    <meta name="keywords" content="COMIDA, MENÚ SEMANAL, VEGETARIANO, VEGANO, CELÍACO, NUTRICIONISTAS, SALUDABLE, RECETAS">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/android-chrome-512x512.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Hoja de Estilo Css propia -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fuente de letras -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=PT+Serif&display=swap" rel="stylesheet">
+    <title>Menu Programado</title>
+
+</head>
+
+<body>
+    <!-- Inicio del Header -->
+    <header class="header">
+        <!-- barra de navegación -->
+        <nav class="header__menu--fondo navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="header__img--size" src="./logo/apple-touch-icon.png" alt="logo de la empresa"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav w-100 d-flex justify-content-center">
+                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                            <a class="nav-link header__a--style active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3 text-center">
+                            <a class="nav-link header__a--style" href="./pages/recetas.html">Recetas</a>
+                        </li>
+                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                            <a class="nav-link header__a--style" href="./pages/consejos.html">Consejos</a>
+                        </li>
+                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                            <a class="nav-link header__a--style" href="./pages/comunidad.html">Comunidades</a>
+                        </li>
+                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                            <a class=" nav-link header__a--style" href="./pages/armar_mi_menu.html">Mi menú</a>
+                        </li>
+                    </ul>
+                    <div class="btn btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn mb-3 me-3"><a href="./usuario.html"><img class="header__img--icono" src="./icons/usuario.png" alt="icono del usuario"></a></button>
+                        <button type="button" class="btn mb-3 me-3"><a href="#"><img class="header__img--icono" src="./icons/carrito.svg" alt="icono del carrito"></a></button>
+                    </div>
+                </div>
+        </nav>
+    </header>
+    <!-- Fin del Header -->
+
+    <!-- Inicio de Sección -->
+    <section class="container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide container mt-2 mb-2" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-item-recipes rounded shadow active">
+                    <a class="carousel__a-style" href="./pages/recetas.html ">
+                        <h2 class="rounded-top">Encontrá excelentes recetas</h2>
+                    </a>
+                </div>
+                <div class="carousel-item carousel-item-comunity rounded shadow ">
+                    <a class="carousel__a-style" href="./pages/comunidad.html">
+                        <h2 class="rounded-top">Unite a nuestras comunidades</h2>
+                    </a>
+                </div>
+                <div class="carousel-item carousel-item-advices rounded shadow ">
+                    <a class="carousel__a-style" href="./pages/consejos.html">
+                        <h2 class="rounded-top">Recibí los mejores consejos por profesionales</h2>
+                    </a>
+                </div>
+                <div class="carousel-item carousel-item-planification rounded shadow ">
+                    <a class="carousel__a-style" href="./pages/armar_mi_menu.html">
+                        <h2 class="rounded-top">Te armamos un menú perfecto para vos</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin de Sección -->
+
+    <!-- Inicio del Footer -->
+    <footer class="footer">
+        <!-- Redes Sociales -->
+        <div class="footer__redesSociales ">
+            <a href="https://www.twitter.com/" target="blank">
+                <img class="footer__iconosSociales twitter" src="./icons/twitter.png " alt="logo de twitter"></a>
+            <a href="https://www.facebook.com/" target="blank">
+                <img class="footer__iconosSociales facebook" src="./icons/facebook.png " alt="logo de facebook"></a>
+            <a href="https://www.instagram.com/" target="blank">
+                <img class="footer__iconosSociales instagram" src="./icons/instagram.png " alt="logo de instagram"></a>
+            <a href="https://www.whatsapp.com/" target="blank">
+                <img class="footer__iconosSociales whatsapp" src="./icons/whatsapp.png " alt="logo dewhatsapp"></a>
+            <a href="https://www.outlook.com/" target="blank">
+                <img class="footer__iconosSociales mail" src="./icons/mail.png " alt="logo de mail"></a>
+        </div>
+    </footer>
+    <!-- Fin del Footer -->
+
+    <!-- Link Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+</body>
+
+>>>>>>> d53e306d0282739f2bc19b157ad11db30be6b82b
 </html>
