@@ -25,8 +25,7 @@ section {
     height: 75vh;
 }
 
-main,
-section {
+main {
     // box model
     overflow-y: auto;
 }
@@ -50,44 +49,36 @@ h4 {
 
 // Scrollbar
 .busquedaConsejos::-webkit-scrollbar,
-main::-webkit-scrollbar,
-.section::-webkit-scrollbar {
+main::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
 .busquedaConsejos::-webkit-scrollbar:vertical,
-main::-webkit-scrollbar:vertical,
-.section::-webkit-scrollbar:vertical,
-::-webkit-scrollbar:vertical {
-    width: 10px;
+main::-webkit-scrollbar:vertical {
+    width: 0.625rem;
 }
 
 .busquedaConsejos::-webkit-scrollbar-button:increment,
 .busquedaConsejos::-webkit-scrollbar-button,
 main::-webkit-scrollbar-button:increment,
-main::-webkit-scrollbar-button,
-.section::-webkit-scrollbar-button:increment,
-.section::-webkit-scrollbar-button {
+main::-webkit-scrollbar-button {
     display: none;
 }
 
 .busquedaConsejos::-webkit-scrollbar:horizontal,
-main::-webkit-scrollbar:horizontal,
-.section::-webkit-scrollbar:horizontal {
-    height: 5px;
+main::-webkit-scrollbar:horizontal {
+    height: 0.325rem;
 }
 
 .busquedaConsejos::-webkit-scrollbar-thumb,
-main::-webkit-scrollbar-thumb,
-.section::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
     background-color: $blancoHumo;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .busquedaConsejos::-webkit-scrollbar-track,
-main::-webkit-scrollbar-track,
-.section::-webkit-scrollbar-track {
-    border-radius: 10px;
+main::-webkit-scrollbar-track {
+    border-radius: 0.625rem;
 }
 
 // Carousel
@@ -132,7 +123,7 @@ main::-webkit-scrollbar-track,
     background-image: url(../images/planificacion.jpg);
 }
 
-// Cards
+// Recetas
 .card--style {
     // Visual
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro
@@ -159,9 +150,8 @@ main::-webkit-scrollbar-track,
 }
 
 .card--style:hover {
-    margin: 1rem;
     /* Others */
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
 }
 
 // Consejos
@@ -210,8 +200,8 @@ main::-webkit-scrollbar-track,
     /* Visual */
     border: none;
     background-color: $blancoHumo;
-    border-radius: 50px;
-    box-shadow: 2px 2px 10px $marronOscuro;
+    border-radius: 3.125rem;
+    box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
     outline: none;
     // Others
     opacity: .7;
@@ -315,13 +305,13 @@ main::-webkit-scrollbar-track,
 
 .formulario {
     /* Box Model */
-    width: 200px;
-    margin: 10px;
+    width: 12.5rem;
+    margin: 0.625rem;
     /* Text */
     text-align: center;
     /* Visual */
     background-color: $marronClaro;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     border: 0 solid $marronOscuro;
 }
 
@@ -332,7 +322,7 @@ main::-webkit-scrollbar-track,
 
 label {
     /* Box Model */
-    width: 100px;
+    width: 6.25rem;
     display: inline-block;
     /* Text */
     text-align: left;
@@ -347,13 +337,13 @@ label {
     max-width: $width;
     height: 50vh;
     /* Visual */
-    border-radius: 50px;
-    box-shadow: 2px 2px 10px $marronOscuro;
+    border-radius: 3.125rem;
+    box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
 }
 
 .pdf {
     /* Box Model */
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .descargarPdf {
@@ -373,6 +363,7 @@ label {
     margin: 0;
 }
 
+// página 404
 .section-404 {
     display: flex;
     flex-direction: column;
