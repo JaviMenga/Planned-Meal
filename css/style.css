@@ -164,7 +164,6 @@ main::-webkit-scrollbar-track,
   background-image: url(../images/planificacion.jpg); }
 
 .card--style {
-  height: 400px;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
 
 .card__img--tamaño {
