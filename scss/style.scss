@@ -25,7 +25,8 @@ section {
     height: 75vh;
 }
 
-main {
+main,
+section {
     // box model
     overflow-y: auto;
 }
@@ -43,8 +44,8 @@ h4 {
 
 h4 {
     // Visual
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
 }
 
 // Scrollbar
@@ -133,15 +134,17 @@ main::-webkit-scrollbar-track,
 
 // Cards
 .card--style {
+    // Box Model
+    height: 400px;
     // Visual
-    box-shadow: 2px 2px 10px $marronOscuro
+    box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro
 }
 
 .card__img--tamaño {
     // Box Model
     height: 30vh;
     // Visual
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .btn-color {
@@ -166,7 +169,7 @@ main::-webkit-scrollbar-track,
 // Consejos
 .section {
     // Box Model 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .titulo {
@@ -176,18 +179,26 @@ main::-webkit-scrollbar-track,
     color: $marronOscuro;
 }
 
+.contenedorConsejos {
+    /* Box Model */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
 .busquedaConsejos {
     /* Box Model */
     display: inline-block;
-    width: ($width/2)-10;
-    height: 300px;
-    margin: 10px;
-    overflow: auto;
+    width: 80vw;
+    height: 250px;
+    margin: 0.625rem;
+    overflow-y: scroll;
     /* Visual */
     background-color: $blancoHumo;
     color: $marronOscuro;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px $marronOscuro;
+    border-radius: 0.625rem;
+    box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
     // Others
     opacity: .7;
 }
@@ -221,15 +232,6 @@ main::-webkit-scrollbar-track,
 .consejoTexto {
     /* Box Model */
     margin: .625rem;
-}
-
-.contenedorConsejos {
-    /* Box Model */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-content: center;
 }
 
 // Comunidades
@@ -319,24 +321,21 @@ main::-webkit-scrollbar-track,
 }
 
 // Usuario
-.infoUsuario {
-    /* Position */
-    position: relative;
-    right: 510px;
-}
-
 .contenedorFormulario {
     /* Box Model */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .contenedorEnviarLimpiar {
-    /* Position */
-    position: relative;
-    right: 465px;
+    /* Box Model */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .formulario {

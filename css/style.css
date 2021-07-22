@@ -68,7 +68,8 @@ section {
   /* Box Model */
   height: 75vh; }
 
-main {
+main,
+section {
   overflow-y: auto; }
 
 h1,
@@ -81,8 +82,8 @@ h4 {
   opacity: .7; }
 
 h4 {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem; }
 
 .busquedaConsejos::-webkit-scrollbar,
 main::-webkit-scrollbar,
@@ -163,11 +164,12 @@ main::-webkit-scrollbar-track,
   background-image: url(../images/planificacion.jpg); }
 
 .card--style {
-  box-shadow: 2px 2px 10px #401202; }
+  height: 400px;
+  box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
 
 .card__img--tamaño {
   height: 30vh;
-  border-radius: 10px; }
+  border-radius: 0.625rem; }
 
 .btn-color {
   background-color: #BABCBF; }
@@ -185,25 +187,32 @@ main::-webkit-scrollbar-track,
   transform: scale(1.1, 1.1); }
 
 .section {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .titulo {
   margin-bottom: 1rem;
   /* Visual */
   color: #401202; }
 
+.contenedorConsejos {
+  /* Box Model */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center; }
+
 .busquedaConsejos {
   /* Box Model */
   display: inline-block;
-  width: 40%;
-  height: 300px;
-  margin: 10px;
-  overflow: auto;
+  width: 80vw;
+  height: 250px;
+  margin: 0.625rem;
+  overflow-y: scroll;
   /* Visual */
   background-color: #BABCBF;
   color: #401202;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #401202;
+  border-radius: 0.625rem;
+  box-shadow: 0.125rem 0.125rem 0.625rem #401202;
   opacity: .7; }
 
 .busqueda {
@@ -231,14 +240,6 @@ main::-webkit-scrollbar-track,
 .consejoTexto {
   /* Box Model */
   margin: .625rem; }
-
-.contenedorConsejos {
-  /* Box Model */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: center; }
 
 .grillaPadre {
   /* Box Model */
@@ -312,22 +313,20 @@ main::-webkit-scrollbar-track,
   /* Visual */
   background-image: url(../images/palta.jpg); }
 
-.infoUsuario {
-  /* Position */
-  position: relative;
-  right: 510px; }
-
 .contenedorFormulario {
   /* Box Model */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: start; }
+  align-items: center;
+  margin-bottom: 2rem; }
 
 .contenedorEnviarLimpiar {
-  /* Position */
-  position: relative;
-  right: 465px; }
+  /* Box Model */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .formulario {
   /* Box Model */
