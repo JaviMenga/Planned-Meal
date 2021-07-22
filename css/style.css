@@ -198,7 +198,8 @@ main::-webkit-scrollbar-track,
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: center; }
+  align-content: center;
+  margin-top: 2rem; }
 
 .busquedaConsejos {
   /* Box Model */
