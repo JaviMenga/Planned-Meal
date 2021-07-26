@@ -160,7 +160,7 @@ main::-webkit-scrollbar-track {
 
 .card__img--tamaño {
   height: 30vh;
-  border-radius: 0.625rem; }
+  border-radius: 0.125rem; }
 
 .btn-color {
   background-color: #BABCBF; }
