@@ -32,7 +32,8 @@ main {
 
 h1,
 h2,
-h4 {
+h4,
+.carousel-caption--style {
     // Text
     color: $marronOscuro;
     /* Visual */
@@ -103,19 +104,19 @@ main::-webkit-scrollbar-track {
     background-size: cover;
 }
 
-.carousel-item-recipes {
+.carousel-item-img1 {
     @include carousel;
     background-image: url(../images/receta9.jpg);
 }
 
-.carousel-item-comunity {
+.carousel-item-img2 {
     @include carousel;
-    background-image: url(../images/vegetariano.jpg);
+    background-image: url(../images/asado.jpg);
 }
 
-.carousel-item-advices {
+.carousel-item-img3 {
     @include carousel;
-    background-image: url(../images/nutricionistas.jpg);
+    background-image: url(../images/receta4.jpg);
 }
 
 .carousel-item-planification {

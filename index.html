@@ -59,30 +59,42 @@
     <!-- Fin del Header -->
 
     <!-- Inicio de Sección -->
-    <section class="container">
-        <div id="carouselExampleSlidesOnly" class="carousel slide container mt-2 mb-2" data-bs-ride="carousel" data-bs-interval="4000">
+    <section class="container mt-2">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
-                <div class="carousel-item carousel-item-recipes rounded shadow active">
-                    <a class="carousel__a-style" href="./pages/recetas.html ">
-                        <h2 class="rounded-top">Encontrá excelentes recetas</h2>
-                    </a>
+                <div class="carousel-item carousel-item-img1 rounded shadow active" style="height: 70vh">
+                    <div class="carousel-caption carousel-caption--style d-none d-md-block p-1" style="height: 30vh">
+                        <h2>Nosotros</h2>
+                        <p>Este sitio está ideado para que puedar guardar las recetas que más te gusten en un solo lugar. Además te proponemos armar un menú personalizado con las recetas seleccionadas para que vos solamente te ocupes de cocinar y disfrutar.</p>
+                    </div>
                 </div>
-                <div class="carousel-item carousel-item-comunity rounded shadow ">
-                    <a class="carousel__a-style" href="./pages/comunidad.html">
-                        <h2 class="rounded-top">Unite a nuestras comunidades</h2>
-                    </a>
+                <div class="carousel-item carousel-item-img2 rounded shadow" style="height: 70vh">
+                    <div class="carousel-caption carousel-caption--style d-none d-md-block p-1" style="height: 30vh">
+                        <h2>¿Cómo hago?</h2>
+                        <p>Lo primero que tenés que hacer es ir a la sección de recetas y agregar a tu carrito todas las que te gusten. Nosotros usaremos ese carrito para armarte el menú según lo que vos estés necesitando.</p>
+                        <p>Luego vas a la seccion "Mi Menú", filtras el tipo de menú que deseas y finalmente descargas.</p>
+                    </div>
                 </div>
-                <div class="carousel-item carousel-item-advices rounded shadow ">
-                    <a class="carousel__a-style" href="./pages/consejos.html">
-                        <h2 class="rounded-top">Recibí los mejores consejos por profesionales</h2>
-                    </a>
-                </div>
-                <div class="carousel-item carousel-item-planification rounded shadow ">
-                    <a class="carousel__a-style" href="./pages/armar_mi_menu.html">
-                        <h2 class="rounded-top">Te armamos un menú perfecto para vos</h2>
-                    </a>
+                <div class="carousel-item carousel-item-img3 rounded shadow" style="height: 70vh">
+                    <div class="carousel-caption carousel-caption--style d-none d-md-block" style="height: 30vh">
+                        <h2>Suscripción</h2>
+                        <p>Te recomendamos suscribirte para que te lleguen los mejores consejos semanales, recetas interesantes, tips de alimentación, etc.</p>
+                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
         </div>
     </section>
     <!-- Fin de Sección -->

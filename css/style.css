@@ -73,7 +73,8 @@ main {
 
 h1,
 h2,
-h4 {
+h4,
+.carousel-caption--style {
   color: #401202;
   /* Visual */
   background-color: #BABCBF;
@@ -122,7 +123,7 @@ main::-webkit-scrollbar-track {
     background-image: linear-gradient(to left, #BABCBF, #A66B38);
     color: #401202; }
 
-.carousel-item-recipes {
+.carousel-item-img1 {
   /* Box Model */
   height: 73vh;
   /* Visual */
@@ -130,21 +131,21 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(../images/receta9.jpg); }
 
-.carousel-item-comunity {
+.carousel-item-img2 {
   /* Box Model */
   height: 73vh;
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(../images/vegetariano.jpg); }
+  background-image: url(../images/asado.jpg); }
 
-.carousel-item-advices {
+.carousel-item-img3 {
   /* Box Model */
   height: 73vh;
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(../images/nutricionistas.jpg); }
+  background-image: url(../images/receta4.jpg); }
 
 .carousel-item-planification {
   /* Box Model */
