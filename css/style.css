@@ -82,8 +82,8 @@ h4,
   opacity: .7; }
 
 h4 {
-  border-top-left-radius: 0.625rem;
-  border-top-right-radius: 0.625rem; }
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem; }
 
 .busquedaConsejos::-webkit-scrollbar,
 main::-webkit-scrollbar {
@@ -248,7 +248,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-color: #BABCBF;
   color: #401202;
-  border-radius: 0.625rem;
+  border-radius: 0.125rem;
   background-size: cover;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202;
   /* Text */
@@ -282,6 +282,42 @@ main::-webkit-scrollbar-track {
 .palta {
   /* Visual */
   background-image: url(../images/palta.jpg); }
+
+.regional {
+  /* Visual */
+  background-image: url(../images/comida-regional.jpg); }
+
+.latino {
+  /* Visual */
+  background-image: url(../images/comida-latina.jpg); }
+
+.arabe {
+  /* Visual */
+  background-image: url(../images/falafel.jpg); }
+
+.arabe {
+  /* Visual */
+  background-image: url(../images/falafel.jpg); }
+
+.pizza-time {
+  /* Visual */
+  background-image: url(../images/pizza.jpg); }
+
+.carnes-blancas {
+  /* Visual */
+  background-image: url(../images/pollo.jpg); }
+
+.postres {
+  /* Visual */
+  background-image: url(../images/postre.jpg); }
+
+.comida-china {
+  /* Visual */
+  background-image: url(../images/comida-china.jpg); }
+
+.comida-mexicana {
+  /* Visual */
+  background-image: url(../images/taco.jpg); }
 
 .contenedorFormulario {
   /* Box Model */
