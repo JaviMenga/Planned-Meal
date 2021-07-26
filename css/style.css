@@ -238,7 +238,8 @@ main::-webkit-scrollbar-track {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow-y: auto; }
 
 .comunidades {
   /* Box Model */
