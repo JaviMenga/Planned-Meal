@@ -1,4 +1,4 @@
-@import "colores.scss";
+@import "variables.scss";
 @import "header.scss";
 @import "footer.scss";
 * {
@@ -36,6 +36,7 @@ h4,
 .carousel-caption--style {
     // Text
     color: $marronOscuro;
+    font-weight: bold;
     /* Visual */
     background-color: $blancoHumo;
     /* Others */
@@ -44,8 +45,8 @@ h4,
 
 h4 {
     // Visual
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
+    border-top-left-radius: $bradius1;
+    border-top-right-radius: $bradius1;
 }
 
 // Scrollbar
@@ -83,25 +84,14 @@ main::-webkit-scrollbar-track {
 }
 
 // Carousel
-.carousel__a-style {
-    /* Text */
-    text-decoration: none;
-    color: $marronOscuro;
-    &:hover {
-        /* Box Model */
-        border-radius: 50rem;
-        /* Visual */
-        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
-        color: $marronOscuro;
-    }
-}
-
 @mixin carousel {
     /* Box Model */
     height: 73vh;
     /* Visual */
     background-position: center;
     background-size: cover;
+    font-weight: bold;
+    font-size: 1.1rem
 }
 
 .carousel-item-img1 {
@@ -119,11 +109,6 @@ main::-webkit-scrollbar-track {
     background-image: url(../images/receta4.jpg);
 }
 
-.carousel-item-planification {
-    @include carousel;
-    background-image: url(../images/planificacion.jpg);
-}
-
 // Recetas
 .card--style {
     // Visual
@@ -134,7 +119,7 @@ main::-webkit-scrollbar-track {
     // Box Model
     height: 30vh;
     // Visual
-    border-radius: 0.125rem;
+    border-radius: $bradius1;
 }
 
 .btn-color {
@@ -187,7 +172,7 @@ main::-webkit-scrollbar-track {
     /* Visual */
     background-color: $blancoHumo;
     color: $marronOscuro;
-    border-radius: 0.625rem;
+    border-radius: $bradius1;
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
     // Others
     opacity: .7;
@@ -201,7 +186,7 @@ main::-webkit-scrollbar-track {
     /* Visual */
     border: none;
     background-color: $blancoHumo;
-    border-radius: 3.125rem;
+    border-radius: $bradius1;
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
     outline: none;
     // Others
@@ -221,7 +206,7 @@ main::-webkit-scrollbar-track {
 
 .consejoTexto {
     /* Box Model */
-    margin: .625rem;
+    margin: 0.625rem;
 }
 
 // Comunidades
@@ -243,7 +228,7 @@ main::-webkit-scrollbar-track {
     /* Visual */
     background-color: $blancoHumo;
     color: $marronOscuro;
-    border-radius: 0.125rem;
+    border-radius: $bradius1;
     background-size: cover;
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
     /* Text */
@@ -358,8 +343,10 @@ main::-webkit-scrollbar-track {
     text-align: center;
     /* Visual */
     background-color: $marronClaro;
-    border-radius: 3.125rem;
+    border-radius: $bradius1;
     border: 0 solid $marronOscuro;
+    // Others
+    opacity: .7;
 }
 
  ::placeholder {
@@ -379,12 +366,17 @@ label {
 }
 
 // Mi menu
+.seccion-miMenu {
+    // Box Model
+    overflow-y: auto;
+}
+
 .miCalendario {
     /* Box Model */
     max-width: $width;
     height: 50vh;
     /* Visual */
-    border-radius: 3.125rem;
+    border-radius: $bradius1;
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
 }
 
@@ -395,7 +387,7 @@ label {
 
 .descargarPdf {
     /* Box model */
-    border-radius: 50em;
+    border-radius: $bradius2;
     background-color: $marronClaro;
     padding: .5rem;
     /* Text */

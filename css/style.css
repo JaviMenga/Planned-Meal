@@ -19,7 +19,7 @@
   font-weight: bold; }
   .header__a--style:hover {
     /* Box Model */
-    border-radius: 2.5px;
+    border-radius: 0.125rem;
     /* Visual */
     background-image: linear-gradient(to left, #BABCBF, #A66B38);
     color: #401202; }
@@ -76,6 +76,7 @@ h2,
 h4,
 .carousel-caption--style {
   color: #401202;
+  font-weight: bold;
   /* Visual */
   background-color: #BABCBF;
   /* Others */
@@ -112,23 +113,14 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-track {
   border-radius: 0.625rem; }
 
-.carousel__a-style {
-  /* Text */
-  text-decoration: none;
-  color: #401202; }
-  .carousel__a-style:hover {
-    /* Box Model */
-    border-radius: 50rem;
-    /* Visual */
-    background-image: linear-gradient(to left, #BABCBF, #A66B38);
-    color: #401202; }
-
 .carousel-item-img1 {
   /* Box Model */
   height: 73vh;
   /* Visual */
   background-position: center;
   background-size: cover;
+  font-weight: bold;
+  font-size: 1.1rem;
   background-image: url(../images/receta9.jpg); }
 
 .carousel-item-img2 {
@@ -137,6 +129,8 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-position: center;
   background-size: cover;
+  font-weight: bold;
+  font-size: 1.1rem;
   background-image: url(../images/asado.jpg); }
 
 .carousel-item-img3 {
@@ -145,15 +139,9 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-position: center;
   background-size: cover;
+  font-weight: bold;
+  font-size: 1.1rem;
   background-image: url(../images/receta4.jpg); }
-
-.carousel-item-planification {
-  /* Box Model */
-  height: 73vh;
-  /* Visual */
-  background-position: center;
-  background-size: cover;
-  background-image: url(../images/planificacion.jpg); }
 
 .card--style {
   box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
@@ -202,7 +190,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-color: #BABCBF;
   color: #401202;
-  border-radius: 0.625rem;
+  border-radius: 0.125rem;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202;
   opacity: .7; }
 
@@ -214,7 +202,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   border: none;
   background-color: #BABCBF;
-  border-radius: 3.125rem;
+  border-radius: 0.125rem;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202;
   outline: none;
   opacity: .7; }
@@ -230,7 +218,7 @@ main::-webkit-scrollbar-track {
 
 .consejoTexto {
   /* Box Model */
-  margin: .625rem; }
+  margin: 0.625rem; }
 
 .contenedor__comunidad {
   /* Box Model */
@@ -343,8 +331,9 @@ main::-webkit-scrollbar-track {
   text-align: center;
   /* Visual */
   background-color: #A66B38;
-  border-radius: 3.125rem;
-  border: 0 solid #401202; }
+  border-radius: 0.125rem;
+  border: 0 solid #401202;
+  opacity: .7; }
 
 ::placeholder {
   /* Visual */
@@ -360,12 +349,15 @@ label {
   /* Visual */
   color: #401202; }
 
+.seccion-miMenu {
+  overflow-y: auto; }
+
 .miCalendario {
   /* Box Model */
   max-width: 100%;
   height: 50vh;
   /* Visual */
-  border-radius: 3.125rem;
+  border-radius: 0.125rem;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
 
 .pdf {
@@ -374,7 +366,7 @@ label {
 
 .descargarPdf {
   /* Box model */
-  border-radius: 50em;
+  border-radius: 0.325rem;
   background-color: #A66B38;
   padding: .5rem;
   /* Text */
