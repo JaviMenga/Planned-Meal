@@ -1,7 +1,7 @@
 Menú Programado
 
-Este sitio está diseñado para almacenar todo tipo de recetas e incluso agregar propias, para que puedas crear distintos menús (ya sean semanales, mensuales, con ciertas características, para distintos gustos, etc.).
+This site is designed to store all kinds of recipes and even add your own, so that you can create different menus (whether weekly, monthly, with certain characteristics, for different tastes, etc.).
 
-También vas a encontrar un montón de consejos que te pueden ser de mucha ayuda para tu alimentación.
+You will also find a lot of tips that can be very helpful for your diet.
 
-Por último, hay una sección donde te facilitamos algunas comunidades que te permite conectar con gente que comparta tus mismos gustos, ideas innovadoras y interesantes para vos, etc.
+Finally, there is a section where we provide you with some communities that allow you to connect with people who share your same tastes, innovative and interesting ideas for you, etc.
