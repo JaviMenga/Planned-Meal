@@ -5,9 +5,15 @@
     background-position: right;
 }
 
+.navbar-brand--size {
+    // Box Model
+    width: 100px;
+    margin: 0 2rem 0 2rem;
+}
+
 .header__img--size {
     /* Box model */
-    width: ($width/2)+10;
+    width: ($width);
 }
 
 .header__botonera--fondo {

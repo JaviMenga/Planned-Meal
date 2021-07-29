@@ -11,7 +11,7 @@
 body {
     /* Text */
     text-align: center;
-    font-family: 'Kurale', serif;
+    font-family: 'Open Sans', sans-serif;
     /* Visual */
     background-image: url(../images/fondo.png);
 }
@@ -30,7 +30,6 @@ main {
     overflow-y: auto;
 }
 
-h1,
 h2,
 h4,
 .carousel-caption--style {
@@ -87,25 +86,29 @@ main::-webkit-scrollbar-track {
 @mixin carousel {
     /* Box Model */
     height: 73vh;
+    // Text
+    font-weight: bold;
+    font-size: 1.1rem;
     /* Visual */
     background-position: center;
     background-size: cover;
-    font-weight: bold;
-    font-size: 1.1rem
 }
 
 .carousel-item-img1 {
     @include carousel;
+    // Visual
     background-image: url(../images/receta9.jpg);
 }
 
 .carousel-item-img2 {
     @include carousel;
+    // Visual
     background-image: url(../images/asado.jpg);
 }
 
 .carousel-item-img3 {
     @include carousel;
+    // Visual
     background-image: url(../images/receta4.jpg);
 }
 
@@ -123,15 +126,18 @@ main::-webkit-scrollbar-track {
 }
 
 .btn-color {
+    // Visual
     background-color: $blancoHumo;
 }
 
 .card-title--style {
+    // Text
     color: $marronOscuro;
     font-weight: bold;
 }
 
 .a-style {
+    // Text
     color: $marronOscuro
 }
 
@@ -225,21 +231,19 @@ main::-webkit-scrollbar-track {
     width: 10rem;
     height: 10rem;
     margin: .7rem;
+    /* Text */
+    font-weight: bold;
+    color: $marronOscuro;
     /* Visual */
     background-color: $blancoHumo;
-    color: $marronOscuro;
     border-radius: $bradius1;
     background-size: cover;
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro;
-    /* Text */
-    font-weight: bold;
 }
 
 .comunidades:hover {
-    // Box Model
-    margin: 2rem;
     /* Others */
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
 }
 
 .asado {
@@ -361,7 +365,6 @@ label {
     /* Text */
     text-align: left;
     font-weight: bold;
-    /* Visual */
     color: $marronOscuro;
 }
 
@@ -404,12 +407,14 @@ label {
 
 // página 404
 .section-404 {
+    // Box Model
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
 .h1-404 {
+    // Text
     font-size: 2rem;
 }
 

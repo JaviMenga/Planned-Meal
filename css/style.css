@@ -4,9 +4,13 @@
   background-image: url(../images/fondo.png);
   background-position: right; }
 
+.navbar-brand--size {
+  width: 100px;
+  margin: 0 2rem 0 2rem; }
+
 .header__img--size {
   /* Box model */
-  width: 60%; }
+  width: 100%; }
 
 .header__botonera--fondo {
   /* Visual */
@@ -58,7 +62,7 @@
 body {
   /* Text */
   text-align: center;
-  font-family: 'Kurale', serif;
+  font-family: 'Open Sans', sans-serif;
   /* Visual */
   background-image: url(../images/fondo.png); }
 
@@ -71,7 +75,6 @@ section {
 main {
   overflow-y: auto; }
 
-h1,
 h2,
 h4,
 .carousel-caption--style {
@@ -116,31 +119,31 @@ main::-webkit-scrollbar-track {
 .carousel-item-img1 {
   /* Box Model */
   height: 73vh;
+  font-weight: bold;
+  font-size: 1.1rem;
   /* Visual */
   background-position: center;
   background-size: cover;
-  font-weight: bold;
-  font-size: 1.1rem;
   background-image: url(../images/receta9.jpg); }
 
 .carousel-item-img2 {
   /* Box Model */
   height: 73vh;
+  font-weight: bold;
+  font-size: 1.1rem;
   /* Visual */
   background-position: center;
   background-size: cover;
-  font-weight: bold;
-  font-size: 1.1rem;
   background-image: url(../images/asado.jpg); }
 
 .carousel-item-img3 {
   /* Box Model */
   height: 73vh;
+  font-weight: bold;
+  font-size: 1.1rem;
   /* Visual */
   background-position: center;
   background-size: cover;
-  font-weight: bold;
-  font-size: 1.1rem;
   background-image: url(../images/receta4.jpg); }
 
 .card--style {
@@ -234,19 +237,18 @@ main::-webkit-scrollbar-track {
   width: 10rem;
   height: 10rem;
   margin: .7rem;
+  /* Text */
+  font-weight: bold;
+  color: #401202;
   /* Visual */
   background-color: #BABCBF;
-  color: #401202;
   border-radius: 0.125rem;
   background-size: cover;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202;
-  /* Text */
-  font-weight: bold; }
+  box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
 
 .comunidades:hover {
-  margin: 2rem;
   /* Others */
-  transform: scale(1.5, 1.5); }
+  transform: scale(1.2, 1.2); }
 
 .asado {
   /* Visual */
@@ -346,7 +348,6 @@ label {
   /* Text */
   text-align: left;
   font-weight: bold;
-  /* Visual */
   color: #401202; }
 
 .seccion-miMenu {
