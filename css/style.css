@@ -157,15 +157,15 @@ main::-webkit-scrollbar-track {
   background-color: #BABCBF; }
 
 .card-title--style {
-  color: #401202;
+  color: black;
   font-weight: bold; }
 
 .a-style {
   color: #401202; }
 
-.card--style:hover {
-  /* Others */
-  transform: scale(1.05, 1.05); }
+.modal-content--color {
+  background-image: url(../images/fondo.png);
+  background-position: right; }
 
 .section {
   overflow-y: auto; }

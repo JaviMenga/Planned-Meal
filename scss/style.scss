@@ -132,7 +132,7 @@ main::-webkit-scrollbar-track {
 
 .card-title--style {
     // Text
-    color: $marronOscuro;
+    color: black;
     font-weight: bold;
 }
 
@@ -141,9 +141,10 @@ main::-webkit-scrollbar-track {
     color: $marronOscuro
 }
 
-.card--style:hover {
-    /* Others */
-    transform: scale(1.05, 1.05);
+.modal-content--color {
+    // Visual
+    background-image: url(../images/fondo.png);
+    background-position: right;
 }
 
 // Consejos
