@@ -23,33 +23,34 @@
     <!-- Inicio del Header -->
     <header class="header">
         <!-- barra de navegación -->
-        <nav class="header__menu--fondo navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-brand--size" href="../index.html"><img class="header__img--size" src="../logo/logo.png" alt="logo de la empresa"></a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid navbar--style">
+                <a class="navbar-brand navbar-brand--style" href="index.html"><img src="../logo/logo.png" alt="logo de la empresa" width="60" height="64"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav w-100">
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                    <ul class="navbar-nav w-100 d-flex justify-content-center">
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style active" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3 text-center">
-                            <a class="nav-link header__a--style" href="./recetas.html">Recetas</a>
+                        <li class="nav-item shadow w-100 me-3 text-center">
+                            <a class="nav-link header__a--style" href="./armar_mi_menu.html">Mi menú</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style" href="./consejos.html">Consejos</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style" href="./comunidad.html">Comunidades</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
-                            <a class=" nav-link header__a--style" href="./armar_mi_menu.html">Mi menú</a>
+                        <li class="nav-item shadow w-100 me-3">
+                            <a class=" nav-link header__a--style" href="./recetas.html">Mis recetas</a>
                         </li>
                     </ul>
                     <div class="btn btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn mb-3 me-3"><a href="./usuario.html"><img class="header__img--icono" src="../icons/usuario.png" alt="icono del usuario"></a></button>
-                        <button type="button" class="btn mb-3 me-3"><a href="#"><img class="header__img--icono" src="../icons/carrito.svg" alt="icono del carrito"></a></button>
+                        <button type="button" class="btn ms-3"><a href="./usuario.html"><img class="header__img--icono" src="../icons/usuario.png" alt="icono del usuario"></a></button>
+                        <button type="button" class="btn me-3"><a href="#"><img class="header__img--icono" src="../icons/carrito.svg" alt="icono del carrito"></a></button>
                     </div>
                 </div>
         </nav>
@@ -58,7 +59,7 @@
 
     <h1 class="titulo">Guarda las recetas que más te gusten</h1>
     <main class="container-fluid">
-        <div class="mt-3 mb-4 d-flex flex-row flex-wrap justify-content-center">
+        <div class="mb-4 d-flex flex-row flex-wrap justify-content-center">
             <!-- Receta 1 -->
             <div class="card-header m-2 card--style" style="width: 15rem;">
                 <img src="../images/receta1.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de risotto de hongos con hiervas">
@@ -70,7 +71,7 @@
 
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-dialog modal-dialog modal-xl">
                                 <div class="modal-content modal-content--color">
                                     <div class="modal-header">
                                         <h5 class="modal-title card-title--style" id="exampleModalLabel">Risotto de hongos con hiervas</h5>
@@ -117,11 +118,11 @@
                     <h5 class="card-title card-title--style" style="height: 15vh">Berenjenas empanadas con puré</h5>
                     <div class="card-body d-flex flex-column">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver receta</button>
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal1">Ver receta</button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
                                 <div class="modal-content modal-content--color">
                                     <div class="modal-header">
                                         <h5 class="modal-title card-title--style" id="exampleModalLabel">Berenjenas empanadas con puré</h5>
@@ -129,25 +130,14 @@
                                     </div>
                                     <div class="modal-body text-start">
                                         <ul>
-                                            <li>Pele y pique el ajo, cebolla y echalote.</li>
-                                            <li>Limpie los hongos con un trapo húmedo y retire la parte inferior del pie de ellos y cortelos en láminas</li>
-                                            <li>Ponga a calentar el caldo de verduras.</li>
-                                            <li>En una sartén con paredes altas derrita la manteca junto con el aceite de oliva.</li>
-                                            <li>Agregue el ajo y el echalote.</li>
-                                            <li>Cocine durante 5 minutos.</li>
-                                            <li>Agregue la cebolla.</li>
-                                            <li>Cocine todo hasta transparentar bien. Salpimiente.</li>
-                                            <li>Agregue los hongos.</li>
-                                            <li>Cocine hasta que el agua de los hongos se haya evaporado.</li>
-                                            <li>Incorpore el arroz.</li>
-                                            <li>Cocine hasta que esté transparente. Éste procedimiento se llama nacrar.</li>
-                                            <li>Agregue el vino blanco.</li>
-                                            <li>Deje que se evapore casi en su totalidad.</li>
-                                            <li>Asegúrese de que se haya evaporado el alcohol del vino antes de empezar a trabajar el risotto.</li>
-                                            <li>Vuelva a salpimentar.</li>
-                                            <li>Vaya agregando de a tres cucharas el caldo de verduras y revuelva constantemente el arroz con ayuda de una cuchara de madera (No agregue más caldo hasta que el que el último cucharón incorporado se haya evaporado).</li>
-                                            <li>Dos minutos antes de que éste en su punto justo, agregue la manteca fría y el queso parmesano y mezcle bien.</li>
-                                            <li>Deje reposar y al servir agregar las finas hierbas picadas por encima.</li>
+                                            <li>Lavamos bien las berenjenas, las cortamos en rodajas del mismo grosor y las colocamos en un recipiente con agua y abundante sal. Las dejamos reposar durante media hora para que las berenjenas empanadas fritas
+                                                no queden amargas.</li>
+                                            <li>Pasado el tiempo de reposo, secamos las rodajas de berenjena con papel absorbente y preparamos los ingredientes para rebozarlas. Así pues, en un plato batimos los huevos, en otro colocamos la harina y en un
+                                                tercero el pan rallado. Si quieres, puedes añadir alguna especia que sea de tu agrado al plato del pan rallado y mezclar, como perejil, romero, tomillo u orégano.</li>
+                                            <li>Cuando esté todo listo, pasamos las rodajas primero por el huevo, luego por la harina y, por último, por el pan rallado. Hecho esto, y una vez que el aceite esté caliente, freímos las berenjenas empanadas.</li>
+                                            <li>Reservamos las berenjenas rebozadas fritas sobre papel absorbente para retirar el exceso de aceite y listo. En apenas unos minutos habremos preparado un plato sencillo y lleno de sabor, perfecto para servir
+                                                durante la cena con salsa de tomate y crema agria, como entrante o acompañamiento de una pechuga de pollo a la plancha o filetes de tofu si seguimos una dieta vegetariana.</li>
+
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
@@ -163,16 +153,16 @@
             </div>
             <!-- Receta 3 -->
             <div class="card-header m-2 card--style" style="width: 15rem;">
-                <img src="../images/receta3.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de risotto de hongos con hiervas">
+                <img src="../images/receta3.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de tarta de Jamón y Queso">
                 <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Tarta de Jamón y Queso</h5>
                     <div class="card-body d-flex flex-column">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver receta</button>
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal2">Ver receta</button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
                                 <div class="modal-content modal-content--color">
                                     <div class="modal-header">
                                         <h5 class="modal-title card-title--style" id="exampleModalLabel">Tarta de Jamón y Queso</h5>
@@ -180,25 +170,25 @@
                                     </div>
                                     <div class="modal-body text-start">
                                         <ul>
-                                            <li>Pele y pique el ajo, cebolla y echalote.</li>
-                                            <li>Limpie los hongos con un trapo húmedo y retire la parte inferior del pie de ellos y cortelos en láminas</li>
-                                            <li>Ponga a calentar el caldo de verduras.</li>
-                                            <li>En una sartén con paredes altas derrita la manteca junto con el aceite de oliva.</li>
-                                            <li>Agregue el ajo y el echalote.</li>
-                                            <li>Cocine durante 5 minutos.</li>
-                                            <li>Agregue la cebolla.</li>
-                                            <li>Cocine todo hasta transparentar bien. Salpimiente.</li>
-                                            <li>Agregue los hongos.</li>
-                                            <li>Cocine hasta que el agua de los hongos se haya evaporado.</li>
-                                            <li>Incorpore el arroz.</li>
-                                            <li>Cocine hasta que esté transparente. Éste procedimiento se llama nacrar.</li>
-                                            <li>Agregue el vino blanco.</li>
-                                            <li>Deje que se evapore casi en su totalidad.</li>
-                                            <li>Asegúrese de que se haya evaporado el alcohol del vino antes de empezar a trabajar el risotto.</li>
-                                            <li>Vuelva a salpimentar.</li>
-                                            <li>Vaya agregando de a tres cucharas el caldo de verduras y revuelva constantemente el arroz con ayuda de una cuchara de madera (No agregue más caldo hasta que el que el último cucharón incorporado se haya evaporado).</li>
-                                            <li>Dos minutos antes de que éste en su punto justo, agregue la manteca fría y el queso parmesano y mezcle bien.</li>
-                                            <li>Deje reposar y al servir agregar las finas hierbas picadas por encima.</li>
+                                            <li>
+                                                La masa para la tarta puedes comprarla ya preparada en cualquier supermercado o hacerla tú mismo siguiendo los pasos de esta sencilla receta de masa para empanadas. Cuando la tengas, engrasa el molde que vayas a utilizar y fórralo con la masa. Para ello,
+                                                deberás estirarla previamente con un rodillo hasta formar una capa fina. Recuerda que deberás cubrir la tarta con más masa, por lo que si la haces ten en cuenta este detalle para no quedarte sin masa.
+                                            </li>
+                                            <li>
+                                                Reserva el molde con la masa y disponte a preparar el relleno. Para hacerlo, deberás cocer tres huevos y batir los otros cuatro. Luego, pela el tomate, retira las semillas y córtalo en cuadrados pequeños
+                                            </li>
+                                            <li>
+                                                Coge un recipiente y mezcla el jamón, el queso, el tomate y los huevos cocidos troceados. Después, añade sal y pimienta a los huevos batidos y mézclalos con el resto de ingredientes haciendo movimientos envolventes.
+                                            </li>
+                                            <li>
+                                                Cuando tengas el relleno listo, viértelo en el molde donde tienes la masa y repártelo por toda la tarta. Después, coloca otra lámina fina de masa para taparla y ciérrala mediante pliegues, como si se trata de empanadas caseras.
+                                            </li>
+                                            <li>
+                                                Pinta la tarta de jamón y queso con huevo batido, pínchala con un tenedor por todas partes y hornéala a 180ºC hasta que esté dorada.
+                                            </li>
+                                            <li>
+                                                Cuando esté lista, retira la tarta de jamón, queso, tomate y huevo del horno y sírvela a modo de aperitivo. Si te sobró masa, puedes preparar unas deliciosas empanadillas caseras y hacer el entrante más completo.
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
@@ -212,107 +202,253 @@
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem;">
-                <img src="../images/receta3.jpg" class="card-img-top img-fluid card__img--tamaño" alt="foto de tarta de jamon y queso">
-                <div class="card-body">
-                    <h5 class="card-title card-title--style" style="height: 15vh">Tarta de Jamón y Queso</h5>
-                    <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
-                        <a href="#" class="btn btn-color a-style m-1">Agregar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem;">
-                <img src="../images/receta4.jpg" class="card-img-top img-fluid card__img--tamaño" alt="foto de zucchini condimentado">
+            <!-- Receta 4 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta4.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de zucchini condimentado">
                 <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Zucchini condimentado</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal3">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Zucchini condimentado</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem;">
-                <img src="../images/receta6.jpg" class="card-img-top img-fluid card__img--tamaño" alt="foto de milanesa de ternera con ensalada fresca">
+            <!-- Receta 5 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta6.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de milanesa de ternera con ensalada">
                 <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Milanesa de ternera con ensalada fresca</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal4">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Milanesa de ternera con ensalada fresca</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class=" card-header m-2 card--style card--style:hover" style="width: 15rem; ">
-                <img src="../images/receta7.jpg " class="card-img-top img-fluid card__img--tamaño " alt="foto de hongos fritos con huevos poyet ">
-                <div class="card-body ">
+            <!-- Receta 6 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta7.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de hongos fritos con huevos poyet">
+                <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Hongos fritos con huevos poyet</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal5">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Hongos fritos con huevos poyet</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem; ">
-                <img src="../images/receta8.jpg " class="card-img-top img-fluid card__img--tamaño " alt="foto de capelletti de verduras con salsa blanca ">
-                <div class="card-body ">
+            <!-- Receta 7 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta8.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de capelletti de verduras con salsa blanca">
+                <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Capelletti de verduras con salsa blanca</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal6">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Capelletti de verduras con salsa blanca</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem; ">
-                <img src="../images/receta13.jpg " class="card-img-top mg-fluid card__img--tamaño " alt="foto de ensalada de lentejas ">
-                <div class="card-body ">
+            <!-- Receta 8 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta13.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de ensalada de lentejas">
+                <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Ensalada de lentejas</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal7">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Ensalada de lentejas</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem; ">
-                <img src="../images/receta10.jpg " class="card-img-top img-fluid card__img--tamaño " alt="foto de omelette caprese ">
-                <div class="card-body ">
+            <!-- Receta 9 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta10.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de omelette caprese">
+                <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Omelette caprese</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal8">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Omelette caprese</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
-            <div class="card-header m-2 card--style card--style:hover" style="width: 15rem; ">
-                <img src="../images/receta11.jpg " class="card-img-top img-fluid card__img--tamaño " alt="foto de tortilla de espinaca y ricota ">
-                <div class="card-body ">
+            <!-- Receta 10 -->
+            <div class="card-header m-2 card--style" style="width: 15rem;">
+                <img src="../images/receta11.jpg" class="card-img-top img-fluid card__img--tamaño" alt="Foto de tortilla de espinaca y ricota">
+                <div class="card-body">
                     <h5 class="card-title card-title--style" style="height: 15vh">Tortilla de espinaca y ricota</h5>
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-color a-style m-1">Ver Receta</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-color m-1" data-bs-toggle="modal" data-bs-target="#exampleModal9">Ver receta</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-modal-dialog modal-xl">
+                                <div class="modal-content modal-content--color">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">Tortilla de espinaca y ricota</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <ul>
+                                            <li>Aquí va la receta paso a paso</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Volver</button>
+                                        <button type="button" class="btn btn-color m-1">Agregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-color a-style m-1">Agregar</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- <main> -->
-    <!-- <h1 class="titulo ">Escoge las recetas que van a formar parte de tu menú!</h1> -->
-    <!-- Fin de Sección -->
-    <!-- </main> -->
     <!-- Inicio del Footer -->
-    <footer class="footer ">
+    <footer class="footer">
         <!-- Redes Sociales -->
         <div class="footer__redesSociales ">
-            <a href="https://www.twitter.com/ " target="blank ">
-                <img class="footer__iconosSociales twitter " src="../icons/twitter.png " alt="logo de twitter "></a>
-            <a href="https://www.facebook.com/ " target="blank ">
-                <img class="footer__iconosSociales facebook " src="../icons/facebook.png " alt="logo de facebook "></a>
-            <a href="https://www.instagram.com/ " target="blank ">
-                <img class="footer__iconosSociales instagram " src="../icons/instagram.png " alt="logo de instagram "></a>
-            <a href="https://www.whatsapp.com/ " target="blank ">
-                <img class="footer__iconosSociales whatsapp " src="../icons/whatsapp.png " alt="logo de whatsapp "></a>
-            <a href="https://www.outlook.com/ " target="blank ">
-                <img class="footer__iconosSociales mail " src="../icons/mail.png " alt="logo de mail "></a>
+            <a href="https://www.twitter.com/" target="blank">
+                <img class="footer__iconosSociales twitter " src="../icons/twitter.png" alt="logo de twitter"></a>
+            <a href="https://www.facebook.com/" target="blank">
+                <img class="footer__iconosSociales facebook " src="../icons/facebook.png" alt="logo de facebook"></a>
+            <a href="https://www.instagram.com/" target="blank">
+                <img class="footer__iconosSociales instagram" src="../icons/instagram.png" alt="logo de instagram"></a>
+            <a href="https://api.whatsapp.com/send?phone=[54][1111111111]" target="blank">
+                <img class="footer__iconosSociales whatsapp" src="../icons/whatsapp.png" alt="logo de whatsapp"></a>
+            <a href="https://www.outlook.com/" target="blank">
+                <img class="footer__iconosSociales mail" src="../icons/mail.png" alt="logo de mail"></a>
         </div>
     </footer>
     <!-- Fin del Footer -->

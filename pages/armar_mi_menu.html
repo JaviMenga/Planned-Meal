@@ -23,33 +23,34 @@
     <!-- Inicio del Header -->
     <header class="header">
         <!-- barra de navegación -->
-        <nav class="header__menu--fondo navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-brand--size" href="../index.html"><img class="header__img--size" src="../logo/logo.png" alt="logo de la empresa"></a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid navbar--style">
+                <a class="navbar-brand navbar-brand--style" href="index.html"><img src="../logo/logo.png" alt="logo de la empresa" width="60" height="64"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav w-100">
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                    <ul class="navbar-nav w-100 d-flex justify-content-center">
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style active" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3 text-center">
-                            <a class="nav-link header__a--style" href="./recetas.html">Recetas</a>
+                        <li class="nav-item shadow w-100 me-3 text-center">
+                            <a class="nav-link header__a--style" href="./armar_mi_menu.html">Mi menú</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style" href="./consejos.html">Consejos</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
+                        <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style" href="./comunidad.html">Comunidades</a>
                         </li>
-                        <li class="nav-item header__botonera--fondo rounded shadow w-100 mb-3 me-3">
-                            <a class=" nav-link header__a--style" href="./armar_mi_menu.html">Mi menú</a>
+                        <li class="nav-item shadow w-100 me-3">
+                            <a class=" nav-link header__a--style" href="./recetas.html">Mis recetas</a>
                         </li>
                     </ul>
                     <div class="btn btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn mb-3 me-3"><a href="./usuario.html"><img class="header__img--icono" src="../icons/usuario.png" alt="icono del usuario"></a></button>
-                        <button type="button" class="btn mb-3 me-3"><a href="#"><img class="header__img--icono" src="../icons/carrito.svg" alt="icono del carrito"></a></button>
+                        <button type="button" class="btn ms-3"><a href="./usuario.html"><img class="header__img--icono" src="../icons/usuario.png" alt="icono del usuario"></a></button>
+                        <button type="button" class="btn me-3"><a href="#"><img class="header__img--icono" src="../icons/carrito.svg" alt="icono del carrito"></a></button>
                     </div>
                 </div>
         </nav>
@@ -59,6 +60,31 @@
     <!-- Inicio de Sección -->
     <section class="seccion-miMenu">
         <h1 class="titulo">Elegí el tipo de menú que querés que armemos por vos.</h1>
+
+
+        <div class="dropdown d-flex flex-row justify-content-center mb-3">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Semanal o mensual?
+                </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Semanal</a></li>
+                <li><a class="dropdown-item" href="#">Mensual</a></li>
+            </ul>
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Qué recetas querés incluir?
+                </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Un poco de todo</a></li>
+                <li><a class="dropdown-item" href="#">Vegano</a></li>
+                <li><a class="dropdown-item" href="#">Vegetariano</a></li>
+                <li><a class="dropdown-item" href="#">Celíaco</a></li>
+                <li><a class="dropdown-item" href="#">Intolerante a la lactosa</a></li>
+            </ul>
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Querés generar una lista de compras sobre este menú?
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Si</a></li>
+                <li><a class="dropdown-item" href="#">No</a></li>
+            </ul>
+        </div>
         <div class="calendario">
             <img class="miCalendario" src="../images/calendario.jfif " alt="menu semanal">
         </div>
@@ -78,8 +104,8 @@
                 <img class="footer__iconosSociales facebook" src="../icons/facebook.png" alt="logo de facebook"></a>
             <a href="https://www.instagram.com/" target="blank">
                 <img class="footer__iconosSociales instagram" src="../icons/instagram.png" alt="logo de instagram"></a>
-            <a href="https://www.whatsapp.com/" target="blank">
-                <img class="footer__iconosSociales whatsapp" src="../icons/whatsapp.png" alt="logo de whatsapp"></a>
+            <a href="https://api.whatsapp.com/send?phone=[54][1111111111]" target="blank ">
+                <img class="footer__iconosSociales whatsapp " src="../icons/whatsapp.png " alt="logo de whatsapp "></a>
             <a href="https://www.outlook.com/" target="blank">
                 <img class="footer__iconosSociales mail" src="../icons/mail.png" alt="logo de mail"></a>
         </div>

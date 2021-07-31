@@ -22,7 +22,7 @@ body {
 main,
 section {
     /* Box Model */
-    height: 75vh;
+    height: 80vh;
 }
 
 main {
@@ -30,16 +30,15 @@ main {
     overflow-y: auto;
 }
 
-h2,
 h4,
 .carousel-caption--style {
     // Text
-    color: $marronOscuro;
+    color: #000000;
     font-weight: bold;
     /* Visual */
     background-color: $blancoHumo;
     /* Others */
-    opacity: .7;
+    opacity: .8;
 }
 
 h4 {
@@ -114,6 +113,8 @@ main::-webkit-scrollbar-track {
 
 // Recetas
 .card--style {
+    // Box Model
+    height: 72vh;
     // Visual
     box-shadow: 0.125rem 0.125rem 0.625rem $marronOscuro
 }
@@ -132,13 +133,13 @@ main::-webkit-scrollbar-track {
 
 .card-title--style {
     // Text
-    color: black;
+    color: #000000;
     font-weight: bold;
 }
 
 .a-style {
     // Text
-    color: $marronOscuro
+    color: black;
 }
 
 .modal-content--color {
@@ -155,9 +156,7 @@ main::-webkit-scrollbar-track {
 
 .titulo {
     // Box Model
-    margin-bottom: 1rem;
-    /* Visual */
-    color: $marronOscuro;
+    margin-bottom: 3rem;
 }
 
 .contenedorConsejos {
@@ -347,16 +346,15 @@ main::-webkit-scrollbar-track {
     /* Text */
     text-align: center;
     /* Visual */
-    background-color: $marronClaro;
+    background-color: inherit;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     border-radius: $bradius1;
     border: 0 solid $marronOscuro;
-    // Others
-    opacity: .7;
 }
 
- ::placeholder {
-    /* Visual */
-    color: $marronOscuro;
+.newsletter {
+    // Visual
+    box-shadow: none;
 }
 
 label {
@@ -366,7 +364,6 @@ label {
     /* Text */
     text-align: left;
     font-weight: bold;
-    color: $marronOscuro;
 }
 
 // Mi menu

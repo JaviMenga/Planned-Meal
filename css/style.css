@@ -1,22 +1,11 @@
 @charset "UTF-8";
-.header__menu--fondo {
+.navbar--style {
   /* Visual */
   background-image: url(../images/fondo.png);
   background-position: right; }
 
-.navbar-brand--size {
-  width: 100px;
-  margin: 0 2rem 0 2rem; }
-
-.header__img--size {
-  /* Box model */
-  width: 100%; }
-
-.header__botonera--fondo {
-  /* Visual */
-  background-color: #A66B38;
-  /* Others */
-  opacity: 1; }
+.navbar-brand--style {
+  margin: 0 3.7rem 0 2rem; }
 
 .header__a--style {
   /* Text */
@@ -25,8 +14,7 @@
     /* Box Model */
     border-radius: 0.125rem;
     /* Visual */
-    background-image: linear-gradient(to left, #BABCBF, #A66B38);
-    color: #401202; }
+    background-image: linear-gradient(to left, #BABCBF, #A66B38); }
 
 .header__img--icono {
   width: 20px; }
@@ -70,20 +58,19 @@ body {
 main,
 section {
   /* Box Model */
-  height: 75vh; }
+  height: 80vh; }
 
 main {
   overflow-y: auto; }
 
-h2,
 h4,
 .carousel-caption--style {
-  color: #401202;
+  color: #000000;
   font-weight: bold;
   /* Visual */
   background-color: #BABCBF;
   /* Others */
-  opacity: .7; }
+  opacity: .8; }
 
 h4 {
   border-top-left-radius: 0.125rem;
@@ -147,6 +134,7 @@ main::-webkit-scrollbar-track {
   background-image: url(../images/receta4.jpg); }
 
 .card--style {
+  height: 72vh;
   box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
 
 .card__img--tamaño {
@@ -157,11 +145,11 @@ main::-webkit-scrollbar-track {
   background-color: #BABCBF; }
 
 .card-title--style {
-  color: black;
+  color: #000000;
   font-weight: bold; }
 
 .a-style {
-  color: #401202; }
+  color: black; }
 
 .modal-content--color {
   background-image: url(../images/fondo.png);
@@ -171,9 +159,7 @@ main::-webkit-scrollbar-track {
   overflow-y: auto; }
 
 .titulo {
-  margin-bottom: 1rem;
-  /* Visual */
-  color: #401202; }
+  margin-bottom: 3rem; }
 
 .contenedorConsejos {
   /* Box Model */
@@ -332,14 +318,13 @@ main::-webkit-scrollbar-track {
   /* Text */
   text-align: center;
   /* Visual */
-  background-color: #A66B38;
+  background-color: inherit;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.125rem;
-  border: 0 solid #401202;
-  opacity: .7; }
+  border: 0 solid #401202; }
 
-::placeholder {
-  /* Visual */
-  color: #401202; }
+.newsletter {
+  box-shadow: none; }
 
 label {
   /* Box Model */
@@ -347,8 +332,7 @@ label {
   display: inline-block;
   /* Text */
   text-align: left;
-  font-weight: bold;
-  color: #401202; }
+  font-weight: bold; }
 
 .seccion-miMenu {
   overflow-y: auto; }

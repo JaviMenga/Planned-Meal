@@ -1,26 +1,13 @@
 @import "variables.scss";
-.header__menu--fondo {
+.navbar--style {
     /* Visual */
     background-image: url(../images/fondo.png);
     background-position: right;
 }
 
-.navbar-brand--size {
+.navbar-brand--style {
     // Box Model
-    width: 100px;
-    margin: 0 2rem 0 2rem;
-}
-
-.header__img--size {
-    /* Box model */
-    width: ($width);
-}
-
-.header__botonera--fondo {
-    /* Visual */
-    background-color: $marronClaro;
-    /* Others */
-    opacity: 1;
+    margin: 0 3.7rem 0 2rem;
 }
 
 .header__a--style {
@@ -31,7 +18,6 @@
         border-radius: $bradius1;
         /* Visual */
         background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
-        color: $marronOscuro;
     }
 }
 
