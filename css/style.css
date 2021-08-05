@@ -17,29 +17,24 @@
     background-image: linear-gradient(to left, #BABCBF, #A66B38); }
 
 .header__img--icono {
-  width: 20px; }
+  width: 17px; }
 
-.footer {
+footer {
   /* Box Model */
-  grid-area: footer;
-  padding-top: 0.625em;
-  padding-bottom: 0.2em;
-  height: 8vh;
+  padding: 0.625rem 0 0.625rem 0;
   /* Visual */
   background-image: url(../images/fondo.png);
   background-position: right; }
 
 .footer__redesSociales {
+  /* Box Model */
+  margin-right: .5em;
   /* Text */
   text-align: right; }
 
 .footer__iconosSociales {
   /* Box Model */
   width: 25px; }
-
-.mail {
-  /* Box Model */
-  margin-right: .5em; }
 
 * {
   /* Box Model */
@@ -48,19 +43,17 @@
   padding: 0; }
 
 body {
+  max-height: 100vh;
   /* Text */
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   /* Visual */
   background-image: url(../images/fondo.png); }
 
-/* --------------------------------------PERTENECE A CUERPO-SECCION------------------------------------ */
-main,
-section {
-  /* Box Model */
-  height: 80vh; }
-
+/* ---------------------------------------------------------PERTENECE A CUERPO-SECCION------------------------------------------------------- */
 main {
+  /* Box Model */
+  height: 77vh;
   overflow-y: auto; }
 
 h4,
@@ -69,12 +62,10 @@ h4,
   font-weight: bold;
   /* Visual */
   background-color: #BABCBF;
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
   /* Others */
   opacity: .8; }
-
-h4 {
-  border-top-left-radius: 0.125rem;
-  border-top-right-radius: 0.125rem; }
 
 .busquedaConsejos::-webkit-scrollbar,
 main::-webkit-scrollbar {
@@ -103,9 +94,7 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-track {
   border-radius: 0.625rem; }
 
-.carousel-item-img1 {
-  /* Box Model */
-  height: 73vh;
+.carousel-item-receta9 {
   font-weight: bold;
   font-size: 1.1rem;
   /* Visual */
@@ -113,9 +102,7 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(../images/receta9.jpg); }
 
-.carousel-item-img2 {
-  /* Box Model */
-  height: 73vh;
+.carousel-item-asado {
   font-weight: bold;
   font-size: 1.1rem;
   /* Visual */
@@ -123,9 +110,7 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(../images/asado.jpg); }
 
-.carousel-item-img3 {
-  /* Box Model */
-  height: 73vh;
+.carousel-item-receta4 {
   font-weight: bold;
   font-size: 1.1rem;
   /* Visual */
@@ -135,31 +120,29 @@ main::-webkit-scrollbar-track {
 
 .card--style {
   height: 72vh;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
+  box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
 
 .card__img--tamaño {
   height: 30vh;
   border-radius: 0.125rem; }
 
 .btn-color {
-  background-color: #BABCBF; }
+  background-color: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .card-title--style {
   color: #000000;
   font-weight: bold; }
 
 .a-style {
-  color: black; }
+  color: #000000; }
 
 .modal-content--color {
   background-image: url(../images/fondo.png);
   background-position: right; }
 
-.section {
-  overflow-y: auto; }
-
 .titulo {
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
 
 .contenedorConsejos {
   /* Box Model */
@@ -173,14 +156,13 @@ main::-webkit-scrollbar-track {
   /* Box Model */
   display: inline-block;
   width: 80vw;
-  height: 250px;
+  height: 21.875rem;
   margin: 0.625rem;
   overflow-y: scroll;
   /* Visual */
-  background-color: #BABCBF;
-  color: #401202;
+  background-color: transparent;
   border-radius: 0.125rem;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202;
+  box-shadow: 0.125rem 0.125rem 0.625rem #000000;
   opacity: .7; }
 
 .busqueda {
@@ -190,11 +172,11 @@ main::-webkit-scrollbar-track {
   text-align: center;
   /* Visual */
   border: none;
-  background-color: #BABCBF;
+  background-color: transparent;
   border-radius: 0.125rem;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   outline: none;
-  opacity: .7; }
+  opacity: .8; }
 
 .busqueda:hover,
 .busquedaConsejos:hover {
@@ -225,12 +207,11 @@ main::-webkit-scrollbar-track {
   margin: .7rem;
   /* Text */
   font-weight: bold;
-  color: #401202;
   /* Visual */
   background-color: #BABCBF;
   border-radius: 0.125rem;
   background-size: cover;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
+  box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
 
 .comunidades:hover {
   /* Others */
@@ -321,21 +302,42 @@ main::-webkit-scrollbar-track {
   background-color: inherit;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.125rem;
-  border: 0 solid #401202; }
+  border: none; }
 
 .newsletter {
   box-shadow: none; }
 
-label {
+.label-formulario {
   /* Box Model */
   width: 6.25rem;
   display: inline-block;
   /* Text */
-  text-align: left;
+  text-align: left; }
+
+label {
+  /* Text */
   font-weight: bold; }
 
-.seccion-miMenu {
-  overflow-y: auto; }
+.filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.filters-container {
+  margin: 0 0.5rem 0.625rem 0.5rem;
+  padding: 0.3125rem;
+  width: 25vw;
+  height: 15vh;
+  background-color: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.125rem; }
+
+.filters-label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
 
 .miCalendario {
   /* Box Model */
@@ -343,7 +345,7 @@ label {
   height: 50vh;
   /* Visual */
   border-radius: 0.125rem;
-  box-shadow: 0.125rem 0.125rem 0.625rem #401202; }
+  box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
 
 .pdf {
   /* Box Model */
@@ -351,15 +353,15 @@ label {
 
 .descargarPdf {
   /* Box model */
-  border-radius: 0.325rem;
-  background-color: #A66B38;
+  border-radius: 0.125rem;
   padding: .5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   /* Text */
   font-weight: bold;
   /* Visual */
   border: none;
-  /* Others */
-  opacity: .8; }
+  background-color: transparent; }
 
 .textoDescarga {
   margin: 0; }
@@ -367,16 +369,19 @@ label {
 .section-404 {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  height: 80vh;
+  justify-content: center; }
 
 .h1-404 {
   font-size: 2rem; }
 
 .img-404 {
+  width: 18.75rem;
   opacity: .9; }
 
 .a-404 {
   display: block;
   text-decoration: none;
-  color: #401202;
+  color: #000000;
   font-size: 2rem; }

@@ -57,25 +57,24 @@
     </header>
     <!-- Fin de Header -->
 
-    <!-- Inicio de Sección. Formulario de ingreso -->
-    <section>
+    <!-- Inicio de Main. Formulario de ingreso -->
+    <main>
         <h1 class="titulo">Información de Usuario</h1>
         <form class="contenedorFormulario" action="#">
-            <!-- falta agregar el action del <form> -->
             <div>
-                <label for="nombre">Nombre</label>
+                <label class="label-formulario" for="nombre">Nombre</label>
                 <input class="formulario nombre" type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
             </div>
             <div>
-                <label for="apellido">Apellido</label>
+                <label class="label-formulario" for="apellido">Apellido</label>
                 <input class="formulario apellido" type="text" name="apellido" id="apellido" placeholder="Escribí tu apellido">
             </div>
             <div>
-                <label for="edad">Edad</label>
+                <label class="label-formulario" for="edad">Edad</label>
                 <input class="formulario edad" type="number" name="edad" id="edad">
             </div>
             <div>
-                <label for="nacionalidad">Nacionalidad</label>
+                <label class="label-formulario" for="nacionalidad">Nacionalidad</label>
                 <select class="formulario nacionalidad" name="nacionalidad" id="nacionalidad">
                     <option value="Argentina">Argentina</option>
                     <option value="Argentina">Chile</option>
@@ -83,15 +82,15 @@
                 </select>
             </div>
             <div>
-                <label for="email">Mail</label>
+                <label class="label-formulario" for="email">Mail</label>
                 <input class="formulario email" type="email" name="email" id="email" placeholder="Escribí tu email" required>
             </div>
             <div>
-                <label for="contraseña">Contraseña</label>
+                <label class="label-formulario" for="contraseña">Contraseña</label>
                 <input class="formulario contraseña" type="password" name="contraseña" id="contraseña" placeholder="Escribí tu contraseña" required minlength="6" maxlength="10">
             </div>
             <div>
-                <label for="newsletter">Desea recibir Newsletter?</label>
+                <label class="label-formulario" for="newsletter">Desea recibir Newsletter?</label>
                 <input class="formulario newsletter" type="checkbox" name="newsletter" id="newsletter" value="Enviar Newsletter">
             </div>
         </form>
@@ -99,26 +98,27 @@
             <input class="formulario limpiarFormulario" type="reset" value="Borrar">
             <input class="formulario enviar" type="submit" value="Enviar">
         </form>
-    </section>
-    <!-- Fin de Sección -->
+    </main>
+    <!-- Fin de Main -->
 
     <!-- Inicio del Footer -->
-    <footer class="footer">
+    <footer>
         <!-- Redes Sociales -->
-        <div class="footer__redesSociales ">
+        <div class="footer__redesSociales">
             <a href="https://www.twitter.com/" target="blank">
-                <img class="footer__iconosSociales twitter" src="../icons/twitter.png " alt="logo de twitter"></a>
+                <img class="footer__iconosSociales" src="../icons/twitter.png" alt="logo de twitter"></a>
             <a href="https://www.facebook.com/" target="blank">
-                <img class="footer__iconosSociales facebook" src="../icons/facebook.png " alt="logo de facebook"></a>
+                <img class="footer__iconosSociales" src="../icons/facebook.png" alt="logo de facebook"></a>
             <a href="https://www.instagram.com/" target="blank">
-                <img class="footer__iconosSociales instagram" src="../icons/instagram.png " alt="logo de instagram"></a>
+                <img class="footer__iconosSociales" src="../icons/instagram.png" alt="logo de instagram"></a>
             <a href="https://api.whatsapp.com/send?phone=[54][1111111111]" target="blank ">
-                <img class="footer__iconosSociales whatsapp " src="../icons/whatsapp.png " alt="logo de whatsapp "></a>
+                <img class="footer__iconosSociales" src="../icons/whatsapp.png " alt="logo de whatsapp"></a>
             <a href="https://www.outlook.com/" target="blank">
-                <img class="footer__iconosSociales mail" src="../icons/mail.png " alt="logo de mail"></a>
+                <img class="footer__iconosSociales" src="../icons/mail.png" alt="logo de mail"></a>
         </div>
     </footer>
     <!-- Fin de Footer -->
+
     <!-- Link Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </body>

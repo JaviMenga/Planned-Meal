@@ -57,33 +57,28 @@
     </header>
     <!-- Fin del Header -->
 
-    <!-- Inicio de Sección -->
-    <section class="seccion-miMenu">
+    <!-- Inicio de Main -->
+    <main>
         <h1 class="titulo">Elegí el tipo de menú que querés que armemos por vos.</h1>
-
-
-        <div class="dropdown d-flex flex-row justify-content-center mb-3">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Semanal o mensual?
-                </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Semanal</a></li>
-                <li><a class="dropdown-item" href="#">Mensual</a></li>
-            </ul>
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Qué recetas querés incluir?
-                </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Un poco de todo</a></li>
-                <li><a class="dropdown-item" href="#">Vegano</a></li>
-                <li><a class="dropdown-item" href="#">Vegetariano</a></li>
-                <li><a class="dropdown-item" href="#">Celíaco</a></li>
-                <li><a class="dropdown-item" href="#">Intolerante a la lactosa</a></li>
-            </ul>
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">¿Querés generar una lista de compras sobre este menú?
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Si</a></li>
-                <li><a class="dropdown-item" href="#">No</a></li>
-            </ul>
+        <div class="filters">
+            <div class=" filters-container periodicity-container">
+                <label for="periodicity" class="filters-label">Formato del Menú:</label>
+                <input class="periodicity" type="radio" name="periodicity" id="periodicity" value="sem" checked>Semanal
+                <input class="periodicity" type="radio" name="periodicity" id="periodicity" value="men">Mensual
+            </div>
+            <div class="filters-container type-container">
+                <label for="type" class="filters-label">¿Qué recetas incluir?</label>
+                <input class="type" type="checkbox" name="type" id="type" value="veggie" checked>Vegetariano
+                <input class="type" type="checkbox" name="type" id="type" value="vegan">Vegano
+                <input class="type" type="checkbox" name="type" id="type" value="celiac">Celíaco
+                <input class="type" type="checkbox" name="type" id="type" value="lactoseless">Deslactosado
+                <input class="type" type="checkbox" name="type" id="type" value="carnivorous">Carnívoro
+            </div>
+            <div class="filters-container shop-list-container">
+                <label for="shop-list" class="filters-label">¿Querés generar lista de compras?</label>
+                <input class="shop-list" type="radio" name="shop-list" id="shop-list" value="si" checked>Si
+                <input class="shop-list" type="radio" name="shop-list" id="shop-list" value="no">No
+            </div>
         </div>
         <div class="calendario">
             <img class="miCalendario" src="../images/calendario.jfif " alt="menu semanal">
@@ -91,26 +86,27 @@
         <form class="pdf" action="../images/calendario.jfif">
             <button class="descargarPdf"><p class="textoDescarga">Descargar PDF</p></button>
         </form>
-    </section>
-    <!-- Fin de Sección -->
+    </main>
+    <!-- Fin de Main -->
 
     <!-- Inicio del Footer -->
-    <footer class="footer">
+    <footer>
         <!-- Redes Sociales -->
         <div class="footer__redesSociales">
             <a href="https://www.twitter.com/" target="blank">
-                <img class="footer__iconosSociales twitter" src="../icons/twitter.png" alt="logo de twitter"></a>
+                <img class="footer__iconosSociales" src="../icons/twitter.png" alt="logo de twitter"></a>
             <a href="https://www.facebook.com/" target="blank">
-                <img class="footer__iconosSociales facebook" src="../icons/facebook.png" alt="logo de facebook"></a>
+                <img class="footer__iconosSociales" src="../icons/facebook.png" alt="logo de facebook"></a>
             <a href="https://www.instagram.com/" target="blank">
-                <img class="footer__iconosSociales instagram" src="../icons/instagram.png" alt="logo de instagram"></a>
+                <img class="footer__iconosSociales" src="../icons/instagram.png" alt="logo de instagram"></a>
             <a href="https://api.whatsapp.com/send?phone=[54][1111111111]" target="blank ">
-                <img class="footer__iconosSociales whatsapp " src="../icons/whatsapp.png " alt="logo de whatsapp "></a>
+                <img class="footer__iconosSociales" src="../icons/whatsapp.png " alt="logo de whatsapp"></a>
             <a href="https://www.outlook.com/" target="blank">
-                <img class="footer__iconosSociales mail" src="../icons/mail.png" alt="logo de mail"></a>
+                <img class="footer__iconosSociales" src="../icons/mail.png" alt="logo de mail"></a>
         </div>
     </footer>
     <!-- Fin del Footer -->
+
     <!-- Link Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </body>
