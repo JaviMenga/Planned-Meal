@@ -15,7 +15,7 @@ body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     /* Visual */
-    background-image: url(../images/fondo.png);
+    background-image: url(/multimedia/images/fondo.png);
 }
 
 
@@ -87,19 +87,19 @@ main::-webkit-scrollbar-track {
 .carousel-item-receta9 {
     @include carousel;
     // Visual
-    background-image: url(../images/receta9.jpg);
+    background-image: url(/multimedia/images/receta9.jpg);
 }
 
 .carousel-item-asado {
     @include carousel;
     // Visual
-    background-image: url(../images/asado.jpg);
+    background-image: url(/multimedia/images/asado.jpg);
 }
 
 .carousel-item-receta4 {
     @include carousel;
     // Visual
-    background-image: url(../images/receta4.jpg);
+    background-image: url(/multimedia/images/receta4.jpg);
 }
 
 // Recetas
@@ -137,7 +137,7 @@ main::-webkit-scrollbar-track {
 
 .modal-content--color {
     // Visual
-    background-image: url(../images/fondo.png);
+    background-image: url(/multimedia/images/fondo.png);
     background-position: right;
 }
 
@@ -234,77 +234,77 @@ main::-webkit-scrollbar-track {
 
 .asado {
     /* Visual */
-    background-image: url(../images/asado.jpg);
+    background-image: url(/multimedia/images/asado.jpg);
 }
 
 .veganos {
     /* Visual */
-    background-image: url(../images/vegano.jpg);
+    background-image: url(/multimedia/images/vegano.jpg);
 }
 
 .vegetarianos {
     /* Visual */
-    background-image: url(../images/vegetariano.jpg);
+    background-image: url(/multimedia/images/vegetariano.jpg);
 }
 
 .lactosa {
     /* Visual */
-    background-image: url(../images/lactosa.jpg);
+    background-image: url(/multimedia/images/lactosa.jpg);
 }
 
 .celiacos {
     /* Visual */
-    background-image: url(../images/celiaco.jpg);
+    background-image: url(/multimedia/images/celiaco.jpg);
 }
 
 .palta {
     /* Visual */
-    background-image: url(../images/palta.jpg);
+    background-image: url(/multimedia/images/palta.jpg);
 }
 
 .regional {
     /* Visual */
-    background-image: url(../images/comida-regional.jpg);
+    background-image: url(/multimedia/images/comida-regional.jpg);
 }
 
 .latino {
     /* Visual */
-    background-image: url(../images/comida-latina.jpg);
+    background-image: url(/multimedia/images/comida-latina.jpg);
 }
 
 .arabe {
     /* Visual */
-    background-image: url(../images/falafel.jpg);
+    background-image: url(/multimedia/images/falafel.jpg);
 }
 
 .arabe {
     /* Visual */
-    background-image: url(../images/falafel.jpg);
+    background-image: url(/multimedia/images/falafel.jpg);
 }
 
 .pizza-time {
     /* Visual */
-    background-image: url(../images/pizza.jpg);
+    background-image: url(/multimedia/images/pizza.jpg);
 }
 
 .carnes-blancas {
     /* Visual */
-    background-image: url(../images/pollo.jpg);
+    background-image: url(/multimedia/images/pollo.jpg);
 }
 
 .postres {
     /* Visual */
-    background-image: url(../images/postre.jpg);
+    background-image: url(/multimedia/images/postre.jpg);
 }
 
 .comida-china {
     /* Visual */
-    background-image: url(../images/comida-china.jpg);
+    background-image: url(/multimedia/images/comida-china.jpg);
 }
 
 .comida-mexicana {
     /* Visual */
-    background-image: url(../images/taco.jpg);
+    background-image: url(/multimedia/images/taco.jpg);
 }
 
 // Usuario
@@ -368,51 +368,71 @@ label {
     // Box Model
     margin: 0 0.5rem 0.625rem 0.5rem;
     padding: 0.3125rem;
-    width: 25vw;
-    height: 15vh;
     // Visusal
-    background-color: transparent;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     border-radius: $bradius1;
 }
 
-.filters-label {
+.calendario {
     // Box Model
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    // Visual
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
 }
 
-.miCalendario {
-    /* Box Model */
-    max-width: $width;
-    height: 50vh;
-    /* Visual */
-    border-radius: $bradius1;
-    box-shadow: 0.125rem 0.125rem 0.625rem #000000;
+#semanal:checked~.calendario-mensual {
+    // Box Model
+    display: none;
 }
 
-.pdf {
-    /* Box Model */
-    margin-top: 0.625rem;
+#mensual:checked~.calendario-semanal {
+    // Box Model
+    display: none;
 }
 
-.descargarPdf {
+ol {
+    // Box Model
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+}
+
+.dias {
+    // Text
+    font-weight: bold;
+    // Visual
+    background-color: $blancoHumo;
+}
+
+.comidas-menu {
+    // Box Model
+    margin: 1rem;
+}
+
+.descargar {
     /* Box model */
     border-radius: $bradius1;
     padding: .5rem;
-    margin-bottom: 1rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     /* Text */
     font-weight: bold;
     /* Visual */
     border: none;
     background-color: transparent;
+    &:hover {
+        /* Box Model */
+        border-radius: $bradius1;
+        /* Visual */
+        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
+    }
+}
+
+#shop-list-no:checked~.descargarLista {
+    display: none;
 }
 
 .textoDescarga {
-    margin: 0;
+    margin: .3rem;
 }
 
 // página 404
