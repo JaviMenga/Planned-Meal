@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "header.scss";
 @import "footer.scss";
+@import "responsive.scss";
 * {
     /* Box Model */
     box-sizing: border-box;
@@ -147,19 +148,10 @@ main::-webkit-scrollbar-track {
     margin-bottom: 2rem;
 }
 
-.contenedorConsejos {
-    /* Box Model */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    margin-top: 2rem;
-}
-
 .busquedaConsejos {
     /* Box Model */
     display: inline-block;
-    width: 80vw;
+    width: 25vw;
     height: 21.875rem;
     margin: 0.625rem;
     overflow-y: scroll;
@@ -169,6 +161,10 @@ main::-webkit-scrollbar-track {
     box-shadow: 0.125rem 0.125rem 0.625rem #000000;
     // Others
     opacity: .7;
+}
+
+.animate__animated {
+    transition: 2s 5s ease-in-out;
 }
 
 .busqueda {
@@ -225,6 +221,7 @@ main::-webkit-scrollbar-track {
     border-radius: $bradius1;
     background-size: cover;
     box-shadow: 0.125rem 0.125rem 0.625rem #000000;
+    transition: transform 1s ease-in-out;
 }
 
 .comunidades:hover {
@@ -375,6 +372,7 @@ label {
 .calendario {
     // Box Model
     margin-top: 1rem;
+    display: none;
     // Visual
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
 }
@@ -384,9 +382,19 @@ label {
     display: none;
 }
 
+#semanal:checked~.calendario-semanal {
+    // Box Model
+    display: block;
+}
+
 #mensual:checked~.calendario-semanal {
     // Box Model
     display: none;
+}
+
+#mensual:checked~.calendario-mensual {
+    // Box Model
+    display: block;
 }
 
 ol {

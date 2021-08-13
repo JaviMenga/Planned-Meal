@@ -13,12 +13,13 @@
 .header__a--style {
     /* Text */
     font-weight: bold;
-    &:hover {
-        /* Box Model */
-        border-radius: $bradius1;
-        /* Visual */
-        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
-    }
+}
+
+.header__a--style:hover {
+    /* Box Model */
+    border-radius: $bradius1;
+    /* Visual */
+    background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
 }
 
 .header__img--icono {
