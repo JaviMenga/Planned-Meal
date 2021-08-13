@@ -301,6 +301,9 @@ main::-webkit-scrollbar-track {
   border-radius: 0.125rem;
   border: none; }
 
+.formulario:active {
+  border: none; }
+
 .newsletter {
   box-shadow: none; }
 
@@ -309,11 +312,14 @@ main::-webkit-scrollbar-track {
   width: 6.25rem;
   display: inline-block;
   /* Text */
-  text-align: left; }
+  text-align: center; }
 
 label {
   /* Text */
   font-weight: bold; }
+
+option {
+  background-color: #BABCBF; }
 
 .filters {
   display: flex;

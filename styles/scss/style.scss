@@ -335,6 +335,11 @@ main::-webkit-scrollbar-track {
     border: none
 }
 
+.formulario:active {
+    // Visual
+    border: none
+}
+
 .newsletter {
     // Visual
     box-shadow: none;
@@ -345,12 +350,17 @@ main::-webkit-scrollbar-track {
     width: 6.25rem;
     display: inline-block;
     /* Text */
-    text-align: left;
+    text-align: center;
 }
 
 label {
     /* Text */
     font-weight: bold;
+}
+
+option {
+    // Visual
+    background-color: $blancoHumo;
 }
 
 // Mi menu
