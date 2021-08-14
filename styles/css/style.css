@@ -148,7 +148,7 @@ main::-webkit-scrollbar-track {
 .busquedaConsejos {
   /* Box Model */
   display: inline-block;
-  width: 25vw;
+  width: 400px;
   height: 21.875rem;
   margin: 0.625rem;
   overflow-y: scroll;
@@ -163,7 +163,7 @@ main::-webkit-scrollbar-track {
 
 .busqueda {
   /* Box Model */
-  width: 40vw;
+  width: 90vw;
   /* Text */
   text-align: center;
   /* Visual */
@@ -194,7 +194,8 @@ main::-webkit-scrollbar-track {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; }
+  overflow-y: auto;
+  padding: 1rem 0 1rem; }
 
 .comunidades {
   /* Box Model */
@@ -335,7 +336,8 @@ option {
 .calendario {
   margin-top: 1rem;
   display: none;
-  box-shadow: 0 0.5rem 1rem black; }
+  box-shadow: 0 0.5rem 1rem black;
+  overflow-x: auto; }
 
 #semanal:checked ~ .calendario-mensual {
   display: none; }
@@ -366,6 +368,7 @@ ol {
   /* Box model */
   border-radius: 0.125rem;
   padding: .5rem;
+  margin-top: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   /* Text */
   font-weight: bold;
