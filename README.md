@@ -1,4 +1,4 @@
-Menú Programado
+Planned Meal
 
 This site is designed to store all kinds of recipes and even add your own, so that you can create different menus (whether weekly, monthly, with certain characteristics, for different tastes, etc.).
 
