@@ -23,7 +23,7 @@ body {
 
 main {
     /* Box Model */
-    height: 77vh;
+    height: 78vh;
     overflow-y: auto;
 }
 
@@ -166,7 +166,7 @@ main::-webkit-scrollbar-track {
     margin: 0.625rem;
     overflow-y: scroll;
     /* Visual */
-    background-color: transparent;
+    background-color: $smokeWhite;
     border-radius: $bradius1;
     box-shadow: $shadowBlack;
     // Others
@@ -188,8 +188,6 @@ main::-webkit-scrollbar-track {
     border-radius: $bradius1;
     box-shadow: $shadowGrey;
     outline: none;
-    // Others
-    opacity: .8;
 }
 
 .search:hover,
@@ -400,6 +398,11 @@ option {
     border-right: 2px solid #000000;
 }
 
+.menu-box--notBottom {
+    // Visual
+    border-right: 2px solid #000000;
+}
+
 .last-menu-box {
     // Visual
     border-right: none;
@@ -412,6 +415,8 @@ option {
     display: none;
     // Visual
     box-shadow: $shadowBlack;
+    background-image: url(../../multimedia/images/fondo.png);
+    background-position: center;
     // Others
     overflow-x: auto;
 }

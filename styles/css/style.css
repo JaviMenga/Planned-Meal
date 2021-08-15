@@ -54,7 +54,7 @@ body {
 /* -------------------------------------------Belongs to Main------------------------------- */
 main {
   /* Box Model */
-  height: 77vh;
+  height: 78vh;
   overflow-y: auto; }
 
 h4,
@@ -156,7 +156,7 @@ main::-webkit-scrollbar-track {
   margin: 0.625rem;
   overflow-y: scroll;
   /* Visual */
-  background-color: transparent;
+  background-color: #BABCBF;
   border-radius: 0.125rem;
   box-shadow: 0.125rem 0.125rem 0.625rem #000000;
   opacity: .7; }
@@ -174,8 +174,7 @@ main::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 0.125rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  outline: none;
-  opacity: .8; }
+  outline: none; }
 
 .search:hover,
 .adviceSearch:hover {
@@ -339,6 +338,9 @@ option {
   border-bottom: 2px solid #000000;
   border-right: 2px solid #000000; }
 
+.menu-box--notBottom {
+  border-right: 2px solid #000000; }
+
 .last-menu-box {
   border-right: none; }
 
@@ -347,6 +349,8 @@ option {
   margin-top: 1rem;
   display: none;
   box-shadow: 0.125rem 0.125rem 0.625rem #000000;
+  background-image: url(../../multimedia/images/fondo.png);
+  background-position: center;
   overflow-x: auto; }
 
 #weekly:checked ~ .calendar-monthly {
