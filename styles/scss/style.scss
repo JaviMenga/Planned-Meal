@@ -19,7 +19,7 @@ body {
 }
 
 
-/* -------------------------------------------PERTENECE A CUERPO-SECCION------------------------------- */
+/* -------------------------------------------Belongs to Main------------------------------- */
 
 main {
     /* Box Model */
@@ -33,7 +33,7 @@ h4,
     color: #000000;
     font-weight: bold;
     /* Visual */
-    background-color: $blancoHumo;
+    background-color: $smokeWhite;
     border-top-left-radius: $bradius1;
     border-top-right-radius: $bradius1;
     /* Others */
@@ -41,36 +41,42 @@ h4,
 }
 
 // Scrollbar
-.busquedaConsejos::-webkit-scrollbar,
+.adviceSearch::-webkit-scrollbar,
 main::-webkit-scrollbar {
+    // Visual
     -webkit-appearance: none;
 }
 
-.busquedaConsejos::-webkit-scrollbar:vertical,
+.adviceSearch::-webkit-scrollbar:vertical,
 main::-webkit-scrollbar:vertical {
+    // Box Model
     width: 0.625rem;
 }
 
-.busquedaConsejos::-webkit-scrollbar-button:increment,
-.busquedaConsejos::-webkit-scrollbar-button,
+.adviceSearch::-webkit-scrollbar-button:increment,
+.adviceSearch::-webkit-scrollbar-button,
 main::-webkit-scrollbar-button:increment,
 main::-webkit-scrollbar-button {
+    // Box Model
     display: none;
 }
 
-.busquedaConsejos::-webkit-scrollbar:horizontal,
+.adviceSearch::-webkit-scrollbar:horizontal,
 main::-webkit-scrollbar:horizontal {
+    // Box Model
     height: 0.325rem;
 }
 
-.busquedaConsejos::-webkit-scrollbar-thumb,
+.adviceSearch::-webkit-scrollbar-thumb,
 main::-webkit-scrollbar-thumb {
-    background-color: $blancoHumo;
+    // Visual
+    background-color: $smokeWhite;
     border-radius: 0.625rem;
 }
 
-.busquedaConsejos::-webkit-scrollbar-track,
+.adviceSearch::-webkit-scrollbar-track,
 main::-webkit-scrollbar-track {
+    // Visual
     border-radius: 0.625rem;
 }
 
@@ -92,10 +98,10 @@ main::-webkit-scrollbar-track {
     background-image: url(/multimedia/images/receta9.jpg);
 }
 
-.carousel-item-asado {
+.carousel-item-roast {
     @include carousel;
     // Visual
-    background-image: url(/multimedia/images/asado.jpg);
+    background-image: url(/multimedia/images/roast.jpg);
 }
 
 .carousel-item-receta4 {
@@ -105,16 +111,16 @@ main::-webkit-scrollbar-track {
 }
 
 
-/* -------------------------------------------Mis recetas------------------------------- */
+/* -------------------------------------------Mis recaets------------------------------- */
 
 .card--style {
     // Box Model
     height: 72vh;
     // Visual
-    box-shadow: 0.125rem 0.125rem 0.625rem #000000
+    box-shadow: $shadowBlack
 }
 
-.card__img--tamaño {
+.card__img--size {
     // Box Model
     height: 30vh;
     // Visual
@@ -124,8 +130,7 @@ main::-webkit-scrollbar-track {
 .btn-color {
     // Visual
     background-color: transparent;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    ;
+    box-shadow: $shadowGrey;
 }
 
 .card-title--style {
@@ -148,12 +153,12 @@ main::-webkit-scrollbar-track {
 
 /* -------------------------------------------Consejos------------------------------- */
 
-.titulo {
+.title {
     // Box Model
     margin-bottom: 2rem;
 }
 
-.busquedaConsejos {
+.adviceSearch {
     /* Box Model */
     display: inline-block;
     width: 400px;
@@ -163,16 +168,16 @@ main::-webkit-scrollbar-track {
     /* Visual */
     background-color: transparent;
     border-radius: $bradius1;
-    box-shadow: 0.125rem 0.125rem 0.625rem #000000;
+    box-shadow: $shadowBlack;
     // Others
     opacity: .7;
 }
 
 .animate__animated {
-    transition: 2s 5s ease-in-out;
+    transition: 0s 5s ease-in-out;
 }
 
-.busqueda {
+.search {
     /* Box Model */
     width: 90vw;
     /* Text */
@@ -181,32 +186,32 @@ main::-webkit-scrollbar-track {
     border: none;
     background-color: transparent;
     border-radius: $bradius1;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    box-shadow: $shadowGrey;
     outline: none;
     // Others
     opacity: .8;
 }
 
-.busqueda:hover,
-.busquedaConsejos:hover {
+.search:hover,
+.adviceSearch:hover {
     /* Others */
     opacity: 1;
 }
 
-.busqueda:active {
+.search:active {
     /* Others */
     border: none;
 }
 
-.consejoTexto {
+.adviceText {
     /* Box Model */
     margin: 0.625rem;
 }
 
 
-/* -------------------------------------------Comunidades------------------------------- */
+/* -------------------------------------------communities------------------------------- */
 
-.contenedor__comunidad {
+.community-container {
     /* Box Model */
     display: flex;
     flex-direction: row;
@@ -217,7 +222,7 @@ main::-webkit-scrollbar-track {
     padding: 1rem 0 1rem;
 }
 
-.comunidades {
+.communities {
     /* Box Model */
     width: 10rem;
     height: 10rem;
@@ -225,44 +230,44 @@ main::-webkit-scrollbar-track {
     /* Text */
     font-weight: bold;
     /* Visual */
-    background-color: $blancoHumo;
+    background-color: $smokeWhite;
     border-radius: $bradius1;
     background-size: cover;
-    box-shadow: 0.125rem 0.125rem 0.625rem #000000;
+    box-shadow: $shadowBlack;
     transition: transform 1s ease-in-out;
 }
 
-.comunidades:hover {
+.communities:hover {
     /* Others */
     transform: scale(1.2, 1.2);
 }
 
-.asado {
+.roast {
     /* Visual */
     background-image: url(/multimedia/images/asado.jpg);
 }
 
-.veganos {
+.vegan {
     /* Visual */
     background-image: url(/multimedia/images/vegano.jpg);
 }
 
-.vegetarianos {
+.vegetarian {
     /* Visual */
     background-image: url(/multimedia/images/vegetariano.jpg);
 }
 
-.lactosa {
+.lactose {
     /* Visual */
     background-image: url(/multimedia/images/lactosa.jpg);
 }
 
-.celiacos {
+.celiac {
     /* Visual */
     background-image: url(/multimedia/images/celiaco.jpg);
 }
 
-.palta {
+.avocado {
     /* Visual */
     background-image: url(/multimedia/images/palta.jpg);
 }
@@ -277,12 +282,7 @@ main::-webkit-scrollbar-track {
     background-image: url(/multimedia/images/comida-latina.jpg);
 }
 
-.arabe {
-    /* Visual */
-    background-image: url(/multimedia/images/falafel.jpg);
-}
-
-.arabe {
+.arab {
     /* Visual */
     background-image: url(/multimedia/images/falafel.jpg);
 }
@@ -292,22 +292,22 @@ main::-webkit-scrollbar-track {
     background-image: url(/multimedia/images/pizza.jpg);
 }
 
-.carnes-blancas {
+.white-meat {
     /* Visual */
     background-image: url(/multimedia/images/pollo.jpg);
 }
 
-.postres {
+.dessenrts {
     /* Visual */
     background-image: url(/multimedia/images/postre.jpg);
 }
 
-.comida-china {
+.chinese {
     /* Visual */
     background-image: url(/multimedia/images/comida-china.jpg);
 }
 
-.comida-mexicana {
+.mexican {
     /* Visual */
     background-image: url(/multimedia/images/taco.jpg);
 }
@@ -315,7 +315,7 @@ main::-webkit-scrollbar-track {
 
 /* -------------------------------------------Usuario------------------------------- */
 
-.contenedorFormulario {
+.form-container {
     /* Box Model */
     display: flex;
     flex-direction: column;
@@ -324,7 +324,7 @@ main::-webkit-scrollbar-track {
     margin-bottom: 2rem;
 }
 
-.contenedorEnviarLimpiar {
+.send__delete--container {
     /* Box Model */
     display: flex;
     flex-direction: row;
@@ -332,7 +332,7 @@ main::-webkit-scrollbar-track {
     justify-content: center;
 }
 
-.formulario {
+.form {
     /* Box Model */
     width: 12.5rem;
     margin: 0.625rem;
@@ -340,7 +340,7 @@ main::-webkit-scrollbar-track {
     text-align: center;
     /* Visual */
     background-color: inherit;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    box-shadow: $shadowGrey;
     border-radius: $bradius1;
     border: none
 }
@@ -355,7 +355,7 @@ main::-webkit-scrollbar-track {
     box-shadow: none;
 }
 
-.label-formulario {
+.label-form {
     /* Box Model */
     width: 6.25rem;
     display: inline-block;
@@ -370,7 +370,7 @@ label {
 
 option {
     // Visual
-    background-color: $blancoHumo;
+    background-color: $smokeWhite;
 }
 
 
@@ -394,38 +394,44 @@ option {
     border-radius: $bradius1;
 }
 
-.cuadro-menu {
-    border-bottom: 1px solid #000000;
-    border-right: 1px solid #000000;
+.menu-box {
+    // Visual
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
 }
 
-.calendario {
+.last-menu-box {
+    // Visual
+    border-right: none;
+}
+
+.calendar {
     // Box Model
     min-width: 270px;
     margin-top: 1rem;
     display: none;
     // Visual
-    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
+    box-shadow: $shadowBlack;
     // Others
     overflow-x: auto;
 }
 
-#semanal:checked~.calendario-mensual {
+#weekly:checked~.calendar-monthly {
     // Box Model
     display: none;
 }
 
-#semanal:checked~.calendario-semanal {
+#weekly:checked~.calendar-weekly {
     // Box Model
     display: block;
 }
 
-#mensual:checked~.calendario-semanal {
+#monthly:checked~.calendar-weekly {
     // Box Model
     display: none;
 }
 
-#mensual:checked~.calendario-mensual {
+#monthly:checked~.calendar-monthly {
     // Box Model
     display: block;
 }
@@ -438,42 +444,42 @@ ol {
     padding: 0;
 }
 
-.dias {
+.days {
     // Text
     font-weight: bold;
     // Visual
-    background-color: $blancoHumo;
+    background-color: $smokeWhite;
 }
 
-.comidas-menu {
+.menu-meals {
     // Box Model
     margin: 1rem;
 }
 
-.descargar {
+.download {
     /* Box model */
     border-radius: $bradius1;
     padding: .5rem;
     margin-top: 2rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     /* Text */
     font-weight: bold;
     /* Visual */
     border: none;
     background-color: transparent;
+    box-shadow: $shadowGrey;
     &:hover {
         /* Box Model */
         border-radius: $bradius1;
         /* Visual */
-        background-image: linear-gradient(to left, $blancoHumo, $marronClaro);
+        background-image: linear-gradient(to left, $smokeWhite, $lightBrown);
     }
 }
 
-#shop-list-no:checked~.descargarLista {
+#shop-list-no:checked~.downloadList {
     display: none;
 }
 
-.textoDescarga {
+.download-text {
     margin: .3rem;
 }
 

@@ -17,7 +17,7 @@
   /* Visual */
   background-image: linear-gradient(to left, #BABCBF, #A66B38); }
 
-.header__img--icono {
+.header__img--icon {
   width: 1.0625rem; }
 
 footer {
@@ -27,13 +27,13 @@ footer {
   background-image: url(/multimedia/images/fondo.png);
   background-position: right; }
 
-.footer__redesSociales {
+.footer__socialMedia {
   /* Box Model */
   margin-right: .5em;
   /* Text */
   text-align: right; }
 
-.footer__iconosSociales {
+.footer__socialIcons {
   /* Box Model */
   width: 1.5625rem; }
 
@@ -51,7 +51,7 @@ body {
   /* Visual */
   background-image: url(/multimedia/images/fondo.png); }
 
-/* -------------------------------------------PERTENECE A CUERPO-SECCION------------------------------- */
+/* -------------------------------------------Belongs to Main------------------------------- */
 main {
   /* Box Model */
   height: 77vh;
@@ -68,30 +68,30 @@ h4,
   /* Others */
   opacity: .8; }
 
-.busquedaConsejos::-webkit-scrollbar,
+.adviceSearch::-webkit-scrollbar,
 main::-webkit-scrollbar {
   -webkit-appearance: none; }
 
-.busquedaConsejos::-webkit-scrollbar:vertical,
+.adviceSearch::-webkit-scrollbar:vertical,
 main::-webkit-scrollbar:vertical {
   width: 0.625rem; }
 
-.busquedaConsejos::-webkit-scrollbar-button:increment,
-.busquedaConsejos::-webkit-scrollbar-button,
+.adviceSearch::-webkit-scrollbar-button:increment,
+.adviceSearch::-webkit-scrollbar-button,
 main::-webkit-scrollbar-button:increment,
 main::-webkit-scrollbar-button {
   display: none; }
 
-.busquedaConsejos::-webkit-scrollbar:horizontal,
+.adviceSearch::-webkit-scrollbar:horizontal,
 main::-webkit-scrollbar:horizontal {
   height: 0.325rem; }
 
-.busquedaConsejos::-webkit-scrollbar-thumb,
+.adviceSearch::-webkit-scrollbar-thumb,
 main::-webkit-scrollbar-thumb {
   background-color: #BABCBF;
   border-radius: 0.625rem; }
 
-.busquedaConsejos::-webkit-scrollbar-track,
+.adviceSearch::-webkit-scrollbar-track,
 main::-webkit-scrollbar-track {
   border-radius: 0.625rem; }
 
@@ -104,13 +104,13 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(/multimedia/images/receta9.jpg); }
 
-.carousel-item-asado {
+.carousel-item-roast {
   font-weight: bold;
   font-size: 1.1rem;
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(/multimedia/images/asado.jpg); }
+  background-image: url(/multimedia/images/roast.jpg); }
 
 .carousel-item-receta4 {
   font-weight: bold;
@@ -120,12 +120,12 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(/multimedia/images/receta4.jpg); }
 
-/* -------------------------------------------Mis recetas------------------------------- */
+/* -------------------------------------------Mis recaets------------------------------- */
 .card--style {
   height: 72vh;
   box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
 
-.card__img--tamaño {
+.card__img--size {
   height: 30vh;
   border-radius: 0.125rem; }
 
@@ -145,10 +145,10 @@ main::-webkit-scrollbar-track {
   background-position: right; }
 
 /* -------------------------------------------Consejos------------------------------- */
-.titulo {
+.title {
   margin-bottom: 2rem; }
 
-.busquedaConsejos {
+.adviceSearch {
   /* Box Model */
   display: inline-block;
   width: 400px;
@@ -162,9 +162,9 @@ main::-webkit-scrollbar-track {
   opacity: .7; }
 
 .animate__animated {
-  transition: 2s 5s ease-in-out; }
+  transition: 0s 5s ease-in-out; }
 
-.busqueda {
+.search {
   /* Box Model */
   width: 90vw;
   /* Text */
@@ -177,21 +177,21 @@ main::-webkit-scrollbar-track {
   outline: none;
   opacity: .8; }
 
-.busqueda:hover,
-.busquedaConsejos:hover {
+.search:hover,
+.adviceSearch:hover {
   /* Others */
   opacity: 1; }
 
-.busqueda:active {
+.search:active {
   /* Others */
   border: none; }
 
-.consejoTexto {
+.adviceText {
   /* Box Model */
   margin: 0.625rem; }
 
-/* -------------------------------------------Comunidades------------------------------- */
-.contenedor__comunidad {
+/* -------------------------------------------communities------------------------------- */
+.community-container {
   /* Box Model */
   display: flex;
   flex-direction: row;
@@ -201,7 +201,7 @@ main::-webkit-scrollbar-track {
   overflow-y: auto;
   padding: 1rem 0 1rem; }
 
-.comunidades {
+.communities {
   /* Box Model */
   width: 10rem;
   height: 10rem;
@@ -215,31 +215,31 @@ main::-webkit-scrollbar-track {
   box-shadow: 0.125rem 0.125rem 0.625rem #000000;
   transition: transform 1s ease-in-out; }
 
-.comunidades:hover {
+.communities:hover {
   /* Others */
   transform: scale(1.2, 1.2); }
 
-.asado {
+.roast {
   /* Visual */
   background-image: url(/multimedia/images/asado.jpg); }
 
-.veganos {
+.vegan {
   /* Visual */
   background-image: url(/multimedia/images/vegano.jpg); }
 
-.vegetarianos {
+.vegetarian {
   /* Visual */
   background-image: url(/multimedia/images/vegetariano.jpg); }
 
-.lactosa {
+.lactose {
   /* Visual */
   background-image: url(/multimedia/images/lactosa.jpg); }
 
-.celiacos {
+.celiac {
   /* Visual */
   background-image: url(/multimedia/images/celiaco.jpg); }
 
-.palta {
+.avocado {
   /* Visual */
   background-image: url(/multimedia/images/palta.jpg); }
 
@@ -251,11 +251,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-image: url(/multimedia/images/comida-latina.jpg); }
 
-.arabe {
-  /* Visual */
-  background-image: url(/multimedia/images/falafel.jpg); }
-
-.arabe {
+.arab {
   /* Visual */
   background-image: url(/multimedia/images/falafel.jpg); }
 
@@ -263,24 +259,24 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-image: url(/multimedia/images/pizza.jpg); }
 
-.carnes-blancas {
+.white-meat {
   /* Visual */
   background-image: url(/multimedia/images/pollo.jpg); }
 
-.postres {
+.dessenrts {
   /* Visual */
   background-image: url(/multimedia/images/postre.jpg); }
 
-.comida-china {
+.chinese {
   /* Visual */
   background-image: url(/multimedia/images/comida-china.jpg); }
 
-.comida-mexicana {
+.mexican {
   /* Visual */
   background-image: url(/multimedia/images/taco.jpg); }
 
 /* -------------------------------------------Usuario------------------------------- */
-.contenedorFormulario {
+.form-container {
   /* Box Model */
   display: flex;
   flex-direction: column;
@@ -288,14 +284,14 @@ main::-webkit-scrollbar-track {
   align-items: center;
   margin-bottom: 2rem; }
 
-.contenedorEnviarLimpiar {
+.send__delete--container {
   /* Box Model */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
 
-.formulario {
+.form {
   /* Box Model */
   width: 12.5rem;
   margin: 0.625rem;
@@ -313,7 +309,7 @@ main::-webkit-scrollbar-track {
 .newsletter {
   box-shadow: none; }
 
-.label-formulario {
+.label-form {
   /* Box Model */
   width: 6.25rem;
   display: inline-block;
@@ -339,27 +335,30 @@ option {
   padding: 0.3125rem;
   border-radius: 0.125rem; }
 
-.cuadro-menu {
-  border-bottom: 1px solid #000000;
-  border-right: 1px solid #000000; }
+.menu-box {
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000; }
 
-.calendario {
+.last-menu-box {
+  border-right: none; }
+
+.calendar {
   min-width: 270px;
   margin-top: 1rem;
   display: none;
-  box-shadow: 0 0.5rem 1rem black;
+  box-shadow: 0.125rem 0.125rem 0.625rem #000000;
   overflow-x: auto; }
 
-#semanal:checked ~ .calendario-mensual {
+#weekly:checked ~ .calendar-monthly {
   display: none; }
 
-#semanal:checked ~ .calendario-semanal {
+#weekly:checked ~ .calendar-weekly {
   display: block; }
 
-#mensual:checked ~ .calendario-semanal {
+#monthly:checked ~ .calendar-weekly {
   display: none; }
 
-#mensual:checked ~ .calendario-mensual {
+#monthly:checked ~ .calendar-monthly {
   display: block; }
 
 ol {
@@ -368,34 +367,34 @@ ol {
   grid-template-columns: repeat(7, 1fr);
   padding: 0; }
 
-.dias {
+.days {
   font-weight: bold;
   background-color: #BABCBF; }
 
-.comidas-menu {
+.menu-meals {
   margin: 1rem; }
 
-.descargar {
+.download {
   /* Box model */
   border-radius: 0.125rem;
   padding: .5rem;
   margin-top: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   /* Text */
   font-weight: bold;
   /* Visual */
   border: none;
-  background-color: transparent; }
-  .descargar:hover {
+  background-color: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .download:hover {
     /* Box Model */
     border-radius: 0.125rem;
     /* Visual */
     background-image: linear-gradient(to left, #BABCBF, #A66B38); }
 
-#shop-list-no:checked ~ .descargarLista {
+#shop-list-no:checked ~ .downloadList {
   display: none; }
 
-.textoDescarga {
+.download-text {
   margin: .3rem; }
 
 /* -------------------------------------------Página 404------------------------------- */
@@ -421,5 +420,5 @@ ol {
 
 /* -------------------------------------------Responsive------------------------------- */
 @media only screen and (max-width: 480px) {
-  .busquedaConsejos {
+  .adviceSearch {
     width: 270px; } }

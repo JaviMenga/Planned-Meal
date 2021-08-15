@@ -2,17 +2,17 @@
 <html lang="es">
 
 <head>
-    <meta name="description" content="Podés descargar el menú semanal que hacemos para vos, según tus preferencias y gustos.">
-    <meta name="keywords" content="COMIDA, MENÚ SEMANAL, VEGETARIANO, VEGANO, CELIÍCO, NUTRICIONISTAS, SALUDABLE, RECETAS">
+    <meta name="description" content="Podés download el menú weekly que hacemos para vos, según tus preferencias y gustos.">
+    <meta name="keywords" content="COMIDA, MENÚ weekly, VEGETARIANO, VEGANO, CELIÍCO, NUTRICIONISTAS, SALUDABLE, RECETAS">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../multimedia/brand/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Hoja de estilo Css propio -->
+    <!-- Own Stylesheet -->
     <link rel="stylesheet" href="../styles/css/style.css">
-    <!-- Fuente de letras -->
+    <!-- Letter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <!-- Inicio del Header -->
+    <!-- Header's start -->
     <header>
-        <!-- barra de navegación -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid navbar--style">
                 <a class="navbar-brand navbar-brand--style" href="../index.html"><img src="../multimedia/brand/logo.png" alt="logo de la empresa" width="60" height="64"></a>
@@ -49,234 +49,234 @@
                         </li>
                     </ul>
                     <div class="btn btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn ms-3"><a href="./usuario.html"><img class="header__img--icono" src="../multimedia/icons/usuario.png" alt="icono del usuario"></a></button>
-                        <button type="button" class="btn me-3"><a href="#"><img class="header__img--icono" src="../multimedia/icons/carrito.svg" alt="icono del carrito"></a></button>
+                        <button type="button" class="btn ms-3"><a href="./usuario.html"><img class="header__img--icon" src="../multimedia/icons/usuario.png" alt="icono del usuario"></a></button>
+                        <button type="button" class="btn me-3"><a href="#"><img class="header__img--icon" src="../multimedia/icons/carrito.svg" alt="icono del carrito"></a></button>
                     </div>
                 </div>
         </nav>
     </header>
-    <!-- Fin del Header -->
+    <!-- Header's end -->
 
-    <!-- Inicio de Main -->
+    <!-- Main's start -->
     <main>
-        <h1 class="titulo">Elegí el tipo de menú que querés que armemos por vos.</h1>
+        <h1 class="title">Elegí el tipo de menú que querés que armemos por vos.</h1>
         <div class="filters">
             <div class=" filters-container">
-                <label for="semanal" class="filter filters-label">Formato del Menú:</label>
-                <input class="periodicity" type="radio" name="periodicity" id="semanal" value="sem">Semanal
-                <input class="mensual" type="radio" name="periodicity" id="mensual" value="men">Mensual
+                <label for="weekly" class="filter filters-label">Formato del Menú:</label>
+                <input class="weekly" type="radio" name="periodicity" id="weekly" value="sem">Semanal
+                <input class="monthly" type="radio" name="periodicity" id="monthly" value="men">Mensual
                 <label for="type" class="filter filters-label">¿Qué recetas incluir?</label>
                 <input class="type" type="checkbox" name="type" id="type" value="veggie" checked>Vegetariano
                 <input class="type" type="checkbox" name="type" id="type" value="vegan">Vegano
                 <input class="type" type="checkbox" name="type" id="type" value="celiac">Celíaco
-                <input class="type" type="checkbox" name="type" id="type" value="lactoseless">Deslactosado
+                <input class="type" type="checkbox" name="type" id="type" value="lactoseless">Deslactosedo
                 <input class="type" type="checkbox" name="type" id="type" value="carnivorous">Carnívoro
                 <label for="shop-list" class="filter filters-label">¿Querés generar lista de compras?</label>
                 <input class="shop-list" type="radio" name="shop-list" id="shop-list-yes" value="si" checked>Si
                 <input class="shop-list" type="radio" name="shop-list" id="shop-list-no" value="no">No
 
-                <!-- Menu semanal -->
-                <div class="calendario calendario-semanal">
+                <!-- Menu weekly -->
+                <div class="calendar calendar-weekly">
                     <ol>
-                        <li class="dias">Lunes</li>
-                        <li class="dias">Martes</li>
-                        <li class="dias">Miercoles</li>
-                        <li class="dias">Jueves</li>
-                        <li class="dias">Viernes</li>
-                        <li class="dias">Sábado</li>
-                        <li class="dias">Domingo</li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="days">Lunes</li>
+                        <li class="days">Martes</li>
+                        <li class="days">Miercoles</li>
+                        <li class="days">Jueves</li>
+                        <li class="days">Viernes</li>
+                        <li class="days">Sábado</li>
+                        <li class="days">Domingo</li>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Capelletti de verduras con salsa blanca</p>
-                            <p class="comidas-menu">Cena: Ensalada de lentejas</p>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Capelletti de verduras con salsa blanca</p>
+                            <p class="menu-meals">Cena: Ensalada de lentejas</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Omelette caprese</p>
-                            <p class="comidas-menu">Cena: Tortilla de espinaca y ricota</p>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Omelette caprese</p>
+                            <p class="menu-meals">Cena: Tortilla de espinaca y ricota</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Milanesa con puré</p>
-                            <p class="comidas-menu">Cena: Empanadas de atún</p>
+                        <li class="menu-box">
+                            <p class="menu-meals">Almuerzo: Milanesa con puré</p>
+                            <p class="menu-meals">Cena: Empanadas de atún</p>
                         </li>
-                        <li class="cuadro-menu">
-                            <p class="comidas-menu">Almuerzo: Bondiola con papas al horno</p>
-                            <p class="comidas-menu">Cena: Pizza napolitana</p>
+                        <li class="menu-box last-menu-box">
+                            <p class="menu-meals">Almuerzo: Bondiola con papas al horno</p>
+                            <p class="menu-meals">Cena: Pizza napolitana</p>
                         </li>
                     </ol>
                 </div>
-                <!-- Menu mensual -->
-                <div class="calendario calendario-mensual">
+                <!-- Menu monthly -->
+                <div class="calendar calendar-monthly">
                     <ol>
-                        <li class="dias">Lunes</li>
-                        <li class="dias">Martes</li>
-                        <li class="dias">Miercoles</li>
-                        <li class="dias">Jueves</li>
-                        <li class="dias">Viernes</li>
-                        <li class="dias">Sábado</li>
-                        <li class="dias">Domingo</li>
-                        <li class="cuadro-menu">1
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="days">Lunes</li>
+                        <li class="days">Martes</li>
+                        <li class="days">Miercoles</li>
+                        <li class="days">Jueves</li>
+                        <li class="days">Viernes</li>
+                        <li class="days">Sábado</li>
+                        <li class="days">Domingo</li>
+                        <li class="menu-box">1
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">2
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">2
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">3
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">3
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
-                        <li class="cuadro-menu">4
-                            <p class="comidas-menu">Almuerzo: Capelletti de verduras con salsa blanca</p>
-                            <p class="comidas-menu">Cena: Ensalada de lentejas</p>
+                        <li class="menu-box">4
+                            <p class="menu-meals">Almuerzo: Capelletti de verduras con salsa blanca</p>
+                            <p class="menu-meals">Cena: Ensalada de lentejas</p>
                         </li>
-                        <li class="cuadro-menu">5
-                            <p class="comidas-menu">Almuerzo: Omelette caprese</p>
-                            <p class="comidas-menu">Cena: Tortilla de espinaca y ricota</p>
+                        <li class="menu-box">5
+                            <p class="menu-meals">Almuerzo: Omelette caprese</p>
+                            <p class="menu-meals">Cena: Tortilla de espinaca y ricota</p>
                         </li>
-                        <li class="cuadro-menu">6
-                            <p class="comidas-menu">Almuerzo: Milanesa con puré</p>
-                            <p class="comidas-menu">Cena: Empanadas de atún</p>
+                        <li class="menu-box">6
+                            <p class="menu-meals">Almuerzo: Milanesa con puré</p>
+                            <p class="menu-meals">Cena: Empanadas de atún</p>
                         </li>
-                        <li class="cuadro-menu">7
-                            <p class="comidas-menu">Almuerzo: Bondiola con papas al horno</p>
-                            <p class="comidas-menu">Cena: Pizza napolitana</p>
+                        <li class="menu-box last-menu-box">7
+                            <p class="menu-meals">Almuerzo: Bondiola con papas al horno</p>
+                            <p class="menu-meals">Cena: Pizza napolitana</p>
                         </li>
-                        <li class="cuadro-menu">8
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="menu-box">8
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">9
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">9
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">10
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">10
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
-                        <li class="cuadro-menu">11
-                            <p class="comidas-menu">Almuerzo: Capelletti de verduras con salsa blanca</p>
-                            <p class="comidas-menu">Cena: Ensalada de lentejas</p>
+                        <li class="menu-box">11
+                            <p class="menu-meals">Almuerzo: Capelletti de verduras con salsa blanca</p>
+                            <p class="menu-meals">Cena: Ensalada de lentejas</p>
                         </li>
-                        <li class="cuadro-menu">12
-                            <p class="comidas-menu">Almuerzo: Omelette caprese</p>
-                            <p class="comidas-menu">Cena: Tortilla de espinaca y ricota</p>
+                        <li class="menu-box">12
+                            <p class="menu-meals">Almuerzo: Omelette caprese</p>
+                            <p class="menu-meals">Cena: Tortilla de espinaca y ricota</p>
                         </li>
-                        <li class="cuadro-menu">13
-                            <p class="comidas-menu">Almuerzo: Milanesa con puré</p>
-                            <p class="comidas-menu">Cena: Empanadas de atún</p>
+                        <li class="menu-box">13
+                            <p class="menu-meals">Almuerzo: Milanesa con puré</p>
+                            <p class="menu-meals">Cena: Empanadas de atún</p>
                         </li>
-                        <li class="cuadro-menu">14
-                            <p class="comidas-menu">Almuerzo: Bondiola con papas al horno</p>
-                            <p class="comidas-menu">Cena: Pizza napolitana</p>
+                        <li class="menu-box last-menu-box">14
+                            <p class="menu-meals">Almuerzo: Bondiola con papas al horno</p>
+                            <p class="menu-meals">Cena: Pizza napolitana</p>
                         </li>
-                        <li class="cuadro-menu">15
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="menu-box">15
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">16
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">16
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">17
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">17
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
-                        <li class="cuadro-menu">18
-                            <p class="comidas-menu">Almuerzo: Capelletti de verduras con salsa blanca</p>
-                            <p class="comidas-menu">Cena: Ensalada de lentejas</p>
+                        <li class="menu-box">18
+                            <p class="menu-meals">Almuerzo: Capelletti de verduras con salsa blanca</p>
+                            <p class="menu-meals">Cena: Ensalada de lentejas</p>
                         </li>
-                        <li class="cuadro-menu">19
-                            <p class="comidas-menu">Almuerzo: Omelette caprese</p>
-                            <p class="comidas-menu">Cena: Tortilla de espinaca y ricota</p>
+                        <li class="menu-box">19
+                            <p class="menu-meals">Almuerzo: Omelette caprese</p>
+                            <p class="menu-meals">Cena: Tortilla de espinaca y ricota</p>
                         </li>
-                        <li class="cuadro-menu">20
-                            <p class="comidas-menu">Almuerzo: Milanesa con puré</p>
-                            <p class="comidas-menu">Cena: Empanadas de atún</p>
+                        <li class="menu-box">20
+                            <p class="menu-meals">Almuerzo: Milanesa con puré</p>
+                            <p class="menu-meals">Cena: Empanadas de atún</p>
                         </li>
-                        <li class="cuadro-menu">21
-                            <p class="comidas-menu">Almuerzo: Bondiola con papas al horno</p>
-                            <p class="comidas-menu">Cena: Pizza napolitana</p>
+                        <li class="menu-box last-menu-box">21
+                            <p class="menu-meals">Almuerzo: Bondiola con papas al horno</p>
+                            <p class="menu-meals">Cena: Pizza napolitana</p>
                         </li>
-                        <li class="cuadro-menu">22
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="menu-box">22
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">23
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">23
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">24
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">24
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
-                        <li class="cuadro-menu">25
-                            <p class="comidas-menu">Almuerzo: Capelletti de verduras con salsa blanca</p>
-                            <p class="comidas-menu">Cena: Ensalada de lentejas</p>
+                        <li class="menu-box">25
+                            <p class="menu-meals">Almuerzo: Capelletti de verduras con salsa blanca</p>
+                            <p class="menu-meals">Cena: Ensalada de lentejas</p>
                         </li>
-                        <li class="cuadro-menu">26
-                            <p class="comidas-menu">Almuerzo: Omelette caprese</p>
-                            <p class="comidas-menu">Cena: Tortilla de espinaca y ricota</p>
+                        <li class="menu-box">26
+                            <p class="menu-meals">Almuerzo: Omelette caprese</p>
+                            <p class="menu-meals">Cena: Tortilla de espinaca y ricota</p>
                         </li>
-                        <li class="cuadro-menu">27
-                            <p class="comidas-menu">Almuerzo: Milanesa con puré</p>
-                            <p class="comidas-menu">Cena: Empanadas de atún</p>
+                        <li class="menu-box">27
+                            <p class="menu-meals">Almuerzo: Milanesa con puré</p>
+                            <p class="menu-meals">Cena: Empanadas de atún</p>
                         </li>
-                        <li class="cuadro-menu">28
-                            <p class="comidas-menu">Almuerzo: Bondiola con papas al horno</p>
-                            <p class="comidas-menu">Cena: Pizza napolitana</p>
+                        <li class="menu-box last-menu-box">28
+                            <p class="menu-meals">Almuerzo: Bondiola con papas al horno</p>
+                            <p class="menu-meals">Cena: Pizza napolitana</p>
                         </li>
-                        <li class="cuadro-menu">29
-                            <p class="comidas-menu">Almuerzo: Risotto de hongos con hiervas</p>
-                            <p class="comidas-menu">Cena: Berenjenas empanadas con puré</p>
+                        <li class="menu-box">29
+                            <p class="menu-meals">Almuerzo: Risotto de hongos con hiervas</p>
+                            <p class="menu-meals">Cena: Berenjenas empanadas con puré</p>
                         </li>
-                        <li class="cuadro-menu">30
-                            <p class="comidas-menu">Almuerzo: Tarta de jamón y queso</p>
-                            <p class="comidas-menu">Cena: Zuchini condimentado</p>
+                        <li class="menu-box">30
+                            <p class="menu-meals">Almuerzo: Tarta de jamón y queso</p>
+                            <p class="menu-meals">Cena: Zuchini condimentado</p>
                         </li>
-                        <li class="cuadro-menu">31
-                            <p class="comidas-menu">Almuerzo: Milanesa de ternera con ensalada fresca</p>
-                            <p class="comidas-menu">Cena: Hongos fritos con huevos poyet</p>
+                        <li class="menu-box">31
+                            <p class="menu-meals">Almuerzo: Milanesa de ternera con ensalada fresca</p>
+                            <p class="menu-meals">Cena: Hongos fritos con huevos poyet</p>
                         </li>
                     </ol>
                 </div>
                 <div class="buttons">
-                    <button class="descargar guardarMenu"><p class="textoDescarga">Guardar</p></button>
-                    <button class="descargar descargarMenu"><p class="textoDescarga">Descargar Menú</p></button>
-                    <button class="descargar descargarLista"><p class="textoDescarga">Descargar Lista de Ingredientes</p></button>
+                    <button class="download"><p class="download-text">Guardar</p></button>
+                    <button class="download"><p class="download-text">Descargar Menú</p></button>
                 </div>
+                <button class="download downloadList"><p class="download-text">Descargar Lista de Ingredientes</p></button>
             </div>
     </main>
-    <!-- Fin de Main -->
+    <!-- Main's end -->
 
-    <!-- Inicio del Footer -->
+    <!-- Footer's start -->
     <footer>
-        <!-- Redes Sociales -->
-        <div class="footer__redesSociales">
+        <!-- Social Media -->
+        <div class="footer__socialMedia">
             <a href="https://www.twitter.com/" target="blank">
-                <img class="footer__iconosSociales" src="../multimedia/icons/twitter.png" alt="logo de twitter"></a>
+                <img class="footer__socialIcons" src="../multimedia/icons/twitter.png" alt="logo de twitter"></a>
             <a href="https://www.facebook.com/" target="blank">
-                <img class="footer__iconosSociales" src="../multimedia/icons/facebook.png" alt="logo de facebook"></a>
+                <img class="footer__socialIcons" src="../multimedia/icons/facebook.png" alt="logo de facebook"></a>
             <a href="https://www.instagram.com/" target="blank">
-                <img class="footer__iconosSociales" src="../multimedia/icons/instagram.png" alt="logo de instagram"></a>
+                <img class="footer__socialIcons" src="../multimedia/icons/instagram.png" alt="logo de instagram"></a>
             <a href="https://api.whatsapp.com/send?phone=[54][1111111111]" target="blank ">
-                <img class="footer__iconosSociales" src="../multimedia/icons/whatsapp.png " alt="logo de whatsapp"></a>
+                <img class="footer__socialIcons" src="../multimedia/icons/whatsapp.png " alt="logo de whatsapp"></a>
             <a href="https://www.outlook.com/" target="blank">
-                <img class="footer__iconosSociales" src="../multimedia/icons/mail.png" alt="logo de mail"></a>
+                <img class="footer__socialIcons" src="../multimedia/icons/mail.png" alt="logo de mail"></a>
         </div>
     </footer>
-    <!-- Fin del Footer -->
+    <!-- Footer's end -->
 
     <!-- Link Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
