@@ -51,7 +51,7 @@ body {
   /* Visual */
   background-image: url(/multimedia/images/fondo.png); }
 
-/* ---------------------------------------------------------PERTENECE A CUERPO-SECCION------------------------------------------------------- */
+/* -------------------------------------------PERTENECE A CUERPO-SECCION------------------------------- */
 main {
   /* Box Model */
   height: 77vh;
@@ -95,6 +95,7 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-track {
   border-radius: 0.625rem; }
 
+/* -------------------------------------------index------------------------------- */
 .carousel-item-receta9 {
   font-weight: bold;
   font-size: 1.1rem;
@@ -119,6 +120,7 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(/multimedia/images/receta4.jpg); }
 
+/* -------------------------------------------Mis recetas------------------------------- */
 .card--style {
   height: 72vh;
   box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
@@ -142,6 +144,7 @@ main::-webkit-scrollbar-track {
   background-image: url(/multimedia/images/fondo.png);
   background-position: right; }
 
+/* -------------------------------------------Consejos------------------------------- */
 .titulo {
   margin-bottom: 2rem; }
 
@@ -187,6 +190,7 @@ main::-webkit-scrollbar-track {
   /* Box Model */
   margin: 0.625rem; }
 
+/* -------------------------------------------Comunidades------------------------------- */
 .contenedor__comunidad {
   /* Box Model */
   display: flex;
@@ -275,6 +279,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-image: url(/multimedia/images/taco.jpg); }
 
+/* -------------------------------------------Usuario------------------------------- */
 .contenedorFormulario {
   /* Box Model */
   display: flex;
@@ -322,18 +327,24 @@ label {
 option {
   background-color: #BABCBF; }
 
+/* -------------------------------------------Mi menú------------------------------- */
 .filters {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center; }
+  overflow-x: auto; }
+
+.filter {
+  display: block; }
 
 .filters-container {
   margin: 0 0.5rem 0.625rem 0.5rem;
   padding: 0.3125rem;
   border-radius: 0.125rem; }
 
+.cuadro-menu {
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000; }
+
 .calendario {
+  min-width: 270px;
   margin-top: 1rem;
   display: none;
   box-shadow: 0 0.5rem 1rem black;
@@ -387,6 +398,7 @@ ol {
 .textoDescarga {
   margin: .3rem; }
 
+/* -------------------------------------------Página 404------------------------------- */
 .section-404 {
   display: flex;
   flex-direction: column;
@@ -406,3 +418,8 @@ ol {
   text-decoration: none;
   color: #000000;
   font-size: 2rem; }
+
+/* -------------------------------------------Responsive------------------------------- */
+@media only screen and (max-width: 480px) {
+  .busquedaConsejos {
+    width: 270px; } }

@@ -19,7 +19,7 @@ body {
 }
 
 
-/* ---------------------------------------------------------PERTENECE A CUERPO-SECCION------------------------------------------------------- */
+/* -------------------------------------------PERTENECE A CUERPO-SECCION------------------------------- */
 
 main {
     /* Box Model */
@@ -74,7 +74,9 @@ main::-webkit-scrollbar-track {
     border-radius: 0.625rem;
 }
 
-// Carousel
+
+/* -------------------------------------------index------------------------------- */
+
 @mixin carousel {
     // Text
     font-weight: bold;
@@ -102,7 +104,9 @@ main::-webkit-scrollbar-track {
     background-image: url(/multimedia/images/receta4.jpg);
 }
 
-// Recetas
+
+/* -------------------------------------------Mis recetas------------------------------- */
+
 .card--style {
     // Box Model
     height: 72vh;
@@ -141,7 +145,9 @@ main::-webkit-scrollbar-track {
     background-position: right;
 }
 
-// Consejos
+
+/* -------------------------------------------Consejos------------------------------- */
+
 .titulo {
     // Box Model
     margin-bottom: 2rem;
@@ -197,7 +203,9 @@ main::-webkit-scrollbar-track {
     margin: 0.625rem;
 }
 
-// Comunidades
+
+/* -------------------------------------------Comunidades------------------------------- */
+
 .contenedor__comunidad {
     /* Box Model */
     display: flex;
@@ -304,7 +312,9 @@ main::-webkit-scrollbar-track {
     background-image: url(/multimedia/images/taco.jpg);
 }
 
-// Usuario
+
+/* -------------------------------------------Usuario------------------------------- */
+
 .contenedorFormulario {
     /* Box Model */
     display: flex;
@@ -363,12 +373,17 @@ option {
     background-color: $blancoHumo;
 }
 
-// Mi menu
+
+/* -------------------------------------------Mi menú------------------------------- */
+
 .filters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    // Others
+    overflow-x: auto;
+}
+
+.filter {
+    // Box Model
+    display: block;
 }
 
 .filters-container {
@@ -379,9 +394,14 @@ option {
     border-radius: $bradius1;
 }
 
+.cuadro-menu {
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
 .calendario {
     // Box Model
-    // min-width: 1275px;
+    min-width: 270px;
     margin-top: 1rem;
     display: none;
     // Visual
@@ -457,7 +477,9 @@ ol {
     margin: .3rem;
 }
 
-// página 404
+
+/* -------------------------------------------Página 404------------------------------- */
+
 .section-404 {
     // Box Model
     display: flex;
@@ -487,5 +509,8 @@ ol {
     color: #000000;
     font-size: 2rem;
 }
+
+
+/* -------------------------------------------Responsive------------------------------- */
 
 @import "responsive.scss"
