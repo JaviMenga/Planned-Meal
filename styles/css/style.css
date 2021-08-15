@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .navbar--style {
   /* Visual */
-  background-image: url(/multimedia/images/fondo.png);
+  background-image: url(../../multimedia/images/fondo.png);
   background-position: right; }
 
 .navbar-brand--style {
@@ -24,7 +24,7 @@ footer {
   /* Box Model */
   padding: 0.625rem 0 0.625rem 0;
   /* Visual */
-  background-image: url(/multimedia/images/fondo.png);
+  background-image: url(../../multimedia/images/fondo.png);
   background-position: right; }
 
 .footer__socialMedia {
@@ -102,7 +102,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(/multimedia/images/receta9.jpg); }
+  background-image: url(../../multimedia/images/receta9.jpg); }
 
 .carousel-item-roast {
   font-weight: bold;
@@ -110,7 +110,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(/multimedia/images/roast.jpg); }
+  background-image: url(../../multimedia/images/asado.jpg); }
 
 .carousel-item-receta4 {
   font-weight: bold;
@@ -118,7 +118,7 @@ main::-webkit-scrollbar-track {
   /* Visual */
   background-position: center;
   background-size: cover;
-  background-image: url(/multimedia/images/receta4.jpg); }
+  background-image: url(../../multimedia/images/receta4.jpg); }
 
 /* -------------------------------------------Mis recaets------------------------------- */
 .card--style {
@@ -141,7 +141,7 @@ main::-webkit-scrollbar-track {
   color: #000000; }
 
 .modal-content--color {
-  background-image: url(/multimedia/images/fondo.png);
+  background-image: url(../../multimedia/images/fondo.png);
   background-position: right; }
 
 /* -------------------------------------------Consejos------------------------------- */
@@ -221,59 +221,59 @@ main::-webkit-scrollbar-track {
 
 .roast {
   /* Visual */
-  background-image: url(/multimedia/images/asado.jpg); }
+  background-image: url(../../multimedia/images/asado.jpg); }
 
 .vegan {
   /* Visual */
-  background-image: url(/multimedia/images/vegano.jpg); }
+  background-image: url(../../multimedia/images/vegano.jpg); }
 
 .vegetarian {
   /* Visual */
-  background-image: url(/multimedia/images/vegetariano.jpg); }
+  background-image: url(../../multimedia/images/vegetariano.jpg); }
 
 .lactose {
   /* Visual */
-  background-image: url(/multimedia/images/lactosa.jpg); }
+  background-image: url(../../multimedia/images/lactosa.jpg); }
 
 .celiac {
   /* Visual */
-  background-image: url(/multimedia/images/celiaco.jpg); }
+  background-image: url(../../multimedia/images/celiaco.jpg); }
 
 .avocado {
   /* Visual */
-  background-image: url(/multimedia/images/palta.jpg); }
+  background-image: url(../../multimedia/images/palta.jpg); }
 
 .regional {
   /* Visual */
-  background-image: url(/multimedia/images/comida-regional.jpg); }
+  background-image: url(../../multimedia/images/comida-regional.jpg); }
 
 .latino {
   /* Visual */
-  background-image: url(/multimedia/images/comida-latina.jpg); }
+  background-image: url(../../multimedia/images/comida-latina.jpg); }
 
 .arab {
   /* Visual */
-  background-image: url(/multimedia/images/falafel.jpg); }
+  background-image: url(../../multimedia/images/falafel.jpg); }
 
 .pizza-time {
   /* Visual */
-  background-image: url(/multimedia/images/pizza.jpg); }
+  background-image: url(../../multimedia/images/pizza.jpg); }
 
 .white-meat {
   /* Visual */
-  background-image: url(/multimedia/images/pollo.jpg); }
+  background-image: url(../../multimedia/images/pollo.jpg); }
 
 .dessenrts {
   /* Visual */
-  background-image: url(/multimedia/images/postre.jpg); }
+  background-image: url(../../multimedia/images/postre.jpg); }
 
 .chinese {
   /* Visual */
-  background-image: url(/multimedia/images/comida-china.jpg); }
+  background-image: url(../../multimedia/images/comida-china.jpg); }
 
 .mexican {
   /* Visual */
-  background-image: url(/multimedia/images/taco.jpg); }
+  background-image: url(../../multimedia/images/taco.jpg); }
 
 /* -------------------------------------------Usuario------------------------------- */
 .form-container {
