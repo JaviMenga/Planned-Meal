@@ -73,39 +73,48 @@
 
 // request_lifestyle();
 
-// OPCION3
 
-let recipe;
-let calories = 0;
+class recipe {
+    constructor(name, calories) {
+        this.name = name;
+        this.calories = calories;
+    }
+
+    mensaje() {
+        return "Esta receta contiene aproximadamente " + this.calories + " kcal";
+    }
+}
+
+let recipe_user;
+let total_calories = 0;
 let dessert = 300;
 
+
 function request_ingredients() {
-    recipe = (prompt("Qué receta querés hacer? OPCIONES: POLLO CON PAPAS - FIDEOS CON CREMA - BERENJENAS CON PURÉ")).toLowerCase();
-    if (recipe == "pollo con papas") {
-        alert("Esta receta contiene aproximadamente 300 kcal");
-        calories = calories + 200;
-    } else if (recipe == "fideos con crema") {
-        alert("Esta receta contiene aproximadamente 200 kcal");
-        calories = calories + 300;
-    } else if (recipe == "berenjenas con puré" || recipe == "berenjenas con pure") {
-        alert("Esta receta contiene aproximadamente 150kcal");
-        calories = calories + 150;
+    request_recipe_name = prompt("Qué receta querés hacer? OPCIONES: POLLO CON PAPAS - FIDEOS CON CREMA - BERENJENAS CON PURÉ");
+    if (request_recipe_name === "pollo con papas") {
+        recipe_user = new recipe(request_recipe_name, 200);
+        alert(recipe_user.mensaje());
+    } else if (request_recipe_name === "fideos con crema") {
+        recipe_user = new recipe(request_recipe_name, 300);
+        alert(recipe_user.mensaje());
+    } else if (request_recipe_name === "berenjenas con pure" || request_recipe_name === "berenjenas con puré") {
+        recipe_user = new recipe(request_recipe_name, 150);
+        alert(recipe_user.mensaje());
     } else {
-        alert("No ingresaste una receta válida, por favor intentelo nuevamente");
+        alert("No ingresaste una receta válida, por favor ingrese nuevamente");
         request_ingredients();
     }
 }
 
 function add_dessert() {
-    if ((calories + dessert) <= 500) {
-        total_calories = calories + dessert;
+    if ((recipe_user.calories + dessert) <= 500) {
+        total_calories = recipe_user.calories + dessert;
         alert("Con la comida que elegiste podrías comer de postre un FLAN CON DULCE DE LECHE y la suma de calorías de ambas comidas es de: " + total_calories + "kcal");
     } else {
         alert("La comida que elegiste ya tiene demasiadas calorías para comer postre");
     }
 }
-
-
 
 request_ingredients();
 add_dessert();
