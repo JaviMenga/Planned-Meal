@@ -17,11 +17,8 @@ let dessert = 300;
 request_ingredients();
 add_dessert();
 
-for (const name of meals) {
-    console.log(name.name);
-    console.log(name.calories);
-}
-
+const light_meals = meals.filter(name => name.calories < 100);
+for (const name of light_meals) { console.log("Las comidas con menos calorías son: " + name.name) };
 
 // FUNCIONES DEFINIDAS
 function request_ingredients() {
