@@ -17,12 +17,30 @@ let dessert = 300;
 request_ingredients();
 add_dessert();
 
-const light_meals = meals.filter(name => name.calories < 100);
-for (const name of light_meals) { console.log("Las comidas con menos calorías son: " + name.name) };
+let light_meals2 = "";
+
+const light_meals = meals.filter(recipe => recipe.calories < 100);
+light_meals.forEach(recipe => {
+    light_meals2 = light_meals2 + "- " + recipe.name;
+});
+if (light_meals2 != "") {
+    console.log("Las comidas con menos calorías son: " + light_meals2)
+}
+
+let orderedCalories_meals = meals.sort((a, b) => {
+    if (a.calories < b.calories) {
+        return -1;
+    } else if (a.calories > b.calories) {
+        return 1;
+    } else {
+        return 0;
+    }
+})
+console.log(orderedCalories_meals);
 
 // FUNCIONES DEFINIDAS
 function request_ingredients() {
-    let request_recipe_name = prompt("Qué receta querés hacer? OPCIONES: POLLO CON PAPAS - FIDEOS CON CREMA - BERENJENAS EMPANADAS CON PURÉ");
+    let request_recipe_name = (prompt("Qué receta querés hacer? \nOPCIONES: \nPollo con papas \nFideos con crema \nBerenjenas empanadas con puré")).toLowerCase();
     if (request_recipe_name === "pollo con papas") {
         recipe_user = new recipe(request_recipe_name, 200);
         meals.push(recipe_user);
@@ -49,29 +67,3 @@ function add_dessert() {
         alert("La comida que elegiste ya tiene demasiadas calorías para comer postre");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const light_meals = meals.sort(order_calories());
-// let meals_calories;
-
-// function order_calories() {
-//     for (const calories of meals) {
-//         meals_calories = calories.calories;
-//     }
-// }
