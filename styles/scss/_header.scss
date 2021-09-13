@@ -26,3 +26,12 @@
     // Box model
     width: 1.0625rem;
 }
+
+.hola {
+    // Box Model
+    display: inline-block;
+    margin-bottom: 0;
+    // Text
+    color: rgba(0, 0, 0, .55);
+    font-weight: bold;
+}

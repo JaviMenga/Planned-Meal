@@ -61,6 +61,10 @@
         <h1 class="title">Información de Usuario</h1>
         <form class="form-container" action="#">
             <div>
+                <label class="label-form" for="user">Usuario</label>
+                <input class="form user" type="text" name="user" id="user" placeholder="Escribí un usuario">
+            </div>
+            <div>
                 <label class="label-form" for="name">Nombre</label>
                 <input class="form name" type="text" name="name" id="name" placeholder="Escribí tu nombre">
             </div>
@@ -74,11 +78,13 @@
                 ">
             </div>
             <div>
-                <label class="label-form" for="nacionality">Nacionalidad</label>
-                <select class="form nacionality" name="nacionality" id="nacionality">
-                    <option value="Argentina">Argentina</option>
-                    <option value="Argentina">Chile</option>
-                    <option value="Argentina">Brasil</option>
+                <label class="label-form" for="feeding_type">Tipo de alimentación</label>
+                <select class="form feeding_type" name="feeding_type" id="feeding_type">
+                    <option value="carnivora">Carnívora</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="vegana">Vegana</option>
+                    <option value="celiaca">Celíaca</option>
+                    <option value="mixta">Mixta</option>
                 </select>
             </div>
             <div>
@@ -88,10 +94,6 @@
             <div>
                 <label class="label-form" for="password">Contraseña</label>
                 <input class="form password" type="password" name="password" id="password" placeholder="Escribí tu contraseña" required minlength="6" maxlength="10">
-            </div>
-            <div>
-                <label class="label-form" for="newsletter">Desea recibir Newsletter?</label>
-                <input class="form newsletter" type="checkbox" name="newsletter" id="newsletter" value="sendForm Newsletter">
             </div>
         </form>
         <form action="#" class="send__delete--container">

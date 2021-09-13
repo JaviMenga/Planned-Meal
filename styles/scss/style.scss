@@ -112,7 +112,7 @@ main::-webkit-scrollbar-track {
 }
 
 
-/* -------------------------------------------Mis recaets------------------------------- */
+/* -------------------------------------------Recetas------------------------------- */
 
 .card--style {
     // Box Model
@@ -208,7 +208,7 @@ main::-webkit-scrollbar-track {
 }
 
 
-/* -------------------------------------------communities------------------------------- */
+/* -------------------------------------------Comunidades------------------------------- */
 
 .community-container {
     /* Box Model */
@@ -349,11 +349,6 @@ main::-webkit-scrollbar-track {
     border: none
 }
 
-.newsletter {
-    // Visual
-    box-shadow: none;
-}
-
 .label-form {
     /* Box Model */
     width: 6.25rem;
@@ -365,11 +360,6 @@ main::-webkit-scrollbar-track {
 label {
     /* Text */
     font-weight: bold;
-}
-
-option {
-    // Visual
-    background-color: $smokeWhite;
 }
 
 

@@ -20,6 +20,12 @@
 .header__img--icon {
   width: 1.0625rem; }
 
+.hola {
+  display: inline-block;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: bold; }
+
 footer {
   /* Box Model */
   padding: 0.625rem 0 0.625rem 0;
@@ -55,7 +61,8 @@ body {
 main {
   /* Box Model */
   height: 78vh;
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 h4,
 .carousel-caption--style {
@@ -120,7 +127,7 @@ main::-webkit-scrollbar-track {
   background-size: cover;
   background-image: url(../../multimedia/images/receta4.jpg); }
 
-/* -------------------------------------------Mis recaets------------------------------- */
+/* -------------------------------------------Recetas------------------------------- */
 .card--style {
   height: 72vh;
   box-shadow: 0.125rem 0.125rem 0.625rem #000000; }
@@ -189,7 +196,7 @@ main::-webkit-scrollbar-track {
   /* Box Model */
   margin: 0.625rem; }
 
-/* -------------------------------------------communities------------------------------- */
+/* -------------------------------------------Comunidades------------------------------- */
 .community-container {
   /* Box Model */
   display: flex;
@@ -305,9 +312,6 @@ main::-webkit-scrollbar-track {
 .formulario:active {
   border: none; }
 
-.newsletter {
-  box-shadow: none; }
-
 .label-form {
   /* Box Model */
   width: 6.25rem;
@@ -318,9 +322,6 @@ main::-webkit-scrollbar-track {
 label {
   /* Text */
   font-weight: bold; }
-
-option {
-  background-color: #BABCBF; }
 
 /* -------------------------------------------Mi menú------------------------------- */
 .filters {
