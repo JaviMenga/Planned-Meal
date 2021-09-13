@@ -36,8 +36,10 @@ function ingresar() {
     if (usuarioActivo && clave2) {
         alert(`Bienvenido ${usuarioActivo.nombre} ${usuarioActivo.apellido}`);
     } else if (!usuarioActivo) {
-        alert("El usuario que ingresaste no existe");
-        ingresar();
+        let esc = confirm("El usuario que ingresaste no existe. Querés volver a intentarlo?");
+        if (esc) {
+            ingresar();
+        }
     } else if (!clave2) {
         alert("Ingresá una contraseña correcta");
         ingresar();
