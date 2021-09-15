@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                     <div class="btn btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn ms-3"><a href="usuario.html"><img class="header__img--icon" src="../multimedia/icons/usuario.png" alt="icono del usuario"></a></button>
+                        <button type="button" class="btn ms-3"><a href="usuario.html" id="userIcon"><img class="header__img--icon" src="../multimedia/icons/usuario.png" alt="icono del usuario"></a></button>
                         <button type="button" class="btn me-3"><a href="#"><img class="header__img--icon" src="../multimedia/icons/carrito.svg" alt="icono del carrito"></a></button>
                     </div>
                 </div>
@@ -59,46 +59,53 @@
     <!-- Main's start. Login Form -->
     <main>
         <h1 class="title">Información de Usuario</h1>
+
+
         <form class="form-container" action="#">
             <div>
-                <label class="label-form" for="user">Usuario</label>
-                <input class="form user" type="text" name="user" id="user" placeholder="Escribí un usuario">
+                <div class="visible">
+                    <label class="label-form" for="user">Usuario</label>
+                    <input class="form user" type="text" name="user" id="user" placeholder="Escribí un usuario">
+                </div>
+                <div class="visible">
+                    <label class="label-form" for="password">Contraseña</label>
+                    <input class="form password" type="password" name="password" id="password" placeholder="Escribí tu contraseña" required minlength="6" maxlength="10">
+                </div>
             </div>
-            <div>
-                <label class="label-form" for="name">Nombre</label>
-                <input class="form name" type="text" name="name" id="name" placeholder="Escribí tu nombre">
-            </div>
-            <div>
-                <label class="label-form" for="lastName">Apellido</label>
-                <input class="form lastName" type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido">
-            </div>
-            <div>
-                <label class="label-form" for="age">Edad</label>
-                <input class="form age" type="number" name="age" id="age" min="1" max="100
-                ">
-            </div>
-            <div>
-                <label class="label-form" for="feeding_type">Tipo de alimentación</label>
-                <select class="form feeding_type" name="feeding_type" id="feeding_type">
+            <div class="hidden">
+                <div>
+                    <label class="label-form" for="name">Nombre</label>
+                    <input class="form name" type="text" name="name" id="name" placeholder="Escribí tu nombre">
+                </div>
+                <div>
+                    <label class="label-form" for="lastName">Apellido</label>
+                    <input class="form lastName" type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido">
+                </div>
+                <div>
+                    <label class="label-form" for="age">Edad</label>
+                    <input class="form age" type="number" name="age" id="age" min="1" max="100">
+                </div>
+                <div>
+                    <label class="label-form" for="feeding_type">Tipo de alimentación</label>
+                    <select class="form feeding_type" name="feeding_type" id="feeding_type">
                     <option value="carnivora">Carnívora</option>
                     <option value="vegetariana">Vegetariana</option>
                     <option value="vegana">Vegana</option>
                     <option value="celiaca">Celíaca</option>
                     <option value="mixta">Mixta</option>
                 </select>
-            </div>
-            <div>
-                <label class="label-form" for="email">Mail</label>
-                <input class="form email" type="email" name="email" id="email" placeholder="Escribí tu email" required>
-            </div>
-            <div>
-                <label class="label-form" for="password">Contraseña</label>
-                <input class="form password" type="password" name="password" id="password" placeholder="Escribí tu contraseña" required minlength="6" maxlength="10">
+                </div>
+                <div>
+                    <label class="label-form" for="email">Mail</label>
+                    <input class="form email" type="email" name="email" id="email" placeholder="Escribí tu email" required>
+                </div>
             </div>
         </form>
-        <form action="#" class="send__delete--container">
-            <input class="form deleteForm" type="reset" value="Borrar">
-            <input class="form sendForm" type="submit" value="Enviar">
+        <form action="#" id="login">
+            <input class="form" type="button" value="Ingresar">
+        </form>
+        <form action="#" id="register">
+            <input class="form" type="button" value="Registrate">
         </form>
     </main>
     <!-- Main's end -->
@@ -123,6 +130,7 @@
 
     <!-- Link Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="../script/usuario.js"></script>
 </body>
 
 </html>

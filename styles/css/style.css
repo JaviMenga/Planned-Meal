@@ -20,7 +20,7 @@
 .header__img--icon {
   width: 1.0625rem; }
 
-.hola {
+.active_user {
   display: inline-block;
   margin-bottom: 0;
   color: rgba(0, 0, 0, 0.55);
@@ -290,13 +290,6 @@ main::-webkit-scrollbar-track {
   align-items: center;
   margin-bottom: 2rem; }
 
-.send__delete--container {
-  /* Box Model */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center; }
-
 .form {
   /* Box Model */
   width: 12.5rem;
@@ -322,6 +315,12 @@ main::-webkit-scrollbar-track {
 label {
   /* Text */
   font-weight: bold; }
+
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
 
 /* -------------------------------------------Mi menú------------------------------- */
 .filters {

@@ -323,14 +323,6 @@ main::-webkit-scrollbar-track {
     margin-bottom: 2rem;
 }
 
-.send__delete--container {
-    /* Box Model */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .form {
     /* Box Model */
     width: 12.5rem;
@@ -360,6 +352,16 @@ main::-webkit-scrollbar-track {
 label {
     /* Text */
     font-weight: bold;
+}
+
+.visible {
+    // Box Model
+    display: block;
+}
+
+.hidden {
+    // Box Model
+    display: none;
 }
 
 
