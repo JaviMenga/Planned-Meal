@@ -26,3 +26,4 @@ register.addEventListener("mousedown", inhabilitar_ingreso);
 register.addEventListener("click", registrar);
 let mail_input = document.getElementById("email");
 mail_input.addEventListener("keydown", enter);
+console.log(mail_input);
