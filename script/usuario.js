@@ -22,7 +22,7 @@ clave_input.addEventListener("keydown", enter);
 // REGISTRAR
 let register = document.getElementById("register");
 register.addEventListener("mousedown", habilitar_inputs);
-// register.addEventListener("mousedown", inhabilitar_ingreso);
+register.addEventListener("mousedown", inhabilitar_ingreso);
 register.addEventListener("click", registrar);
 let mail_input = document.getElementById("email");
 mail_input.addEventListener("keydown", enter);
