@@ -117,6 +117,7 @@ main::-webkit-scrollbar-track {
 .card--style {
     // Box Model
     height: 72vh;
+    width: 15rem;
     // Visual
     box-shadow: $shadowBlack
 }
@@ -135,6 +136,8 @@ main::-webkit-scrollbar-track {
 }
 
 .card-title--style {
+    // Box Model
+    height: 15vh;
     // Text
     color: #000000;
     font-weight: bold;
@@ -325,12 +328,27 @@ main::-webkit-scrollbar-track {
 
 .form {
     /* Box Model */
-    width: 12.5rem;
+    width: 18rem;
     margin: 0.625rem;
     /* Text */
     text-align: center;
     /* Visual */
     background-color: inherit;
+    box-shadow: $shadowGrey;
+    border-radius: $bradius1;
+    border: none
+}
+
+.btn-form {
+    /* Box Model */
+    width: 10rem;
+    margin: 0.625rem;
+    padding: 0.325rem;
+    /* Text */
+    text-align: center;
+    /* Visual */
+    background-image: url(../../multimedia/images/fondo.png);
+    background-position: right;
     box-shadow: $shadowGrey;
     border-radius: $bradius1;
     border: none
@@ -343,8 +361,7 @@ main::-webkit-scrollbar-track {
 
 .label-form {
     /* Box Model */
-    width: 6.25rem;
-    display: inline-block;
+    display: block;
     /* Text */
     text-align: center;
 }

@@ -14,8 +14,24 @@ let recipe_user;
 let total_calories = 0;
 let dessert = 300;
 
-request_ingredients();
-add_dessert();
+let resp = confirm("¿Querés hacer una comida? Tengo un par de recetas para ofrecerte.")
+if (resp) {
+    request_ingredients();
+} else {
+    resp = confirm("¿Te las puedo ofrecer de todos modos para que lo tengas en cuenta? Las ordené de menor a mayor en calorías")
+    if (resp) {
+        let orderedCalories_meals = meals.sort((a, b) => {
+            if (a.calories < b.calories) {
+                return -1;
+            } else if (a.calories > b.calories) {
+                return 1;
+            } else {
+                return 0;
+            }
+        })
+        alert(orderedCalories_meals);
+    }
+}
 
 let light_meals2 = "";
 
@@ -27,35 +43,36 @@ if (light_meals2 != "") {
     console.log("Las comidas con menos calorías son: " + light_meals2)
 }
 
-let orderedCalories_meals = meals.sort((a, b) => {
-    if (a.calories < b.calories) {
-        return -1;
-    } else if (a.calories > b.calories) {
-        return 1;
-    } else {
-        return 0;
-    }
-})
-console.log(orderedCalories_meals);
+
 
 // FUNCIONES DEFINIDAS
 function request_ingredients() {
-    let request_recipe_name = (prompt("Qué receta querés hacer? \nOPCIONES: \nPollo con papas \nFideos con crema \nBerenjenas empanadas con puré")).toLowerCase();
+    let request_recipe_name = (prompt("OPCIONES: \nPollo con papas \nFideos con crema \nBerenjenas empanadas con puré")).toLowerCase();
     if (request_recipe_name === "pollo con papas") {
         recipe_user = new recipe(request_recipe_name, 200);
         meals.push(recipe_user);
         alert(recipe_user.mensaje());
+        add_dessert();
     } else if (request_recipe_name === "fideos con crema") {
         recipe_user = new recipe(request_recipe_name, 300);
         meals.push(recipe_user);
         alert(recipe_user.mensaje());
+        add_dessert();
     } else if (request_recipe_name === "berenjenas empanadas con pure" || request_recipe_name === "berenjenas empanadas con puré") {
         recipe_user = new recipe(request_recipe_name, 150);
-        meals.push(recipe_user);
-        alert(recipe_user.mensaje());
+        inform_recipe(recipe_user);
     } else {
         alert("No ingresaste una receta válida, por favor ingrese nuevamente");
         request_ingredients();
+    }
+}
+
+function inform_recipe(recipe_user) {
+    meals.push(recipe_user);
+    alert(recipe_user.mensaje());
+    let resp = confirm("Querés comer un postre luego?")
+    if (resp) {
+        add_dessert();
     }
 }
 

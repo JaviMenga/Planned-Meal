@@ -20,6 +20,109 @@ function buscar_usuario(usuario_ingresado) {
 }
 
 // C
+function creando_cartas(x, i) {
+    let contenedor_cartas = document.getElementById(`contenedor-cartas`);
+    let contenedor_carta = document.createElement(`div`);
+    contenedor_carta.classList.add(`card-header`, `m-2`, `card--style`)
+    contenedor_cartas.appendChild(contenedor_carta);
+
+    let imagen_carta = document.createElement(`img`);
+    imagen_carta.classList.add(`card-img-top`, `card__img--size`);
+    imagen_carta.setAttribute(`src`, x.imagen);
+    imagen_carta.setAttribute(`alt`, `Foto de ${x.nombre}`);
+    contenedor_carta.appendChild(imagen_carta);
+
+    let cuerpo_carta = document.createElement(`div`);
+    cuerpo_carta.classList.add(`card-body`);
+    contenedor_carta.appendChild(cuerpo_carta);
+
+    let nombre_carta = document.createElement(`h5`);
+    nombre_carta.classList.add(`card-title`, `card-title--style`);
+    nombre_carta.textContent = x.nombre;
+    cuerpo_carta.appendChild(nombre_carta);
+
+    let contenedor_botones_carta = document.createElement(`div`);
+    contenedor_botones_carta.classList.add(`card-body`, `d-flex`, `flex-column`);
+    cuerpo_carta.appendChild(contenedor_botones_carta);
+
+    let botones_carta = document.createElement(`button`);
+    botones_carta.classList.add(`btn`, `btn-color`, `m-1`);
+    botones_carta.setAttribute(`type`, `button`);
+    botones_carta.setAttribute(`data-bs-toggle`, `modal`);
+    botones_carta.setAttribute(`data-bs-target`, `#exampleModal${i}`);
+    botones_carta.textContent = `Ver receta`;
+    contenedor_botones_carta.appendChild(botones_carta);
+    console.log(botones_carta);
+
+    let contenedor_instrucciones_carta = document.createElement(`div`);
+    contenedor_instrucciones_carta.classList.add(`modal`, `fade`);
+    contenedor_instrucciones_carta.setAttribute(`id`, `exampleModal${i}`);
+    contenedor_instrucciones_carta.setAttribute(`tabindex`, `-1`);
+    contenedor_instrucciones_carta.setAttribute(`aria-labelledby`, `exampleModalLabel`);
+    contenedor_instrucciones_carta.setAttribute(`aria-hidden`, `true`);
+    contenedor_botones_carta.appendChild(contenedor_instrucciones_carta);
+
+    let div1_contenedor_instrucciones_carta = document.createElement(`div`);
+    div1_contenedor_instrucciones_carta.classList.add(`modal-dialog`, `modal-dialog`, `modal-xl`);
+    contenedor_instrucciones_carta.appendChild(div1_contenedor_instrucciones_carta);
+
+    let div2_contenedor_instrucciones_carta = document.createElement(`div`);
+    div2_contenedor_instrucciones_carta.classList.add(`modal-content`, `modal-content--color`);
+    div1_contenedor_instrucciones_carta.appendChild(div2_contenedor_instrucciones_carta);
+
+    let div3_contenedor_instrucciones_carta = document.createElement(`div`);
+    div3_contenedor_instrucciones_carta.classList.add(`modal-header`);
+    div2_contenedor_instrucciones_carta.appendChild(div3_contenedor_instrucciones_carta);
+
+    let titulo_intrucciones_carta = document.createElement(`h5`);
+    titulo_intrucciones_carta.classList.add(`modal-title`, `card-title--style`);
+    titulo_intrucciones_carta.setAttribute(`id`, `exampleModalLabel`);
+    titulo_intrucciones_carta.textContent = x.nombre;
+    div3_contenedor_instrucciones_carta.appendChild(titulo_intrucciones_carta);
+
+    let boton_instrucciones_carta = document.createElement(`button`);
+    boton_instrucciones_carta.classList.add(`btn-close`);
+    boton_instrucciones_carta.setAttribute(`type`, `button`);
+    boton_instrucciones_carta.setAttribute(`data-bs-dismiss`, `modal`);
+    boton_instrucciones_carta.setAttribute(`aria-label`, `Close`);
+    div3_contenedor_instrucciones_carta.appendChild(boton_instrucciones_carta);
+
+    let div4_contenedor_instrucciones_carta = document.createElement(`div`);
+    div4_contenedor_instrucciones_carta.classList.add(`modal-body`, `text-start`);
+    div2_contenedor_instrucciones_carta.appendChild(div4_contenedor_instrucciones_carta);
+
+    // Acá irian las instrucciones
+    let lista_instrucciones_carta = document.createElement(`ul`);
+    div4_contenedor_instrucciones_carta.appendChild(lista_instrucciones_carta)
+
+    let instrucciones_carta = document.createElement(`li`);
+    instrucciones_carta.textContent = x.instrucciones;
+    div4_contenedor_instrucciones_carta.appendChild(instrucciones_carta);
+
+    let link_carta = document.createElement(`a`);
+    link_carta.classList.add(`btn`, `btn-color`, `a-style`, `m-1`)
+    link_carta.setAttribute(`href`, `#`)
+    link_carta.textContent = "Agregar";
+    contenedor_botones_carta.appendChild(link_carta);
+
+    let div5_contenedor_instrucciones_carta = document.createElement(`div`);
+    div5_contenedor_instrucciones_carta.classList.add(`modal-footer`);
+    div2_contenedor_instrucciones_carta.appendChild(div5_contenedor_instrucciones_carta);
+
+    let boton1_contenedor_carta = document.createElement(`button`);
+    boton1_contenedor_carta.classList.add(`btn`, `btn-color`, `m-1`);
+    boton1_contenedor_carta.setAttribute(`type`, `button`);
+    boton1_contenedor_carta.setAttribute(`data-bs-dismiss`, `modal`);
+    boton1_contenedor_carta.textContent = `Volver`;
+    div5_contenedor_instrucciones_carta.appendChild(boton1_contenedor_carta);
+
+    let boton2_contenedor_carta = document.createElement(`button`);
+    boton2_contenedor_carta.classList.add(`btn`, `btn-color`, `m-1`);
+    boton2_contenedor_carta.setAttribute(`type`, `button`);
+    boton2_contenedor_carta.textContent = `Agregar`;
+    div5_contenedor_instrucciones_carta.appendChild(boton2_contenedor_carta);
+}
+
 function chequear_dato(usuario, nombre, apellido, clave, edad, alimentacion, mail) {
     let mjs = ``;
     if ((usuario) && (nombre) && (apellido) && (clave) && (edad) && (alimentacion) && (mail)) {
@@ -92,7 +195,7 @@ function plasmar_usuario() {
     // Visualizar en HTML el usuario ingresado/registrado
     let contenedor_usuario = document.getElementById("userIcon");
     let usuario_activo = document.createElement("p");
-    usuario_activo.textContent = usuarioActivo.nombre;
+    usuario_activo.textContent = usuarioActivo.usuario;
     contenedor_usuario.appendChild(usuario_activo);
     usuario_activo.classList.add("active_user");
 }
@@ -101,19 +204,12 @@ function plasmar_usuario() {
 function registrar() {
 
     let usuario = document.getElementById("user").value;
-    console.log(usuario);
     let nombre = document.getElementById("name").value.toLowerCase();
-    console.log(nombre);
     let apellido = document.getElementById("lastName").value.toLowerCase();
-    console.log(apellido);
     let clave = document.getElementById("password").value;
-    console.log(clave);
     let edad = document.getElementById("age").value;
-    console.log(edad);
     let alimentacion = document.getElementById("feeding_type").value;
-    console.log(alimentacion);
     let mail = document.getElementById("email").value;
-    console.log(mail);
     let mjs = chequear_dato(usuario, nombre, apellido, clave, edad, alimentacion, mail);
     if (mjs == ``) {
         usuarioActivo = new Clientes(usuario, nombre, apellido, clave, edad, alimentacion, mail)
