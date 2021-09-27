@@ -57,10 +57,9 @@
     <!-- Header's end -->
 
     <!-- Main's start -->
-    <form action="#">
-        <input type="search" class="form" placeholder="¿Qué buscas?">
-        <button class="btn-form">Buscar receta</button>
-        <select class="form feeding_type" name="feeding_type" id="feeding_type">
+    <input type="text" id="busqueda_receta" class="form" placeholder="¿Qué buscas?">
+    <button class="btn-form" id="buscar_recetas">Buscar receta</button>
+    <select class="form feeding_type" name="feeding_type" id="feeding_type">
             <option value="" disabled selected>¿Qué tipo de recetas buscas?</option>
             <option value="carnivora">Carnívora</option>
             <option value="vegetariana">Vegetariana</option>
@@ -68,8 +67,7 @@
             <option value="celiaca">Celíaca</option>
             <option value="mixta">Mixta</option>
         </select>
-        <button class="btn-form" id="agregar_receta">Agregar receta</button>
-    </form>
+    <button class="btn-form" id="agregar_receta">Agregar receta</button>
     <main class="container-fluid">
         <div id="contenedor-cartas" class="mb-4 d-flex flex-row flex-wrap justify-content-center">
 
@@ -97,6 +95,7 @@
 
     <!-- Link Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/functions.js"></script>
     <script src="../script/recipes.js"></script>
 </body>
