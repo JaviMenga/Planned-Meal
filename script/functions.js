@@ -2,7 +2,7 @@
 
 // B
 
-// puedo sustituir el While por un for! HACER
+// Puedo sustituir el While por un for! HACER
 function buscar_usuario(usuario_ingresado) {
     if (!localStorage.getItem(`lista_usuarios`)) {
         return false
@@ -75,10 +75,8 @@ function enter(event) {
     let tecla_enter = event.keyCode;
     if (event.target == clave_input && tecla_enter == 13) {
         ingresar();
-        console.log(`entre`)
     } else if (event.target == mail_input && tecla_enter == 13) {
         registrar();
-        console.log(`entre por aquí`)
     }
 }
 
@@ -98,11 +96,13 @@ function guardar_usuario(nuevo_usuario_ingresado) {
 }
 
 // H
+
+// Esta funcion está hecha con JQUERY
 function habilitar_inputs() {
-    let hidden = document.getElementsByClassName(`hidden`);
-    for (const x of hidden) {
-        x.classList.replace("hidden", "visible");
-    }
+    let hidden = $(`#register_input`);
+    hidden.fadeIn(`slow`, function() {
+        login.fadeOut(200);
+    });
 }
 
 // I
@@ -121,18 +121,15 @@ function ingresar() {
     return usuarioActivo;
 }
 
-function inhabilitar_ingreso() {
-    login.classList.add("hidden");
-}
+// Esta funcion está hecha con JQUERY
+// function inhabilitar_ingreso() {
+//     login.hide();
+// }
 
 // P
 function plasmar_usuario() {
-    // Visualizar en HTML el usuario ingresado/registrado
-    let contenedor_usuario = document.getElementById(`userIcon`);
-    let usuario_activo = document.createElement(`p`);
-    usuario_activo.textContent = usuarioActivo.usuario;
-    contenedor_usuario.appendChild(usuario_activo);
-    usuario_activo.classList.add("active_user");
+    let contenedor_usuario = $(`#userIcon`);
+    contenedor_usuario.append(`<p class="active_user">${usuarioActivo.usuario}</p>`)
 }
 
 // R

@@ -15,8 +15,14 @@ for (const receta of recetas) {
     i++
 }
 
-let buscar_recetas = document.getElementById("buscar_recetas");
-buscar_recetas.addEventListener("click", buscar_receta)
+
+
+
+
+
+
+
+
 
 // No está terminado
 function buscar_receta() {
