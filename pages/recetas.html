@@ -67,9 +67,9 @@
             <option value="celiaca">Celíaca</option>
             <option value="mixta">Mixta</option>
     </select> -->
-    <!-- <button class="btn-form" id="agregar_receta" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar receta</button> -->
+    <button class="btn-form" id="agregar_receta" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar receta</button>
     <!-- Modal -->
-    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal-content--color">
                 <div class="modal-header">
@@ -77,16 +77,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
-                        <label for="foto_recetaNueva" class="label-form">Imagen</label>
-                        <input type="file" name="foto_recetaNueva" accept=".jpg">
+                    <label for="foto_recetaNueva">Imagen</label>
+                    <input type="file" name="foto_recetaNueva" accept=".jpg" id="foto_recetaNueva">
 
-                        <label for="nombre_recetaNueva" class="label-form">Nombre de la receta</label>
-                        <input type="text" name="nombre_recetaNueva" id="nombre_recetaNueva" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
+                    <label for="nombre_recetaNueva">Nombre de la receta</label>
+                    <input type="text" name="nombre_recetaNueva" id="nombre_recetaNueva" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
 
-                        <label for="instrucciones_recetaNueva" class="label-form">Instrucciones</label>
-                        <textarea name="instrucciones_recetaNueva" id="instrucciones_recetaNueva" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
-                    </form>
+                    <label for="instrucciones_recetaNueva">Instrucciones</label>
+                    <textarea name="instrucciones_recetaNueva" id="instrucciones_recetaNueva" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
+                    <label for="feeding_type">Tipo de alimentación</label>
+                    <select class="form feeding_type" name="feeding_type" id="feeding_type">
+                        <option value="carnivora">Carnívora</option>
+                        <option value="vegetariana">Vegetariana</option>
+                        <option value="vegana">Vegana</option>
+                        <option value="celiaca">Celíaca</option>
+                        <option value="mixta">Mixta</option>
+                    </select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Cerrar</button>
@@ -94,7 +100,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 

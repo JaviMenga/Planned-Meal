@@ -22,39 +22,44 @@ function buscar_usuario(usuario_ingresado) {
 }
 
 // C
-// Esta funcion está hecha con JQUERY
-function creando_cartas(receta, i) {
-    let contenedor_cartas = $(`#contenedor-cartas`);
-    contenedor_cartas.append(`<div class="card-header m-2 card--style">
-                                <img class="card-img-top card__img--size" src="${receta.imagen}" alt="Foto de ${receta.nombre}">
-                                <div class="card-body">
-                                    <h5 class="card-title card-title--style">${receta.nombre}</h5>
-                                    <div class="card-body d-flex flex-column">
-                                        <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${i}">Ver receta</button>
-                                        <div class="modal fade" id="exampleModal${i}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-xl">
-                                                <div class="modal-content modal-content--color">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title card-title--style" id="exampleModalLabel">${receta.nombre}</h5>
-                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body text-start">
-                                                        <ul>
-                                                            <li>${receta.instrucciones}</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn btn-color m-1" type="button" data-bs-dismiss="modal">Volver</button>
-                                                        <button class="btn btn-color m-1" type="button">Agregar</button>
+function creando_cartas(i) {
+    $.getJSON(URL_receta, function(respuesta, estado) {
+        if (estado === "success") {
+            let misRecetas = respuesta;
+            for (const receta of misRecetas) {
+                let contenedor_cartas = $(`#contenedor-cartas`);
+                contenedor_cartas.append(`<div class="card-header m-2 card--style">
+                                        <img class="card-img-top card__img--size" src="${receta.imagen}" alt="Foto de ${receta.nombre}">
+                                        <div class="card-body">
+                                        <h5 class="card-title card-title--style">${receta.nombre}</h5>
+                                        <div class="card-body d-flex flex-column">
+                                            <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${i}">Ver receta</button>
+                                            <div class="modal fade" id="exampleModal${i}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content modal-content--color">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${receta.nombre}</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body text-start">
+                                                            <ul>
+                                                                <li>${receta.instrucciones}</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn btn-color m-1" type="button" data-bs-dismiss="modal">Volver</button>
+                                                            <button class="btn btn-color m-1" type="button">Agregar</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <a class="btn btn-color a-style m-1">Agregar</a>
                                         </div>
-                                        <a class="btn btn-color a-style m-1">Agregar</a>
-                                    </div>
-                                </div>
-                            </div>`);
-
+                                        </div>
+                                    </div>`);
+            }
+        }
+    })
 }
 
 function chequear_dato(usuario, nombre, apellido, clave, edad, alimentacion, mail) {
@@ -96,13 +101,12 @@ function guardar_usuario(nuevo_usuario_ingresado) {
 }
 
 // H
-
-// Esta funcion está hecha con JQUERY
 function habilitar_inputs() {
     let hidden = $(`#register_input`);
-    hidden.fadeIn(`slow`, function() {
-        login.fadeOut(200);
+    hidden.fadeIn(1000, function() {
+        login.fadeOut();
     });
+    $(`#titulo_login`).text(`Registrar`);
 }
 
 // I
@@ -120,11 +124,6 @@ function ingresar() {
     }
     return usuarioActivo;
 }
-
-// Esta funcion está hecha con JQUERY
-// function inhabilitar_ingreso() {
-//     login.hide();
-// }
 
 // P
 function plasmar_usuario() {
