@@ -1,40 +1,152 @@
 // FUNCIONES DEFINIDAS
 
-// B
-
-// Puedo sustituir el While por un for! HACER
-function buscar_usuario(usuario_ingresado) {
-    if (!localStorage.getItem(`lista_usuarios`)) {
-        return false
+// C
+function checkIn() {
+    let user = document.getElementById(`user`).value;
+    let name = document.getElementById(`name`).value.toLowerCase();
+    let lastname = document.getElementById(`lastName`).value.toLowerCase();
+    let password = document.getElementById(`password`).value;
+    let age = document.getElementById(`age`).value;
+    let email = document.getElementById(`email`).value;
+    let mjs = check_facts(user, name, lastname, password, age, email);
+    if (mjs == ``) {
+        activeUser = new Clients(user, name, lastname, password, age, email)
+        save_user(activeUser);
+        alert(`Usuario creado con éxito!`);
+        translate_user();
     } else {
-        let usuarios_almacenados = JSON.parse(localStorage.getItem(`lista_usuarios`));
-        let i = 0
-        let encontrado = false;
-        while (!encontrado && i != usuarios_almacenados.length) {
-            if (usuarios_almacenados[i].usuario == usuario_ingresado) {
-                encontrado = usuarios_almacenados[i];
-                return encontrado;
-            }
-            i++;
-        }
-        return encontrado;
+        alert(mjs);
     }
 }
 
-// C
-function creando_cartas(i) {
+function check_facts(user, name, lastname, password, age, email) {
+    let mjs = ``;
+    if ((user) && (name) && (lastname) && (password) && (age) && (email)) {
+        let fact = search_user(user);
+        if (fact != false) {
+            mjs = `Usuario existente`;
+        }
+    } else {
+        mjs = `Tenés que ingresar todos los datos`;
+    }
+    return mjs;
+}
+
+// E
+function enter(event) {
+    let enter_key = event.keyCode;
+    if (event.target == password_input && enter_key == 13) {
+        log_in();
+    } else if (event.target == email_input && enter_key == 13) {
+        checkIn();
+    }
+}
+
+function enable_inputs() {
+    let hidden = $(`#register_input`);
+    hidden.fadeIn(1000, function() {
+        login.fadeOut();
+    });
+    $(`#title_login`).text(`Registrar`);
+}
+
+// L
+function log_in() {
+    let user = document.getElementById(`user`).value;
+    let password = document.getElementById(`password`).value;
+    activeUser = search_user(user);
+    let password2 = validate_password(password, user);
+    if (activeUser && password2) {
+        translate_user();
+    } else if (!activeUser) {
+        alert(`El usuario que ingresaste no existe`);
+    } else if (!password2) {
+        alert(`Ingresá una contraseña correcta`);
+    }
+    return activeUser;
+}
+
+// S
+function search_user(user_loggedIn) {
+    if (!localStorage.getItem(`users_list`)) {
+        return false
+    } else {
+        let stored_users = JSON.parse(localStorage.getItem(`users_list`));
+        let found = false;
+        for (const user of stored_users) {
+            if (user.user == user_loggedIn) {
+                found = user;
+                return found
+            }
+        }
+        return found
+    }
+}
+
+function save_user(new_user_loggedIn) {
+    if (localStorage.getItem(`users_list`)) {
+        console.log(`ya está`)
+        let stored_users = JSON.parse(localStorage.getItem(`users_list`));
+        stored_users.push(new_user_loggedIn);
+        let stored_users_string = JSON.stringify(stored_users);
+        localStorage.setItem(`users_list`, stored_users_string);
+    } else {
+        console.log(`no está`)
+        stored_users = new Array();
+        stored_users.push(new_user_loggedIn);
+        let stored_users_string = JSON.stringify(stored_users);
+        localStorage.setItem(`users_list`, stored_users_string);
+    }
+}
+
+// T
+function translate_user() {
+    let userIcon = $(`#userIcon`);
+    userIcon.append(`<p class="active_user">${activeUser.user}</p>`)
+}
+
+// V
+function validate_password(password_loggedIn, user_loggedIn) {
+    let fact = search_user(user_loggedIn);
+    let comparison = false;
+    if (fact != false) {
+        if (fact.password == password_loggedIn) {
+            comparison = true;
+            return comparison
+        }
+    }
+    return comparison;
+}
+
+
+// A
+// esto esta mal!! resolver esto!
+function agregar_receta(imagen_recetaNueva, nombre_recetaNueva, instrucciones_recetaNueva) {
+    let receta_nueva = new Recetas(nombre_recetaNueva, imagen_recetaNueva, 100, instrucciones_recetaNueva, `carnivoro`);
+    let receta_nueva_JSON = JSON.stringify(receta_nueva);
+    $.post(URL_receta, receta_nueva_JSON, (respuesta, estado) => {
+        if (estado === `success`) {
+            $(".modal-footer").prepend(`<div>La receta de ${respuesta.nombre} ha sido creada con éxito!</div>`);
+        }
+    }, `json`);
+}
+
+
+function buscando_receta() {
     $.getJSON(URL_receta, function(respuesta, estado) {
-        if (estado === "success") {
+        if (estado === `success`) {
             let misRecetas = respuesta;
+            user_filter = $(`#user_filter`).val().toLowerCase();
             for (const receta of misRecetas) {
-                let contenedor_cartas = $(`#contenedor-cartas`);
-                contenedor_cartas.append(`<div class="card-header m-2 card--style">
+                let nombre_misRecetas = receta.nombre.toLowerCase();
+                if (nombre_misRecetas.indexOf(user_filter) !== -1) {
+                    contenedor_cartas.append(`<div class="card-header m-2 card--style">
                                         <img class="card-img-top card__img--size" src="${receta.imagen}" alt="Foto de ${receta.nombre}">
                                         <div class="card-body">
                                         <h5 class="card-title card-title--style">${receta.nombre}</h5>
                                         <div class="card-body d-flex flex-column">
-                                            <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${i}">Ver receta</button>
-                                            <div class="modal fade" id="exampleModal${i}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                            <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${receta.id}">Ver receta</button>
+                                            <div class="modal fade" id="exampleModal${receta.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-xl">
                                                     <div class="modal-content modal-content--color">
                                                         <div class="modal-header">
@@ -57,109 +169,95 @@ function creando_cartas(i) {
                                         </div>
                                         </div>
                                     </div>`);
+                }
             }
+
         }
     })
 }
 
-function chequear_dato(usuario, nombre, apellido, clave, edad, alimentacion, mail) {
-    let mjs = ``;
-    if ((usuario) && (nombre) && (apellido) && (clave) && (edad) && (alimentacion) && (mail)) {
-        let dato = buscar_usuario(usuario);
-        if (dato != false) {
-            mjs = `Usuario existente`;
-        }
-    } else {
-        mjs = `Tenés que ingresar todos los datos`;
-    }
-    return mjs;
-}
+// C
+// function creando_cartas() {
+//     $.getJSON(URL_receta, function(respuesta, estado) {
+//         if (estado === `success`) {
+//             let misRecetas = respuesta;
+//             for (const receta of misRecetas) {
+//     contenedor_cartas.append(`<div class="card-header m-2 card--style">
+//                                         <img class="card-img-top card__img--size" src="${receta.imagen}" alt="Foto de ${receta.nombre}">
+//                                         <div class="card-body">
+//                                         <h5 class="card-title card-title--style">${receta.nombre}</h5>
+//                                         <div class="card-body d-flex flex-column">
+//                                             <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${receta.id}">Ver receta</button>
+//                                             <div class="modal fade" id="exampleModal${receta.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+//                                                 <div class="modal-dialog modal-xl">
+//                                                     <div class="modal-content modal-content--color">
+//                                                         <div class="modal-header">
+//                                                             <h5 class="modal-title card-title--style" id="exampleModalLabel">${receta.nombre}</h5>
+//                                                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+//                                                         </div>
+//                                                         <div class="modal-body text-start">
+//                                                             <ul>
+//                                                                 <li>${receta.instrucciones}</li>
+//                                                             </ul>
+//                                                         </div>
+//                                                         <div class="modal-footer">
+//                                                             <button class="btn btn-color m-1" type="button" data-bs-dismiss="modal">Volver</button>
+//                                                             <button class="btn btn-color m-1" type="button">Agregar</button>
+//                                                         </div>
+//                                                     </div>
+//                                                 </div>
+//                                             </div>
+//                                             <a class="btn btn-color a-style m-1">Agregar</a>
+//                                         </div>
+//                                         </div>
+//                                     </div>`);
+// }
+//         }
+//     })
+// }
 
-// E
-function enter(event) {
-    let tecla_enter = event.keyCode;
-    if (event.target == clave_input && tecla_enter == 13) {
-        ingresar();
-    } else if (event.target == mail_input && tecla_enter == 13) {
-        registrar();
-    }
-}
-
-// G
-function guardar_usuario(nuevo_usuario_ingresado) {
-    if (localStorage.getItem(`lista_usuarios`)) {
-        let usuarios_almacenados = JSON.parse(localStorage.getItem(`lista_usuarios`));
-        usuarios_almacenados.push(nuevo_usuario_ingresado);
-        let usuarios_almacenados_string = JSON.stringify(usuarios_almacenados);
-        localStorage.setItem(`lista_usuarios`, usuarios_almacenados_string);
-    } else {
-        usuarios_almacenados = new Array();
-        usuarios_almacenados.push(nuevo_usuario_ingresado);
-        let usuarios_almacenados_string = JSON.stringify(usuarios_almacenados);
-        localStorage.setItem(`lista_usuarios`, usuarios_almacenados_string);
-    }
-}
-
-// H
-function habilitar_inputs() {
-    let hidden = $(`#register_input`);
-    hidden.fadeIn(1000, function() {
-        login.fadeOut();
-    });
-    $(`#titulo_login`).text(`Registrar`);
-}
-
-// I
-function ingresar() {
-    let usuario = document.getElementById(`user`).value;
-    let clave = document.getElementById(`password`).value;
-    usuarioActivo = buscar_usuario(usuario);
-    let clave2 = validar_clave(clave, usuario);
-    if (usuarioActivo && clave2) {
-        plasmar_usuario();
-    } else if (!usuarioActivo) {
-        alert(`El usuario que ingresaste no existe`);
-    } else if (!clave2) {
-        alert(`Ingresá una contraseña correcta`);
-    }
-    return usuarioActivo;
-}
-
-// P
-function plasmar_usuario() {
-    let contenedor_usuario = $(`#userIcon`);
-    contenedor_usuario.append(`<p class="active_user">${usuarioActivo.usuario}</p>`)
-}
-
-// R
-function registrar() {
-    let usuario = document.getElementById(`user`).value;
-    let nombre = document.getElementById(`name`).value.toLowerCase();
-    let apellido = document.getElementById(`lastName`).value.toLowerCase();
-    let clave = document.getElementById(`password`).value;
-    let edad = document.getElementById(`age`).value;
-    let alimentacion = document.getElementById(`feeding_type`).value;
-    let mail = document.getElementById(`email`).value;
-    let mjs = chequear_dato(usuario, nombre, apellido, clave, edad, alimentacion, mail);
-    if (mjs == ``) {
-        usuarioActivo = new Clientes(usuario, nombre, apellido, clave, edad, alimentacion, mail)
-        guardar_usuario(usuarioActivo);
-        alert(`Usuario creado con éxito!`);
-        plasmar_usuario();
-    } else {
-        alert(mjs);
+function creando_cartas_filtradas() {
+    for (const receta of misRecetasFiltradas) {
+        contenedor_cartas_filtradas.append(`<div class="card-header m-2 card--style">
+                                        <img class="card-img-top card__img--size" src="${receta.imagen}" alt="Foto de ${receta.nombre}">
+                                        <div class="card-body">
+                                        <h5 class="card-title card-title--style">${receta.nombre}</h5>
+                                        <div class="card-body d-flex flex-column">
+                                            <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${receta.id}">Ver receta</button>
+                                            <div class="modal fade" id="exampleModal${receta.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content modal-content--color">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${receta.nombre}</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body text-start">
+                                                            <ul>
+                                                                <li>${receta.instrucciones}</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn btn-color m-1" type="button" data-bs-dismiss="modal">Volver</button>
+                                                            <button class="btn btn-color m-1" type="button">Agregar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-color a-style m-1">Agregar</a>
+                                        </div>
+                                        </div>
+                                    </div>`);
     }
 }
 
-// V
-function validar_clave(clave_ingresada, usuario_ingresado) {
-    let dato = buscar_usuario(usuario_ingresado);
-    let comparacion = false;
-    if (dato != false) {
-        if (dato.clave == clave_ingresada) {
-            comparacion = true;
-            return comparacion
-        }
+function crear_receta() {
+    let imagen_recetaNueva = $(`#foto_recetaNueva`).val();
+    let nombre_recetaNueva = $(`#nombre_recetaNueva`).val();
+    let instrucciones_recetaNueva = $(`#instrucciones_recetaNueva`).val();
+    // hay que hacer otra cosa para tomar el valor de un Select
+    let feeding_type_recetaNueva = $(`#feeding_type_recetaNueva`).val();
+
+    if ((imagen_recetaNueva) && (nombre_recetaNueva) && (instrucciones_recetaNueva)) {
+        agregar_receta(imagen_recetaNueva, nombre_recetaNueva, instrucciones_recetaNueva);
     }
-    return comparacion;
 }

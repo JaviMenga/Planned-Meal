@@ -1,27 +1,27 @@
-class Clientes {
-    constructor(usuario, nombre, apellido, clave, edad, alimentacion, mail) {
-        this.usuario = usuario;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.clave = clave;
-        this.edad = edad;
-        this.alimentacion = alimentacion;
-        this.mail = mail;
+class Clients {
+    constructor(user, name, lastname, password, age, email) {
+        this.user = user;
+        this.name = name;
+        this.lastname = lastname;
+        this.password = password;
+        this.age = age;
+        this.email = email;
     }
 }
 
-let usuarioActivo;
-let tipo_dieta = [`carnivora`, `vegetariana`, `vegana`, `celiaca`, `mixta`];
-
-// INGRESAR
+let activeUser;
 let login = $(`#login`);
-login.on(`click`, ingresar);
-let clave_input = document.getElementById(`password`);
-clave_input.addEventListener(`keydown`, enter);
-
-// REGISTRAR
+let password_input = document.getElementById(`password`);
 let register = document.getElementById(`register`);
-register.addEventListener(`mousedown`, habilitar_inputs);
-register.addEventListener(`click`, registrar);
-let mail_input = document.getElementById(`email`);
-mail_input.addEventListener(`keydown`, enter);
+let email_input = document.getElementById(`email`);
+
+$(document).ready(function() {
+
+    login.on(`click`, log_in);
+    password_input.addEventListener(`keydown`, enter);
+    register.addEventListener(`mousedown`, enable_inputs);
+    register.addEventListener(`click`, checkIn);
+    email_input.addEventListener(`keydown`, enter);
+
+
+});

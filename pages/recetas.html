@@ -43,9 +43,6 @@
                         <li class="nav-item shadow w-100 me-3">
                             <a class="nav-link header__a--style" href="comunidad.html">Comunidades</a>
                         </li>
-                        <li class="nav-item shadow w-100 me-3 text-center">
-                            <a class="nav-link header__a--style" href="armar_mi_menu.html">Mi menú</a>
-                        </li>
                     </ul>
                     <div class="btn btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn ms-3" id="userIcon"><a href="usuario.html"><img class="header__img--icon" src="../multimedia/icons/usuario.png" alt="icono del usuario"></a></button>
@@ -57,36 +54,50 @@
     <!-- Header's end -->
 
     <!-- Main's start -->
-    <!-- <input type="text" id="busqueda_receta" class="form" placeholder="¿Qué buscas?">
-    <button class="btn-form" id="buscar_recetas">Buscar receta</button>
-    <select class="form feeding_type" name="feeding_type" id="feeding_type">
-            <option value="" disabled selected>¿Qué tipo de recetas buscas?</option>
-            <option value="carnivora">Carnívora</option>
-            <option value="vegetariana">Vegetariana</option>
-            <option value="vegana">Vegana</option>
-            <option value="celiaca">Celíaca</option>
-            <option value="mixta">Mixta</option>
-    </select> -->
-    <button class="btn-form" id="agregar_receta" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar receta</button>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <!-- Filter -->
+    <button class="btn-form" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Filto</button>
+    <div id="staticBackdrop1" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal-content--color">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Agrega tu propia receta</h5>
+                    <h5 id="staticBackdropLabel" class="modal-title">Filtro de Recetas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="search_recipe">Escribe alguna palabra para filtrar</label>
+                        <input type="search" id="user_filter" name="search_recipe">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="search_recipe" class="btn btn-color m-1">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Recipe -->
+    <button class="btn-form" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar receta</button>
+    <div id="staticBackdrop" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content--color">
+                <div class="modal-header">
+                    <h5 id="staticBackdropLabel" class="modal-title">Agrega tu propia receta</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <label for="foto_recetaNueva">Imagen</label>
-                    <input type="file" name="foto_recetaNueva" accept=".jpg" id="foto_recetaNueva">
+                    <input type="file" id="foto_recetaNueva" name="foto_recetaNueva" accept=".jpg">
 
                     <label for="nombre_recetaNueva">Nombre de la receta</label>
-                    <input type="text" name="nombre_recetaNueva" id="nombre_recetaNueva" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
+                    <input type="text" id="nombre_recetaNueva" name="nombre_recetaNueva" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
 
                     <label for="instrucciones_recetaNueva">Instrucciones</label>
-                    <textarea name="instrucciones_recetaNueva" id="instrucciones_recetaNueva" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
+                    <textarea id="instrucciones_recetaNueva" name="instrucciones_recetaNueva" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
+
                     <label for="feeding_type">Tipo de alimentación</label>
-                    <select class="form feeding_type" name="feeding_type" id="feeding_type">
+                    <select id="feeding_type_recetaNueva" class="form feeding_type" name="feeding_type">
                         <option value="carnivora">Carnívora</option>
                         <option value="vegetariana">Vegetariana</option>
                         <option value="vegana">Vegana</option>
@@ -96,18 +107,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-color m-1">Crear</button>
+                    <button type="button" id="creando_receta" class="btn btn-color m-1">Crear</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
     <main class="container-fluid">
         <div id="contenedor-cartas" class="mb-4 d-flex flex-row flex-wrap justify-content-center">

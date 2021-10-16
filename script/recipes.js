@@ -9,36 +9,15 @@ class Recetas {
 }
 const URL_receta = "../recetas.json";
 
-let i = 1;
-creando_cartas(i);
+let creando_receta = $(`#creando_receta`);
+let contenedor_cartas = $(`#contenedor-cartas`);
+let buscar_receta = $(`#search_recipe`);
+let user_filter = ``;
 
+$(document).ready(function() {
+    buscar_receta.on(`click`, buscando_receta);
+    buscando_receta();
+    // creando_cartas();
+    // creando_receta.on(`click`, crear_receta);
 
-// let foto_recetaNueva = document.getElementById(`foto_recetaNueva`).value;
-// let nombre_recetaNueva = document.getElementById(`nombre_recetaNueva`).value;
-// let instrucciones_recetaNueva = document.getElementById(`instrucciones_recetaNueva`).value;
-// let categoria_recetaNueva = document.getElementById(`feeding_type`).value;
-
-// function crear_receta() {
-//     let nuevaReceta = new Recetas(nombre_recetaNueva, foto_recetaNueva, 100, instrucciones_recetaNueva, categoria_recetaNueva)
-// }
-// crear_receta()
-
-
-
-
-
-
-
-
-
-
-// No está terminado
-// function buscar_receta() {
-//     let busqueda_receta = document.getElementById("busqueda_receta").value;
-//     let recetas_buscadas = recetas.filter(recetas => recetas.nombre.includes(busqueda_receta));
-//     for (const receta of recetas_buscadas) {
-//         creando_cartas(receta, i)
-//         i++
-//     }
-
-// }
+});
