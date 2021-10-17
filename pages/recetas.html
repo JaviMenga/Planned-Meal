@@ -67,7 +67,7 @@
                 <div class="modal-body">
                     <form action="">
                         <label for="search_recipe">Escribe alguna palabra para filtrar</label>
-                        <input type="search" id="user_filter" name="search_recipe">
+                        <input type="search" id="user_filter" name="user_filter">
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -87,34 +87,25 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <label for="foto_recetaNueva">Imagen</label>
-                    <input type="file" id="foto_recetaNueva" name="foto_recetaNueva" accept=".jpg">
+                    <label for="newRecipe_image">Imagen</label>
+                    <input type="file" id="newRecipe_image" name="newRecipe_image" accept=".jpg">
 
-                    <label for="nombre_recetaNueva">Nombre de la receta</label>
-                    <input type="text" id="nombre_recetaNueva" name="nombre_recetaNueva" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
+                    <label for="newRecipe_name">Nombre de la receta</label>
+                    <input type="text" id="newRecipe_name" name="newRecipe_name" placeholder="Ej: Risotto de hongos con hierbas" required class="form">
 
-                    <label for="instrucciones_recetaNueva">Instrucciones</label>
-                    <textarea id="instrucciones_recetaNueva" name="instrucciones_recetaNueva" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
-
-                    <label for="feeding_type">Tipo de alimentación</label>
-                    <select id="feeding_type_recetaNueva" class="form feeding_type" name="feeding_type">
-                        <option value="carnivora">Carnívora</option>
-                        <option value="vegetariana">Vegetariana</option>
-                        <option value="vegana">Vegana</option>
-                        <option value="celiaca">Celíaca</option>
-                        <option value="mixta">Mixta</option>
-                    </select>
+                    <label for="newRecipe_instructions">Instrucciones</label>
+                    <textarea id="newRecipe_instructions" name="newRecipe_instructions" cols="40" rows="10" placeholder="Instrucciones de tu receta" required class="form"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" id="creando_receta" class="btn btn-color m-1">Crear</button>
+                    <button type="button" id="creating_recipes" class="btn btn-color m-1">Crear</button>
                 </div>
             </div>
         </div>
     </div>
 
     <main class="container-fluid">
-        <div id="contenedor-cartas" class="mb-4 d-flex flex-row flex-wrap justify-content-center">
+        <div id="cards_container" class="mb-4 d-flex flex-row flex-wrap justify-content-center">
         </div>
     </main>
     <!-- Main's end -->
