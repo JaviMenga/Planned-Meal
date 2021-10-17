@@ -6,7 +6,8 @@ function add_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_ins
     console.log(`Entre a funcion ADD_RECIPE`)
     let new_recipe = new Recipes(newRecipe_id, newRecipe_name, newRecipe_image, 100, newRecipe_instructions);
     let new_recipe_JSON = JSON.stringify(new_recipe);
-    $.post(URL_recipe, new_recipe_JSON, (answer, state) => {
+    console.log(new_recipe_JSON)
+    $.post(URL_recipe, new_recipe_JSON, function(answer, state) {
         if (state === `success`) {
             $(".modal-footer").prepend(`<div>La receta de ${answer.name} ha sido creada con éxito!</div>`);
         }
@@ -114,7 +115,7 @@ function searching_recipe() {
                                                 <div class="modal-dialog modal-xl">
                                                     <div class="modal-content modal-content--color">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.nombre}</h5>
+                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
                                                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body text-start">
