@@ -1,18 +1,9 @@
 // FUNCIONES DEFINIDAS
 
 // A
-// esto esta mal!! resolver esto!
-function add_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions) {
+function add_recipe() {
     console.log(`Entre a funcion ADD_RECIPE`)
-    let new_recipe = new Recipes(newRecipe_id, newRecipe_name, newRecipe_image, 100, newRecipe_instructions);
-    let new_recipe_JSON = JSON.stringify(new_recipe);
-    console.log(new_recipe_JSON)
-    $.post(URL_recipe, new_recipe_JSON, function(answer, state) {
-        if (state === `success`) {
-            $(".modal-footer").prepend(`<div>La receta de ${answer.name} ha sido creada con éxito!</div>`);
-        }
-    }, `json`);
-}
+};
 
 // C
 function checkIn() {
@@ -65,6 +56,20 @@ function enable_inputs() {
 }
 
 // L
+
+// esto esta mal!! resolver!!
+function load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions) {
+    console.log(`Entre a funcion ADD_RECIPE`)
+    let new_recipe = new Recipes(newRecipe_id, newRecipe_name, newRecipe_image, 100, newRecipe_instructions);
+    let new_recipe_JSON = JSON.stringify(new_recipe);
+    console.log(new_recipe_JSON)
+    $.post(URL_recipe, new_recipe_JSON, function(answer, state) {
+        if (state === `success`) {
+            $(".modal-footer").prepend(`<div>La receta de ${answer.name} ha sido creada con éxito!</div>`);
+        }
+    }, `json`);
+}
+
 function log_in() {
     let user = document.getElementById(`user`).value;
     let password = document.getElementById(`password`).value;
@@ -110,7 +115,7 @@ function searching_recipe() {
                                         <div class="card-body">
                                         <h5 class="card-title card-title--style">${recipe.name}</h5>
                                         <div class="card-body d-flex flex-column">
-                                            <button class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
+                                            <button id="btn_add" class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
                                             <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-xl">
                                                     <div class="modal-content modal-content--color">
@@ -123,14 +128,10 @@ function searching_recipe() {
                                                                 <li>${recipe.instructions}</li>
                                                             </ul>
                                                         </div>
-                                                        <div class="modal-footer">
-                                                            <button class="btn btn-color m-1" type="button" data-bs-dismiss="modal">Volver</button>
-                                                            <button class="btn btn-color m-1" type="button">Agregar</button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="btn btn-color a-style m-1">Agregar</a>
+                                            <button id="btn_add" class="btn btn-color m-1" type="button">Agregar</button>
                                         </div>
                                         </div>
                                     </div>`);
@@ -191,7 +192,7 @@ function validate_recipe() {
             newRecipe_id = id + 1;
 
             if ((newRecipe_id) && (newRecipe_image) && (newRecipe_name) && (newRecipe_instructions)) {
-                add_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions);
+                load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions);
             }
         }
     });

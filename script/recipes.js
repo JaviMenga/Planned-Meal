@@ -9,14 +9,18 @@ class Recipes {
 }
 const URL_recipe = "../recetas.json";
 
-let creating_recipes = $(`#creating_recipes`);
+let create_recipes = $(`#create_recipes`);
 let cards_container = $(`#cards_container`);
 let search_recipe = $(`#search_recipe`);
 let user_filter = ``;
+let btn_add = $(`btn_add`);
+
 
 $(document).ready(function() {
+
     search_recipe.on(`click`, searching_recipe);
     searching_recipe();
-    creating_recipes.on(`click`, validate_recipe)
-
+    create_recipes.on(`click`, validate_recipe);
+    // no escucha el evento
+    btn_add.on(`click`, add_recipe);
 });
