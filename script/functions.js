@@ -2,10 +2,44 @@
 
 // A
 function add_recipe(recipe_user) {
-    let recipe_selected = new Recipes(recipe_user.querySelector(`#btn-add`).getAttribute(`data-id`), recipe_user.querySelector(`h5`).textContent, recipe_user.querySelector(`img`).src, 100, recipe_user.querySelector(`li`).textContent);
+    let recipe_selected = new Recipes(recipe_user.querySelector(`.btn_Add`).getAttribute(`data-id`), recipe_user.querySelector(`h5`).textContent, recipe_user.querySelector(`img`).src, 100, recipe_user.querySelector(`li`).textContent);
     recipes_selected_byUSer.push(recipe_selected);
-    console.log(recipes_selected_byUSer)
+    console.log(recipes_selected_byUSer);
+    for (const recipe of recipes_selected_byUSer) {
+        add_toBasket(recipe);
+        recipes_selected_byUSer2.push(recipe);
+    }
 
+    recipes_selected_byUSer = [];
+}
+
+
+function add_toBasket(recipe) {
+    basket.append(`<div class="card-header m-2 card--style">
+                                        <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
+                                        <div class="card-body">
+                                        <h5 class="card-title card-title--style">${recipe.name}</h5>
+                                        <div class="card-body d-flex flex-column">
+                                            <button id="btn_add" class="btn btn-color" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
+                                            <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content modal-content--color">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body text-start">
+                                                            <ul>
+                                                                <li>${recipe.instructions}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn-erase btn btn-color " data-id=${recipe.id}>Borrar</button>
+                                        </div>
+                                    </div>`);
 }
 
 // C
@@ -50,6 +84,7 @@ function enter(event) {
     }
 }
 
+
 function enable_inputs() {
     let hidden = $(`#register_input`);
     hidden.fadeIn(1000, function() {
@@ -58,9 +93,8 @@ function enable_inputs() {
     $(`#title_login`).text(`Registrar`);
 }
 
-
 // I
-function inyect_html(recipe) {
+function inject_html(recipe) {
     cards_container.append(`<div class="card-header m-2 card--style">
                                         <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
                                         <div class="card-body">
@@ -84,7 +118,7 @@ function inyect_html(recipe) {
                                             </div>
                                         </div>
                                         </div>
-                                        <button id="btn-add" class="btn_Add btn btn-color" type="button" data-id=${recipe.id}>Agregar</button>
+                                        <button class="btn_Add btn btn-color" type="button" data-id=${recipe.id}>Agregar</button>
                                     </div>`);
 }
 // L
@@ -140,7 +174,7 @@ function searching_recipe() {
             for (const recipe of myRecipes) {
                 let myRecipes_name = recipe.name.toLowerCase();
                 if (myRecipes_name.indexOf(user_filter) !== -1) {
-                    inyect_html(recipe)
+                    inject_html(recipe)
                 }
             }
 
@@ -150,13 +184,11 @@ function searching_recipe() {
 
 function save_user(new_user_loggedIn) {
     if (localStorage.getItem(`users_list`)) {
-        console.log(`ya está`)
         let stored_users = JSON.parse(localStorage.getItem(`users_list`));
         stored_users.push(new_user_loggedIn);
         let stored_users_string = JSON.stringify(stored_users);
         localStorage.setItem(`users_list`, stored_users_string);
     } else {
-        console.log(`no está`)
         stored_users = new Array();
         stored_users.push(new_user_loggedIn);
         let stored_users_string = JSON.stringify(stored_users);

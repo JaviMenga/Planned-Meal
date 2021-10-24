@@ -1,11 +1,12 @@
 class Clients {
-    constructor(user, name, lastname, password, age, email) {
+    constructor(user, name, lastname, password, age, email, recipes_saved) {
         this.user = user;
         this.name = name;
         this.lastname = lastname;
         this.password = password;
         this.age = age;
         this.email = email;
+        this.recipes_saved = recipes_saved;
     }
 }
 
