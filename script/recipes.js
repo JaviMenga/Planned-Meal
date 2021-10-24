@@ -14,10 +14,8 @@ let cards_container = $(`#cards_container`);
 let search_recipe = $(`#search_recipe`);
 let user_filter = ``;
 let btns_add = [];
-let recipes_selected_byUSer = [];
-// Aquí se van guardando todas las recetas que el usuario agregar a su canasta
-let recipes_selected_byUSer2 = [];
-let basket = $(`#basket`);
+let basket = {};
+let basket_contains = document.getElementById(`basket`);
 
 search_recipe.on(`click`, searching_recipe);
 searching_recipe();

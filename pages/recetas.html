@@ -110,11 +110,12 @@
                 <div class="modal-header">
                     <h5 id="staticBackdropLabel" class="modal-title">Recetas Guardadas</h5>
                 </div>
-                <div class="modal-body" id="basket">
-
+                <div class="modal-body d-flex flex-column align-items-center" id="basket">
+                    <!-- aquí van las cartas guardadas por el usuario -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-color m-1" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="bnt-erase" class="btn btn-color m-1">Borrar todo</button>
                 </div>
             </div>
         </div>
@@ -122,6 +123,7 @@
 
     <main class="container-fluid">
         <div id="cards_container" class="mb-4 d-flex flex-row flex-wrap justify-content-center">
+            <!-- Aquí van las cartas con las recetas que sacamos del JSON -->
         </div>
     </main>
     <!-- Main's end -->

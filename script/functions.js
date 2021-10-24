@@ -2,44 +2,50 @@
 
 // A
 function add_recipe(recipe_user) {
-    let recipe_selected = new Recipes(recipe_user.querySelector(`.btn_Add`).getAttribute(`data-id`), recipe_user.querySelector(`h5`).textContent, recipe_user.querySelector(`img`).src, 100, recipe_user.querySelector(`li`).textContent);
-    recipes_selected_byUSer.push(recipe_selected);
-    console.log(recipes_selected_byUSer);
-    for (const recipe of recipes_selected_byUSer) {
-        add_toBasket(recipe);
-        recipes_selected_byUSer2.push(recipe);
+    const producto = {
+        id: recipe_user.querySelector(`.btn_Add`).getAttribute(`data-id`),
+        name: recipe_user.querySelector(`h5`).textContent,
+        image: recipe_user.querySelector(`img`).src,
+        calories: 100,
+        instructions: recipe_user.querySelector(`li`).textContent,
     }
+    basket[producto.id] = {...producto };
+    add_toBasket(basket)
 
-    recipes_selected_byUSer = [];
+
 }
 
 
-function add_toBasket(recipe) {
-    basket.append(`<div class="card-header m-2 card--style">
-                                        <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
-                                        <div class="card-body">
-                                        <h5 class="card-title card-title--style">${recipe.name}</h5>
+function add_toBasket(basket) {
+    basket_contains.innerHTML = ``;
+    Object.values(basket).forEach(recipe => {
+        basket_contains.innerHTML += `<div class="card-header m-2 card--style">
+                            <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title card-title--style">${recipe.name}</h5>
                                         <div class="card-body d-flex flex-column">
                                             <button id="btn_add" class="btn btn-color" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
-                                            <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl">
-                                                    <div class="modal-content modal-content--color">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
-                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body text-start">
-                                                            <ul>
-                                                                <li>${recipe.instructions}</li>
-                                                            </ul>
+                                                <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-xl">
+                                                        <div class="modal-content modal-content--color">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
+                                                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body text-start">
+                                                                <ul>
+                                                                    <li>${recipe.instructions}</li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                         </div>
                                         <button class="btn-erase btn btn-color " data-id=${recipe.id}>Borrar</button>
-                                        </div>
-                                    </div>`);
+                                </div>
+                        </div>`;
+    })
+
 }
 
 // C
