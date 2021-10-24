@@ -2,21 +2,23 @@
 
 // A
 function add_recipe(recipe_user) {
+
     const producto = {
         id: recipe_user.querySelector(`.btn_Add`).getAttribute(`data-id`),
         name: recipe_user.querySelector(`h5`).textContent,
         image: recipe_user.querySelector(`img`).src,
         calories: 100,
         instructions: recipe_user.querySelector(`li`).textContent,
-    }
-    basket[producto.id] = {...producto };
-    add_toBasket(basket)
+    };
 
+    basket[producto.id] = {...producto };
+    add_toBasket(basket);
 
 }
 
 
 function add_toBasket(basket) {
+
     basket_contains.innerHTML = ``;
     Object.values(basket).forEach(recipe => {
         basket_contains.innerHTML += `<div class="card-header m-2 card--style">
@@ -41,15 +43,18 @@ function add_toBasket(basket) {
                                                     </div>
                                                 </div>
                                         </div>
-                                        <button class="btn-erase btn btn-color " data-id=${recipe.id}>Borrar</button>
+                                        <button class="btns_erase btn btn-color" data-id=${recipe.id}>Borrar</button>
                                 </div>
                         </div>`;
-    })
+    });
+
+    localStorage.setItem(`basket`, JSON.stringify(basket));
 
 }
 
 // C
 function checkIn() {
+
     let user = document.getElementById(`user`).value;
     let name = document.getElementById(`name`).value.toLowerCase();
     let lastname = document.getElementById(`lastName`).value.toLowerCase();
@@ -68,6 +73,7 @@ function checkIn() {
 }
 
 function check_facts(user, name, lastname, password, age, email) {
+
     let mjs = ``;
     if ((user) && (name) && (lastname) && (password) && (age) && (email)) {
         let fact = search_user(user);
@@ -82,6 +88,7 @@ function check_facts(user, name, lastname, password, age, email) {
 
 // E
 function enter(event) {
+
     let enter_key = event.keyCode;
     if (event.target == password_input && enter_key == 13) {
         log_in();
@@ -90,17 +97,34 @@ function enter(event) {
     }
 }
 
+function erase_basket() {
+
+    basket = {};
+    add_toBasket(basket)
+}
+
+function erase_recipe(e) {
+
+    let recipe_toDelete = basket[e.target.dataset.id];
+    delete basket[e.target.dataset.id];
+    add_toBasket(basket);
+
+}
+
 
 function enable_inputs() {
+
     let hidden = $(`#register_input`);
     hidden.fadeIn(1000, function() {
         login.fadeOut();
     });
     $(`#title_login`).text(`Registrar`);
+
 }
 
 // I
 function inject_html(recipe) {
+
     cards_container.append(`<div class="card-header m-2 card--style">
                                         <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
                                         <div class="card-body">
@@ -126,11 +150,13 @@ function inject_html(recipe) {
                                         </div>
                                         <button class="btn_Add btn btn-color" type="button" data-id=${recipe.id}>Agregar</button>
                                     </div>`);
+
 }
 // L
 
 // esto esta mal!! resolver!!
 function load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions) {
+
     let new_recipe = new Recipes(newRecipe_id, newRecipe_name, newRecipe_image, 100, newRecipe_instructions);
     let new_recipe_JSON = JSON.stringify(new_recipe);
     $.post(URL_recipe, new_recipe_JSON, function(answer, state) {
@@ -138,9 +164,11 @@ function load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_in
             $(".modal-footer").prepend(`<div>La receta de ${answer.name} ha sido creada con éxito!</div>`);
         }
     }, `json`);
+
 }
 
 function log_in() {
+
     let user = document.getElementById(`user`).value;
     let password = document.getElementById(`password`).value;
     activeUser = search_user(user);
@@ -153,10 +181,12 @@ function log_in() {
         alert(`Ingresá una contraseña correcta`);
     }
     return activeUser;
+
 }
 
 // S
 function search_user(user_loggedIn) {
+
     if (!localStorage.getItem(`users_list`)) {
         return false
     } else {
@@ -170,9 +200,11 @@ function search_user(user_loggedIn) {
         }
         return found
     }
+
 }
 
 function searching_recipe() {
+
     $.getJSON(URL_recipe, function(answer, state) {
         if (state === `success`) {
             let myRecipes = answer;
@@ -185,10 +217,12 @@ function searching_recipe() {
             }
 
         }
-    })
+    });
+
 }
 
 function save_user(new_user_loggedIn) {
+
     if (localStorage.getItem(`users_list`)) {
         let stored_users = JSON.parse(localStorage.getItem(`users_list`));
         stored_users.push(new_user_loggedIn);
@@ -200,16 +234,20 @@ function save_user(new_user_loggedIn) {
         let stored_users_string = JSON.stringify(stored_users);
         localStorage.setItem(`users_list`, stored_users_string);
     }
+
 }
 
 // T
 function translate_user() {
+
     let userIcon = $(`#userIcon`);
-    userIcon.append(`<p class="active_user">${activeUser.user}</p>`)
+    userIcon.append(`<p class="active_user">${activeUser.user}</p>`);
+
 }
 
 // V
 function validate_password(password_loggedIn, user_loggedIn) {
+
     let fact = search_user(user_loggedIn);
     let comparison = false;
     if (fact != false) {
@@ -217,11 +255,13 @@ function validate_password(password_loggedIn, user_loggedIn) {
             comparison = true;
             return comparison
         }
-    }
+    };
     return comparison;
+
 }
 
 function validate_recipe() {
+
     $.getJSON(URL_recipe, function(answer, state) {
         if (state === `success`) {
             let newRecipe_image = $(`#newRecipe_image`).val();
@@ -232,12 +272,12 @@ function validate_recipe() {
             let id;
             for (const recipe of myRecipes) {
                 id = recipe.id;
-            }
+            };
             newRecipe_id = id + 1;
 
             if ((newRecipe_id) && (newRecipe_image) && (newRecipe_name) && (newRecipe_instructions)) {
                 load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions);
-            }
+            };
         }
     });
 }

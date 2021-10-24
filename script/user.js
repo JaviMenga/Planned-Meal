@@ -24,5 +24,4 @@ $(document).ready(function() {
     register.addEventListener(`click`, checkIn);
     email_input.addEventListener(`keydown`, enter);
 
-
 });

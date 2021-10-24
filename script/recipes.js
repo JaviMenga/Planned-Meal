@@ -16,6 +16,8 @@ let user_filter = ``;
 let btns_add = [];
 let basket = {};
 let basket_contains = document.getElementById(`basket`);
+let btn_eraseAll = document.getElementById(`btn-erase`);
+
 
 search_recipe.on(`click`, searching_recipe);
 searching_recipe();
@@ -27,5 +29,15 @@ $(document).ready(function() {
         add_recipe(e.target.parentElement);
     }));
 
+    btn_eraseAll.addEventListener(`click`, erase_basket);
+
+    basket_contains.addEventListener(`click`, e => {
+        erase_recipe(e);
+    });
+
+    if (localStorage.getItem(`basket`)) {
+        basket = JSON.parse(localStorage.getItem(`basket`));
+        add_toBasket(basket);
+    }
     create_recipes.on(`click`, validate_recipe);
 });
