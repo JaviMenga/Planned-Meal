@@ -1,9 +1,12 @@
 // FUNCIONES DEFINIDAS
 
 // A
-function add_recipe() {
-    console.log(`Entre a funcion ADD_RECIPE`)
-};
+function add_recipe(recipe_user) {
+    let recipe_selected = new Recipes(recipe_user.querySelector(`#btn-add`).getAttribute(`data-id`), recipe_user.querySelector(`h5`).textContent, recipe_user.querySelector(`img`).src, 100, recipe_user.querySelector(`li`).textContent);
+    recipes_selected_byUSer.push(recipe_selected);
+    console.log(recipes_selected_byUSer)
+
+}
 
 // C
 function checkIn() {
@@ -55,14 +58,41 @@ function enable_inputs() {
     $(`#title_login`).text(`Registrar`);
 }
 
+
+// I
+function inyect_html(recipe) {
+    cards_container.append(`<div class="card-header m-2 card--style">
+                                        <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
+                                        <div class="card-body">
+                                        <h5 class="card-title card-title--style">${recipe.name}</h5>
+                                        <div class="card-body d-flex flex-column">
+                                            <button id="btn_add" class="btn btn-color" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
+                                            <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content modal-content--color">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body text-start">
+                                                            <ul>
+                                                                <li>${recipe.instructions}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <button id="btn-add" class="btn_Add btn btn-color" type="button" data-id=${recipe.id}>Agregar</button>
+                                    </div>`);
+}
 // L
 
 // esto esta mal!! resolver!!
 function load_recipe(newRecipe_id, newRecipe_image, newRecipe_name, newRecipe_instructions) {
-    console.log(`Entre a funcion ADD_RECIPE`)
     let new_recipe = new Recipes(newRecipe_id, newRecipe_name, newRecipe_image, 100, newRecipe_instructions);
     let new_recipe_JSON = JSON.stringify(new_recipe);
-    console.log(new_recipe_JSON)
     $.post(URL_recipe, new_recipe_JSON, function(answer, state) {
         if (state === `success`) {
             $(".modal-footer").prepend(`<div>La receta de ${answer.name} ha sido creada con éxito!</div>`);
@@ -110,31 +140,7 @@ function searching_recipe() {
             for (const recipe of myRecipes) {
                 let myRecipes_name = recipe.name.toLowerCase();
                 if (myRecipes_name.indexOf(user_filter) !== -1) {
-                    cards_container.append(`<div class="card-header m-2 card--style">
-                                        <img class="card-img-top card__img--size" src="${recipe.image}" alt="Foto de ${recipe.name}">
-                                        <div class="card-body">
-                                        <h5 class="card-title card-title--style">${recipe.name}</h5>
-                                        <div class="card-body d-flex flex-column">
-                                            <button id="btn_add" class="btn btn-color m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${recipe.id}">Ver receta</button>
-                                            <div class="modal fade" id="exampleModal${recipe.id}" tabindex="-1" aria-labellebdy="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-xl">
-                                                    <div class="modal-content modal-content--color">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title card-title--style" id="exampleModalLabel">${recipe.name}</h5>
-                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body text-start">
-                                                            <ul>
-                                                                <li>${recipe.instructions}</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button id="btn_add" class="btn btn-color m-1" type="button">Agregar</button>
-                                        </div>
-                                        </div>
-                                    </div>`);
+                    inyect_html(recipe)
                 }
             }
 
